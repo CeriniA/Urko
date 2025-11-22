@@ -1,0 +1,149 @@
+:root {
+  --bg-gradient: radial-gradient(circle at top left, rgba(255, 196, 0, 0.25), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(255, 69, 0, 0.18), transparent 60%), #050505;
+  --card-glass: rgba(15, 15, 15, 0.65);
+  --accent: #f9aa33;
+  --accent-dark: #f2780c;
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--bg-gradient);
+  color: #f8f9fa;
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.app-bg {
+  min-height: 100vh;
+  background: var(--bg-gradient);
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  color: #fff;
+  padding: 7rem 0 6rem;
+  background: linear-gradient(135deg, rgba(5, 5, 5, 0.5), rgba(5, 5, 5, 0.8)),
+    url('https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=1600&q=80') center/cover
+      no-repeat;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(2px);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  gap: 1.5rem;
+}
+
+.hero__eyebrow {
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero__title {
+  font-size: clamp(2.8rem, 6vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.hero__subtitle {
+  max-width: 38rem;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.section-title {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  max-width: 46rem;
+  margin: 0 auto;
+  color: rgba(248, 249, 250, 0.75);
+}
+
+.offer-card {
+  background: var(--card-glass);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.5rem;
+  color: #f8f9fa;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(12px);
+}
+
+.offer-card .btn {
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.offers-section {
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.87), rgba(5, 5, 5, 0.92));
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.footer {
+  background: rgba(5, 5, 5, 0.95);
+}
+
+.urko-navbar {
+  transition: background-color 0.35s ease, backdrop-filter 0.35s ease, box-shadow 0.35s ease;
+  background-color: transparent;
+}
+
+.urko-navbar--scrolled {
+  background-color: rgba(5, 5, 5, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
+}
+
+.navbar-brand,
+.nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: #ffffff !important;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1a1a1a;
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 6rem 0 4rem;
+  }
+
+  .urko-navbar {
+    background-color: rgba(5, 5, 5, 0.9);
+  }
+}
