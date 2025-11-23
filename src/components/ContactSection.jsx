@@ -36,7 +36,7 @@ const ContactSection = () => {
 
     try {
       // Obtener token de reCAPTCHA v3
-      const recaptchaToken = await window.grecaptcha.execute('6Lf0OxUsAAAAAJJSnjrASm4tBJ7Sn5l_9gCFSZ3H', {
+      const recaptchaToken = await window.grecaptcha.execute('6LccbxUsAAAAAErNnrc9XD8wb4ga74P4QNI-o7RH', {
         action: 'submit',
       });
 
