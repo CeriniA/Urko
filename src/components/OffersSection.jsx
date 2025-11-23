@@ -34,7 +34,7 @@ const OffersSection = () => {
 
         window.paypal.Buttons({
           style: { 
-            layout: 'vertical',
+            layout: 'horizontal',
             color: 'gold',
             shape: 'rect',
             label: 'paypal',

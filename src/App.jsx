@@ -18,34 +18,54 @@ import Footer from './components/Footer.jsx';
 function App() {
   const { theme } = useTheme();
 
-  // Cargar CSS dinámicamente según el tema
+  // Cargar CSS dinámicamente según el tema usando importaciones dinámicas
   useEffect(() => {
-    const cssFiles = {
-      minimal: '/src/styles/global.css',
-      editorial: '/src/styles/global-editorial.css',
-      brutalist: '/src/styles/global-brutalist.css',
-      glass: '/src/styles/global-glass.css',
-      neon: '/src/styles/global-neon.css',
-      luxury: '/src/styles/global-luxury.css',
-      retro: '/src/styles/global-retro.css',
-      bootstrap: '/src/styles/global-bootstrap.css',
-      mercadolibre: '/src/styles/global-mercadolibre.css'
-    };
-    
-    const cssFile = cssFiles[theme] || cssFiles.minimal;
-    
-    // Remover CSS anterior
-    const oldLink = document.getElementById('theme-css');
-    if (oldLink) {
-      oldLink.remove();
-    }
+    const loadThemeCSS = async () => {
+      // Remover CSS anterior
+      const oldStyle = document.getElementById('theme-css');
+      if (oldStyle) {
+        oldStyle.remove();
+      }
 
-    // Agregar nuevo CSS
-    const link = document.createElement('link');
-    link.id = 'theme-css';
-    link.rel = 'stylesheet';
-    link.href = cssFile;
-    document.head.appendChild(link);
+      // Importar el CSS del tema actual
+      let cssModule;
+      switch (theme) {
+        case 'editorial':
+          cssModule = await import('./styles/global-editorial.css?inline');
+          break;
+        case 'brutalist':
+          cssModule = await import('./styles/global-brutalist.css?inline');
+          break;
+        case 'glass':
+          cssModule = await import('./styles/global-glass.css?inline');
+          break;
+        case 'neon':
+          cssModule = await import('./styles/global-neon.css?inline');
+          break;
+        case 'luxury':
+          cssModule = await import('./styles/global-luxury.css?inline');
+          break;
+        case 'retro':
+          cssModule = await import('./styles/global-retro.css?inline');
+          break;
+        case 'bootstrap':
+          cssModule = await import('./styles/global-bootstrap.css?inline');
+          break;
+        case 'mercadolibre':
+          cssModule = await import('./styles/global-mercadolibre.css?inline');
+          break;
+        default:
+          cssModule = await import('./styles/global.css?inline');
+      }
+
+      // Crear un style tag con el CSS importado
+      const style = document.createElement('style');
+      style.id = 'theme-css';
+      style.textContent = cssModule.default;
+      document.head.appendChild(style);
+    };
+
+    loadThemeCSS();
   }, [theme]);
 
   // Seleccionar componentes según el tema

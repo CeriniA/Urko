@@ -193,7 +193,7 @@ body {
   color: var(--text-secondary);
   line-height: 1.7;
   margin-bottom: 1.5rem;
-  text-align: center;
+  text-align: left;
   flex: 1;
 }
 
