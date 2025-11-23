@@ -25,7 +25,7 @@ const products = [
     price: 11,
     currency: 'USD',
     description: 'Libros Urko en formato digital. Pago único por cada libro disponible.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout-libros-urko',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=2995219259-99427f1c-70e3-4ee3-a446-d9fc334340c2',
     paypalScriptId: 'paypal-books',
   },
   {
@@ -34,18 +34,18 @@ const products = [
     price: 39,
     currency: 'USD',
     description:
-      'Fin de semana intensivo + 3 días de repaso. Guía escrita, ejercicios prácticos, video terapia y plan de acción.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=2995219259-7d8e60ed-2334-4508-a2ae-b8e49c9e2b7f',
+      'Fin de semana intensivo + 3 días de repaso. Incluye: Drive privado con video guía, guía escrita para 3 días de trabajo, ejercicios prácticos, video terapia del método y planilla de acción paso a paso. Transformá tu energía en solo 6 días.',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=2995219259-85cb0d4a-7c93-4617-a39f-bee1f2c2568e',
     paypalScriptId: 'paypal-intensive',
   },
   {
     id: 'monthly',
-    title: 'Acceso mensual + comunidad',
+    title: 'Acceso mensual (trabajo en solitario)',
     price: 69,
     currency: 'USD',
     description:
-      'Drive privado, guía de trabajo, video terapia y acceso a la comunidad (sin interacción obligatoria).',
-    mpLink: 'https://www.mercadopago.com.ar/checkout-acceso-mensual',
+      'Drive privado, guía de trabajo, plan de acción, video terapia y biblioteca. Renovación mensual. No incluye videollamada con Urko ni acceso al grupo privado.',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=2995219259-66cac267-0132-4b32-aed3-c765826d1ce1',
     paypalScriptId: 'paypal-monthly',
   },
   {
@@ -53,8 +53,8 @@ const products = [
     title: 'Acceso trimestral',
     price: 120,
     currency: 'USD',
-    description: 'Pago único por 3 meses. Incluye todos los beneficios del acceso mensual.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout-acceso-trimestral',
+    description: 'Pago único por 3 meses. Incluye: Drive privado, guía de trabajo, plan de acción, video terapia y biblioteca. No incluye videollamada con Urko ni acceso al grupo privado.',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=2995219259-129bb7de-1b56-4317-9d0f-346e0ce1c172',
     paypalScriptId: 'paypal-quarterly',
   },
   {
@@ -63,19 +63,31 @@ const products = [
     price: 369,
     currency: 'USD',
     description:
-      'Grupo privado, 2 llamadas 1 a 1 de inicio, seguimiento en equipo, clases maestras quincenales e incluye plan mensual.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout-trabajo-grupal',
+      'Lo más recomendado. Grupo privado de trabajo, 2 llamadas 1 a 1 de inicio, seguimiento en equipo con enfoque individual, contacto directo por WhatsApp 24/7, 1 clase maestra quincenal grupal. Incluye plan mensual. Inversión única con posibilidad de renovación.',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=2995219259-f907185d-44b6-41a8-85a9-741d282634ae',
     paypalScriptId: 'paypal-group',
+    recommended: true,
   },
   {
-    id: 'exclusive',
-    title: 'Exclusivo 1 a 1 (3 meses)',
+    id: 'exclusive-full',
+    title: 'Exclusivo 1 a 1 (3 meses) - Pago único',
     price: 999,
     currency: 'USD',
     description:
-      'Acompañamiento 1 a 1: sesiones profundas, guía personalizada desde el cuerpo al espíritu y acceso total a planes anteriores.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout-exclusivo-1a1',
-    paypalScriptId: 'paypal-exclusive',
+      'Acompañamiento exclusivo: espacio íntimo y profundo, trabajo específico según tu caso, 2 videollamadas al mes, contacto directo vía WhatsApp, guía y herramientas personalizadas desde el cuerpo al espíritu. Coach para la vida, para la cama. Incluye acceso al trabajo grupal. Pago único de $999 USD.',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=2995219259-cf4baac0-abe2-44ec-abb0-f25bc3825c26',
+    paypalScriptId: 'paypal-exclusive-full',
+  },
+  {
+    id: 'exclusive-installments',
+    title: 'Exclusivo 1 a 1 (3 meses) - 3 pagos mensuales',
+    price: 369,
+    currency: 'USD',
+    description:
+      'Mismo programa exclusivo, con opción de pago en 3 cuotas mensuales de $369 USD. Acompañamiento exclusivo: espacio íntimo y profundo, trabajo específico según tu caso, 2 videollamadas al mes, contacto directo vía WhatsApp, guía y herramientas personalizadas desde el cuerpo al espíritu. Coach para la vida, para la cama. Incluye acceso al trabajo grupal.',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=2995219259-68f2ed20-e677-4a40-9dcd-6a034b80662e',
+    paypalScriptId: 'paypal-exclusive-installments',
+    badge: '3 cuotas',
   },
 ];
 

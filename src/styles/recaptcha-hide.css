@@ -1,0 +1,21 @@
+/* Ocultar badge de reCAPTCHA */
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+/* Estilos para el aviso de reCAPTCHA en el footer */
+.recaptcha-notice {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.recaptcha-notice a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: underline;
+}
+
+.recaptcha-notice a:hover {
+  color: rgba(255, 255, 255, 1);
+}

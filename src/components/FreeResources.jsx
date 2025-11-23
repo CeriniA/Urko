@@ -1,6 +1,4 @@
-import Card from 'react-bootstrap/Card';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 import products from '../data/products';
 
 const FreeResources = () => {
@@ -9,30 +7,37 @@ const FreeResources = () => {
   if (!free) return null;
 
   return (
-    <section id="recursos" className="text-light">
-      <h2 className="section-title text-center mb-4">Recursos gratuitos para empezar hoy</h2>
-      <Row className="g-4">
-        {free.driveLinks.map((link) => (
-          <Col key={link.url} xs={12} md={4}>
-            <Card className="h-100 bg-transparent border border-light-subtle shadow-sm">
-              <Card.Body>
-                <Card.Title>{link.label}</Card.Title>
-                <Card.Text>
-                  Accedé al material y comenzá a entrenar tu presencia, energía y enfoque.
-                </Card.Text>
+    <section id="recursos" className="free-resources-section">
+      <Container>
+        <div className="text-center mb-5">
+          <h2 className="section-title">Recursos gratuitos para empezar hoy</h2>
+          <p className="section-subtitle">
+            Accedé al material y comenzá a entrenar tu presencia, energía y enfoque
+          </p>
+        </div>
+        <div className="free-resources-grid">
+          {free.driveLinks.map((link) => (
+            <div key={link.url} className="free-resource-card">
+              <div className="free-resource-header">
+                <h3 className="free-resource-title">{link.label}</h3>
+              </div>
+              <div className="free-resource-body">
+                <p className="free-resource-description">
+                  Material descargable para comenzar tu transformación
+                </p>
                 <a
-                  className="stretched-link text-decoration-none fw-semibold"
+                  className="free-resource-button"
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Abrir en Google Drive →
                 </a>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Container>
     </section>
   );
 };
