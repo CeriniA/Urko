@@ -25,7 +25,7 @@ const products = [
     price: 11,
     currency: 'USD',
     description: 'Libros Urko en formato digital. Pago único por cada libro disponible.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=2995219259-99427f1c-70e3-4ee3-a446-d9fc334340c2',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=28966409-dcb07c33-8660-47bb-b539-ce5e5072bbb4',
     paypalScriptId: 'paypal-books',
   },
   {
@@ -35,7 +35,7 @@ const products = [
     currency: 'USD',
     description:
       'Fin de semana intensivo + 3 días de repaso. Incluye: Drive privado con video guía, guía escrita para 3 días de trabajo, ejercicios prácticos, video terapia del método y planilla de acción paso a paso. Transformá tu energía en solo 6 días.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=2995219259-85cb0d4a-7c93-4617-a39f-bee1f2c2568e',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=28966409-e754d416-658b-4962-817f-1c05491f0788',
     paypalScriptId: 'paypal-intensive',
   },
   {
@@ -45,7 +45,7 @@ const products = [
     currency: 'USD',
     description:
       'Drive privado, guía de trabajo, plan de acción, video terapia y biblioteca. Renovación mensual. No incluye videollamada con Urko ni acceso al grupo privado.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=2995219259-66cac267-0132-4b32-aed3-c765826d1ce1',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=28966409-46a709dc-738c-47c3-a483-f333e5b35beb',
     paypalScriptId: 'paypal-monthly',
   },
   {
@@ -54,7 +54,7 @@ const products = [
     price: 120,
     currency: 'USD',
     description: 'Pago único por 3 meses. Incluye: Drive privado, guía de trabajo, plan de acción, video terapia y biblioteca. No incluye videollamada con Urko ni acceso al grupo privado.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=2995219259-129bb7de-1b56-4317-9d0f-346e0ce1c172',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=28966409-302892a1-11c3-4bcb-9aae-c7bc32147e55',
     paypalScriptId: 'paypal-quarterly',
   },
   {
@@ -64,7 +64,7 @@ const products = [
     currency: 'USD',
     description:
       'Lo más recomendado. Grupo privado de trabajo, 2 llamadas 1 a 1 de inicio, seguimiento en equipo con enfoque individual, contacto directo por WhatsApp 24/7, 1 clase maestra quincenal grupal. Incluye plan mensual. Inversión única con posibilidad de renovación.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=2995219259-f907185d-44b6-41a8-85a9-741d282634ae',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=28966409-40b5bb38-f8e4-4d77-a9cd-2c2dffa709c4',
     paypalScriptId: 'paypal-group',
     recommended: true,
   },
@@ -75,7 +75,7 @@ const products = [
     currency: 'USD',
     description:
       'Acompañamiento exclusivo: espacio íntimo y profundo, trabajo específico según tu caso, 2 videollamadas al mes, contacto directo vía WhatsApp, guía y herramientas personalizadas desde el cuerpo al espíritu. Coach para la vida, para la cama. Incluye acceso al trabajo grupal. Pago único de $999 USD.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=2995219259-cf4baac0-abe2-44ec-abb0-f25bc3825c26',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=28966409-aff17529-271f-4b06-bc69-6c6899f6ffa2',
     paypalScriptId: 'paypal-exclusive-full',
   },
   {
@@ -85,7 +85,7 @@ const products = [
     currency: 'USD',
     description:
       'Mismo programa exclusivo, con opción de pago en 3 cuotas mensuales de $369 USD. Acompañamiento exclusivo: espacio íntimo y profundo, trabajo específico según tu caso, 2 videollamadas al mes, contacto directo vía WhatsApp, guía y herramientas personalizadas desde el cuerpo al espíritu. Coach para la vida, para la cama. Incluye acceso al trabajo grupal.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=2995219259-68f2ed20-e677-4a40-9dcd-6a034b80662e',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=28966409-4d31008e-8461-4b18-b6dd-b23ecd6667ea',
     paypalScriptId: 'paypal-exclusive-installments',
     badge: '3 cuotas',
   },
