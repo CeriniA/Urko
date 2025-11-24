@@ -469,6 +469,79 @@ body {
   margin: 0;
 }
 
+/* Free Resources Section - MercadoLibre */
+.free-resources-section {
+  padding: 2.5rem 0;
+  background: var(--bg-dark);
+}
+
+.free-resources-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.free-resource-card {
+  flex: 0 1 340px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.free-resource-header {
+  padding: 1.75rem 1.5rem;
+  background: var(--ml-yellow);
+  text-align: center;
+}
+
+.free-resource-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.free-resource-body {
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex: 1;
+  text-align: center;
+}
+
+.free-resource-description {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.free-resource-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: var(--ml-blue);
+  border-radius: 6px;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.free-resource-button:hover {
+  background: var(--ml-blue-dark);
+  box-shadow: 0 2px 4px 0 rgba(52, 131, 250, 0.3);
+}
+
 .footer {
   background: #fff;
   color: var(--text-secondary);
