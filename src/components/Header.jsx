@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import ThemeSwitcher from './ThemeSwitcher';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -32,7 +31,6 @@ const Header = () => {
             <Nav.Link href="#recursos">Recursos gratuitos</Nav.Link>
             <Nav.Link href="#ofertas">Programas</Nav.Link>
             <Nav.Link href="#contacto">Contacto</Nav.Link>
-            <ThemeSwitcher />
             <a
               className="btn btn-sm btn-outline-light ms-lg-3 mt-3 mt-lg-0"
               href="https://wa.me/549XXXXXXXXX"
