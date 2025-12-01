@@ -153,9 +153,9 @@ const ResourcesSection = () => {
       <Container>
         {/* RECURSOS GRATUITOS */}
         <div className="mb-5" id="recursos-gratuitos">
-          <h2 className="section-title text-center mb-4">Recursos gratuitos</h2>
+          <h2 className="section-title text-center mb-4">Recursos Gratuitos de Tantra para Varones</h2>
           <p className="text-center lead mb-4">
-            Comenza a entrenar tu presencia, energía y enfoque con estos entrenamientos gratuitos de Urko tántrico:
+            Comenzá a desarrollar tu masculinidad consciente y sexualidad consciente con estos recursos gratuitos de tantra para hombres. Entrenamientos especializados para varones que buscan crecimiento auténtico:
           </p>
             
           <Row className="g-4">

@@ -2,9 +2,22 @@
 
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /api/
 
-# Sitemap
+# Crawl-delay for better server performance
+Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://urko.com/sitemap.xml
+
+# Additional directives for better SEO
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
 
 # Crawl-delay para bots agresivos
 User-agent: *

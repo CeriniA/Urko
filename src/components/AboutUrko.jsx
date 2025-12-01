@@ -37,7 +37,7 @@ const AboutUrko = () => {
           <Col md={6} className="d-flex justify-content-center">
             <img
               src={sobreMiImg}
-              alt="Sobre mí - Lucas Flesia"
+              alt="Lucas Flesia - Coach de Masculinidad Consciente y Tantra para Varones"
               className="about-urko__image img-fluid"
             />
           </Col>

@@ -5,12 +5,12 @@ const Hero = () => (
   <section className="hero" id="top">
     <Container className="d-flex flex-column align-items-start justify-content-center hero__content">
       <span className="hero__eyebrow">¡Bienvenido!</span>
-      <h1 className="hero__title">Escuela de tantra para varones</h1>
+      <h1 className="hero__title">Escuela de Tantra para Varones</h1>
       <p className="hero__subtitle">
-        Un camino hacia el paraíso terrenal
+        Desarrollá tu sexualidad consciente y masculinidad sana
       </p>
       <p className="hero__description">
-        Transformá tu vida desde la sexualidad tántrica taoísta en el mundo real.
+        Transformá tu vida como hombre a través del tantra masculino. Coaching especializado para varones que buscan desarrollar su presencia, sexualidad consciente y crecimiento auténtico.
       </p>
       <div className="d-flex flex-column flex-md-row gap-3">
         <Button
