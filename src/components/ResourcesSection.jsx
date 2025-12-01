@@ -104,11 +104,9 @@ const ResourcesSection = () => {
   return (
     <section ref={sectionRef} className="resources-section py-5" id="recursos">
       <Container>
-        <h2 className="section-title text-center mb-4">Recursos</h2>
-        
         {/* RECURSOS GRATUITOS */}
         <div className="mb-5" id="recursos-gratuitos">
-          <h3 className="text-center mb-4">Recursos Gratuitos</h3>
+          <h2 className="section-title text-center mb-4">Recursos gratuitos</h2>
           <p className="text-center lead mb-4">
             Comenza a entrenar tu presencia, energía y enfoque con estos entrenamientos gratuitos de Urko tántrico:
           </p>
@@ -155,7 +153,7 @@ const ResourcesSection = () => {
 
         {/* LIBROS */}
         <div className="mb-5" id="recursos-libros">
-          <h3 className="text-center mb-4">Libros</h3>
+          <h2 className="section-title text-center mb-4">Libros</h2>
           <Row className="g-4 justify-content-center">
             {books.map((book) => (
               <Col key={book.id} md={6} lg={4}>
@@ -204,7 +202,7 @@ const ResourcesSection = () => {
 
         {/* PROGRAMAS */}
         <div className="mb-5" id="programas">
-          <h3 className="text-center mb-4">Programas</h3>
+          <h2 className="section-title text-center mb-4">Programas</h2>
           <p className="text-center lead mb-4">
             Transformá tu vida con nuestros programas de acompañamiento
           </p>

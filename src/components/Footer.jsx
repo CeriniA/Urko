@@ -3,7 +3,7 @@ import logo from '../assets/images/logo.png';
 
 const Footer = () => (
   <footer className="py-4 text-center text-light footer">
-    <Container className="d-flex flex-column flex-md-row align-items-center justify-content-center gap-3">
+    <Container className="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
       <img src={logo} alt="Urko Tántrico" className="site-logo-img-footer" />
       <div className="text-center">
         <p className="mb-1">© {new Date().getFullYear()} Escuela Urko – La Senda del Varón Presente.</p>
