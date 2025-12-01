@@ -82,7 +82,7 @@ const ContactSection = () => {
           <Col md={6}>
             <h2 className="section-title mb-3">¿Listo para trabajar con Urko?</h2>
             <p className="section-subtitle">
-              Completá el formulario o escribime directo por WhatsApp para coordinar la primera llamada.
+              Completá el formulario o escribime directo por WhatsApp para comenzar a transformar tu vida.
             </p>
             <div className="contact-socials mt-4">
               <a
@@ -228,7 +228,7 @@ const ContactSection = () => {
                   name="Compromiso"
                   checked={formData.Compromiso}
                   onChange={handleChange}
-                  label="Confirmo mi compromiso para trabajar bajo la guía de Urko"
+                  label="Acepto que me contacten"
                   required
                   disabled={status === 'submitting'}
                 />

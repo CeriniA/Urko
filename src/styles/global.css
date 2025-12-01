@@ -144,12 +144,14 @@ body {
   height: 72px;
   width: auto;
   display: block;
+  filter: brightness(0) invert(1);
 }
 
 .site-logo-img-footer {
   height: 120px;
   width: auto;
   display: block;
+  filter: brightness(0) invert(1);
 }
 
 .section-subtitle {
@@ -218,6 +220,11 @@ body {
 .contact-social-text {
   font-size: 0.95rem;
   font-weight: 600;
+}
+
+/* Newsletter section styling */
+.newsletter-box h4 {
+  color: var(--accent);
 }
 
 /* Botones primarios globales (usar amarillito de la marca) */
