@@ -8,16 +8,11 @@ const CTASection = () => (
         <p className="cta-text">
           Cambiá tu vida de una vez y para siempre.
           <br />
-          <strong>Si yo pude, vos podés.</strong>
-          <br />
-          Estoy para acompañarte.
+          <strong>Si yo pude, vos podes.</strong>
         </p>
         <div className="cta-actions">
-          <a className="cta-button cta-button--primary" href="#ofertas">
-            Ver Programas
-          </a>
-          <a className="cta-button cta-button--secondary" href="#contacto">
-            Contactar
+          <a className="cta-button cta-button--primary" href="#programas">
+            Siento el fuego
           </a>
         </div>
         <div className="payment-methods">

@@ -15,7 +15,6 @@ const ContactSection = () => {
     Edad: '',
     Residencia: '',
     Motivo: '',
-    Horarios: '',
     Compromiso: false,
   });
   const [status, setStatus] = useState('idle'); // idle, submitting, success, error
@@ -63,7 +62,6 @@ const ContactSection = () => {
           Edad: '',
           Residencia: '',
           Motivo: '',
-          Horarios: '',
           Compromiso: false,
         });
       } else {
@@ -84,8 +82,7 @@ const ContactSection = () => {
           <Col md={6}>
             <h2 className="section-title mb-3">¿Listo para trabajar con Urko?</h2>
             <p className="section-subtitle">
-              Completá el formulario o escribime directo por WhatsApp con tu nombre, edad, ciudad, motivo y horarios
-              disponibles para coordinar la primera llamada.
+              Completá el formulario o escribime directo por WhatsApp para coordinar la primera llamada.
             </p>
             <div className="d-flex gap-3 flex-wrap mt-4">
               <a
@@ -201,18 +198,6 @@ const ContactSection = () => {
                   value={formData.Motivo}
                   onChange={handleChange}
                   required
-                  disabled={status === 'submitting'}
-                />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="horarios">
-                <Form.Label>Horarios disponibles *</Form.Label>
-                <Form.Control
-                  type="text"
-                  name="Horarios"
-                  value={formData.Horarios}
-                  onChange={handleChange}
-                  required
-                  placeholder="Lunes a viernes 18-21 hs"
                   disabled={status === 'submitting'}
                 />
               </Form.Group>

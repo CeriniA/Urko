@@ -4,28 +4,21 @@ import Button from 'react-bootstrap/Button';
 const Hero = () => (
   <section className="hero" id="top">
     <Container className="d-flex flex-column align-items-start justify-content-center hero__content">
-      <span className="hero__eyebrow">Buen día, Varón.</span>
-      <h1 className="hero__title">La Senda del Varón Presente</h1>
+      <span className="hero__eyebrow">Bienvenido.</span>
+      <h1 className="hero__title">Escuela de tantra para varones.</h1>
       <p className="hero__subtitle">
-        Transformá tu energía sexual en presencia, poder vital y resultados reales. Escuela Urko para hombres
-        comprometidos con su despertar.
+        Un camino hacia el paraíso terrenal
+      </p>
+      <p className="hero__description">
+        Transformá tu vida desde la sexualidad tántrica taoísta en el mundo real.
       </p>
       <div className="d-flex flex-column flex-md-row gap-3">
         <Button
           size="lg"
           variant="primary"
-          href="https://drive.google.com/drive/folders/1-z_BmV_TJ2WhzjCsQVxhD-DZFvRrbeEh?usp=drive_link"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#recursos"
         >
-          Entrenamiento gratuito
-        </Button>
-        <Button
-          size="lg"
-          variant="outline-light"
-          href="#ofertas"
-        >
-          Ingresar a la Escuela Urko
+          Activar mi fuego
         </Button>
       </div>
     </Container>

@@ -27,14 +27,36 @@ body {
   background: var(--bg-dark);
 }
 
+/* Aparición suave al hacer scroll */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-section--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeUpHero {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero {
   position: relative;
   min-height: 100vh;
   color: #fff;
   padding: 10rem 0 8rem;
-  background: linear-gradient(135deg, rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.85)),
-    url('https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=1600&q=80') center/cover
-      no-repeat;
+  background: var(--bg-dark);
+  overflow: hidden;
 }
 
 .hero::after {
@@ -44,10 +66,38 @@ body {
   backdrop-filter: blur(1px);
 }
 
+/* Capa de imagen del hero: por defecto (mobile) sin degradado, imagen completa */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../assets/images/WhatsApp Image 2025-11-26 at 6.57.33 PM.jpeg') center/cover no-repeat;
+  opacity: 0.98;
+}
+
+/* En desktop aplicamos degradado lateral solo sobre la imagen usando mask-image */
+@media (min-width: 768px) {
+  .hero::before {
+    background-size: cover;
+    background-position: center 12%;
+    -webkit-mask-image: linear-gradient(to right,
+      transparent 0%,
+      black 8%,
+      black 92%,
+      transparent 100%);
+    mask-image: linear-gradient(to right,
+      transparent 0%,
+      black 8%,
+      black 92%,
+      transparent 100%);
+  }
+}
+
 .hero__content {
   position: relative;
   z-index: 1;
   gap: 1.5rem;
+  animation: fadeUpHero 0.9s ease-out both;
 }
 
 .hero__eyebrow {
@@ -286,6 +336,7 @@ body {
 .navbar-brand,
 .nav-link {
   color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 600;
 }
 
 .nav-link:hover,
@@ -711,5 +762,188 @@ body {
 
   .cta-button {
     width: 100%;
+  }
+}
+
+/* ============================================
+   MODAL DE DETALLES DEL PROGRAMA
+   ============================================ */
+.program-detail-modal .modal-content {
+  background: var(--bg-section) !important;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.program-detail-modal .modal-header {
+  background: rgba(249, 170, 51, 0.05);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.program-detail-modal .modal-header .btn-close {
+  filter: invert(1);
+  opacity: 0.7;
+}
+
+.program-detail-modal .modal-header .btn-close:hover {
+  opacity: 1;
+}
+
+.program-detail-modal .modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.program-detail-modal .modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.program-detail-modal .modal-body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.program-detail-modal .modal-body::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+.program-detail-modal .modal-body::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-dark);
+}
+
+.program-detail-modal .program-description {
+  color: var(--text-secondary);
+}
+
+.program-detail-modal .modal-footer {
+  background: rgba(249, 170, 51, 0.03);
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* ============================================
+   QUÉ VAS A LOGRAR - ICONOS Y CARDS
+   ============================================ */
+.what-you-will-achieve {
+  background: var(--bg-section);
+}
+
+/* Lista simple de logros */
+.achievements-simple-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.achievement-simple-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.achievement-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  margin-top: 0.55rem;
+  background: var(--accent);
+  box-shadow: 0 0 6px rgba(249, 170, 51, 0.7);
+  flex-shrink: 0;
+}
+
+.achievement-simple-item:hover {
+  transform: translateX(4px);
+}
+
+.achievements-grid,
+.learnings-grid {
+  align-items: stretch;
+}
+
+.achievement-card,
+.learning-card {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0.5rem 0.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  box-shadow: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.achievement-icon-wrapper,
+.learning-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.learning-icon-svg {
+  width: 32px;
+  height: 32px;
+  color: var(--accent);
+  filter: drop-shadow(0 0 10px rgba(249, 170, 51, 0.6));
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.learning-card:hover {
+  transform: translateY(-2px);
+}
+
+.learning-card:hover .learning-icon-svg {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 14px rgba(249, 170, 51, 0.9));
+}
+
+.tantra-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  position: relative;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.4), transparent 60%),
+              radial-gradient(circle at 70% 70%, rgba(249, 170, 51, 0.7), rgba(242, 120, 12, 0.3));
+  box-shadow: 0 0 18px rgba(249, 170, 51, 0.35);
+  overflow: hidden;
+}
+
+.tantra-icon::before,
+.tantra-icon::after {
+  content: '';
+  position: absolute;
+  inset: 18%;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.tantra-icon::after {
+  inset: 32%;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.tantra-icon--achievement::before {
+  transform: rotate(45deg);
+}
+
+.tantra-icon--learning::before {
+  transform: rotate(-45deg);
+}
+
+/* Las variantes .tantra-icon--learning-* ya no se usan, las mantenemos por si se reutilizan en otro contexto */
+
+.achievement-text,
+.learning-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 767px) {
+  .achievement-card,
+  .learning-card {
+    padding: 0.5rem 0;
   }
 }

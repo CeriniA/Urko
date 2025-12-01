@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -23,22 +24,19 @@ const Header = () => {
     >
       <Container>
         <Navbar.Brand href="#top" className="fw-bold text-uppercase">
-          La Senda del Varón Presente
+          Urko Tántrico
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="main-nav" />
         <Navbar.Collapse id="main-nav" className="justify-content-end">
           <Nav className="align-items-lg-center">
-            <Nav.Link href="#recursos">Recursos gratuitos</Nav.Link>
-            <Nav.Link href="#ofertas">Programas</Nav.Link>
+            <Nav.Link href="#sobre-urko">Sobre Urko</Nav.Link>
+            <NavDropdown title="Recursos" id="recursos-dropdown" menuVariant="dark">
+              <NavDropdown.Item href="#recursos-gratuitos">Gratuitos</NavDropdown.Item>
+              <NavDropdown.Item href="#recursos-libros">Libros</NavDropdown.Item>
+              <NavDropdown.Item href="#programas">Programas</NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="#preguntas">Preguntas Frecuentes</Nav.Link>
             <Nav.Link href="#contacto">Contacto</Nav.Link>
-            <a
-              className="btn btn-sm btn-outline-light ms-lg-3 mt-3 mt-lg-0"
-              href="https://wa.me/549XXXXXXXXX"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Hablar por WhatsApp
-            </a>
           </Nav>
         </Navbar.Collapse>
       </Container>
