@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
-import { products } from '../data/products';
+import products from '../data/products';
 import ProgramDetail from './ProgramDetail';
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll';
 import libro1Img from '../assets/images/libro 1.png';
