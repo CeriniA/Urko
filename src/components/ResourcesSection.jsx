@@ -6,6 +6,8 @@ import Button from 'react-bootstrap/Button';
 import products from '../data/products';
 import ProgramDetail from './ProgramDetail';
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll';
+import libro1Img from '../assets/images/libro 1.png';
+import libro2Img from '../assets/images/Libro 2.png';
 
 const PAYPAL_CLIENT_ID = import.meta.env.VITE_PAYPAL_CLIENT_ID;
 
@@ -157,8 +159,14 @@ const ResourcesSection = () => {
           <Row className="g-4 justify-content-center">
             {books.map((book) => (
               <Col key={book.id} md={6} lg={4}>
-                <div className="free-resource-card h-100 d-flex flex-column">
+                <div className="free-resource-card free-resource-card--book h-100 d-flex flex-column">
                   <div className="free-resource-header">
+                    {book.id === 'book-entrenamiento-urko' && (
+                      <img src={libro1Img} alt={book.title} className="book-cover-img " />
+                    )}
+                    {book.id === 'book-si-yo-pude' && (
+                      <img src={libro2Img} alt={book.title} className="book-cover-img" />
+                    )}
                     <h4 className="free-resource-title">{book.title}</h4>
                     <p className="text-center mt-2 mb-0"><strong className="fs-4">${book.price} {book.currency}</strong></p>
                   </div>
@@ -192,39 +200,6 @@ const ResourcesSection = () => {
               </Col>
             ))}
           </Row>
-            
-          {/* Texto adicional sobre maestros */}
-          <div className="mt-5 mx-auto" style={{ maxWidth: '900px' }}>
-            <p className="text-center fst-italic mb-4">"El que no tiene maestro, pierde"</p>
-            <p className="mb-3">
-              El camino del conocimiento se pasa de maestro alumno desde hace cientos o miles de años. Los secretos se develan 
-              al alumno, este toma el conocimiento de su maestro, lo entrena, lo practica, Lo interioriza y lo traduce a sabiduría 
-              cuando empieza a vivir lo aprendido.
-            </p>
-            <p className="mb-3">
-              Ese conocimiento se solidifica y ese alumno pasa a ser un discípulo que conjuga ese saber con la experiencia propia, 
-              honrar el linaje y le suma valores para expandir la doctrina con tintes personales.
-            </p>
-            <p className="mb-3">
-              Los tiempos cambian y adaptar el lenguaje es fundamental para no morir. Lo único permanente, es el cambio. Lo vemos 
-              en la simplicidad de la naturaleza, la raíz es lo que sostiene el árbol en pie, mientras más profunda, esa raíz, 
-              más frondosa será la copa que alberga a innumerables brotes.
-            </p>
-            <p className="mb-3">
-              Romper creencias limitantes y trascender dolores es Crecer y Crecer es estar vivo, cuando entendemos este concepto 
-              todo en la vida progresa, avanzas.
-            </p>
-            <p className="mb-3">
-              La energia sexual es energía de vida, si se comprende y se vive en plenitud y consciencia todo se alinea para bien.
-            </p>
-            <p className="mb-3">
-              Tal vez leíste "Si yo pude vos podes", ese escrito es el punta pies de este entrenamiento.
-            </p>
-            <p>
-              Espero ser tu maestro en este camino sin fin de conocer y conocernos. Apropiarte de este método y experimentarlo 
-              es la senda para gobernar tu poder sexual. Si así lo haces entendiste todo lo necesario para vivir una vida plena y abundante.
-            </p>
-          </div>
         </div>
 
         {/* PROGRAMAS */}
