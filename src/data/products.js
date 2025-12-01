@@ -31,7 +31,7 @@ const products = [
     title: 'Si yo pude, vos podes',
     price: 11,
     currency: 'USD',
-    description: 'Relato y guía para recordar que si yo pude, vos también podes. Lectura para inspirar tu propio camino de transformación.',
+    description: 'Guia testimonial de cómo transformar tu vida desde la sexualidad tántrica taoista en el mundo real.',
     mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=28966409-dcb07c33-8660-47bb-b539-ce5e5072bbb4',
     paypalScriptId: 'paypal-book-si-yo-pude',
     category: 'books',
