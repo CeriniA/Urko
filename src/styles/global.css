@@ -160,6 +160,82 @@ body {
   font-weight: 400;
 }
 
+/* Navbar estilos personalizados */
+.urko-navbar {
+  transition: background-color 0.35s ease, backdrop-filter 0.35s ease, box-shadow 0.35s ease;
+  background-color: transparent;
+}
+
+.urko-navbar--scrolled {
+  background-color: rgba(5, 5, 5, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
+}
+
+.navbar-brand,
+.nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 600;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: #ffffff !important;
+}
+
+/* Contact socials - lista simple y limpia */
+.contact-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  padding: 0.25rem 0;
+}
+
+.contact-social-link:hover {
+  color: var(--accent);
+}
+
+.contact-social-logo {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-social-logo i {
+  font-size: 18px;
+}
+
+.contact-social-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Botones primarios globales (usar amarillito de la marca) */
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: #1a1a1a;
+}
+
 /* Offers Section */
 .offers-section {
   padding: 5rem 0;
@@ -342,44 +418,126 @@ body {
   justify-content: center;
 }
 
-.footer {
-  background: rgba(5, 5, 5, 0.95);
+/* CTA Section */
+.cta-section {
+  padding: 5rem 0;
+  background: var(--bg-section);
 }
 
-.urko-navbar {
-  transition: background-color 0.35s ease, backdrop-filter 0.35s ease, box-shadow 0.35s ease;
-  background-color: transparent;
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.urko-navbar--scrolled {
-  background-color: rgba(5, 5, 5, 0.85);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
+.cta-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
-.navbar-brand,
-.nav-link {
-  color: rgba(255, 255, 255, 0.85) !important;
+.cta-text {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.cta-text strong {
+  color: var(--text-primary);
   font-weight: 600;
 }
 
-.nav-link:hover,
-.navbar-brand:hover {
-  color: #ffffff !important;
+.cta-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
 }
 
-.btn-primary {
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.cta-button--primary {
   background: var(--accent);
-  border-color: var(--accent);
-  color: #1a1a1a;
+  color: #000;
+  border: 2px solid var(--accent);
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active {
+.cta-button--primary:hover {
   background: var(--accent-dark);
   border-color: var(--accent-dark);
-  color: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+.cta-button--secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 2px solid var(--border-subtle);
+}
+
+.cta-button--secondary:hover {
+  border-color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.payment-methods {
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.payment-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.payment-list {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* FAQ Section */
+.faq-section .accordion-item {
+  border: none;
+  margin-bottom: 0.75rem;
+}
+
+.faq-section .accordion-button {
+  background-color: #2b2b2b;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.faq-section .accordion-button:not(.collapsed) {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.faq-section .accordion-button:focus {
+  box-shadow: none;
+  border-color: var(--accent);
+}
+
+.faq-section .accordion-body {
+  background-color: #151515;
+  color: var(--text-secondary);
 }
 
 /* Botones específicos de Mercado Pago (azul similar a PayPal) */
@@ -396,6 +554,21 @@ body {
   background: #005c99;
   border-color: #005c99;
   color: #ffffff;
+}
+
+/* Payment buttons styling */
+.payment-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.payment-buttons .btn {
+  font-weight: 600;
+}
+
+.paypal-button-container {
+  width: 100%;
 }
 
 /* Benefits Section - Yin Yang Design */
@@ -558,132 +731,33 @@ body {
   color: var(--accent);
 }
 
-/* CTA Section */
-.cta-section {
-  padding: 5rem 0;
-  background: var(--bg-section);
-}
-
-.cta-content {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.cta-title {
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
-
-.cta-text {
-  font-size: 1.25rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: 2.5rem;
-}
-
-.cta-text strong {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-
-.cta-actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 4rem;
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-}
-
-.cta-button--primary {
-  background: var(--accent);
-  color: #000;
-  border: 2px solid var(--accent);
-}
-
-.cta-button--primary:hover {
-  background: var(--accent-dark);
-  border-color: var(--accent-dark);
-  transform: translateY(-2px);
-}
-
-.cta-button--secondary {
-  background: transparent;
-  color: var(--text-primary);
-  border: 2px solid var(--border-subtle);
-}
-
-.cta-button--secondary:hover {
-  border-color: var(--text-primary);
-  transform: translateY(-2px);
-}
-
-.payment-methods {
-  padding-top: 2.5rem;
-  border-top: 1px solid var(--border-subtle);
-}
-
-.payment-title {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.75rem;
-}
-
-.payment-list {
-  font-size: 0.9375rem;
-  color: var(--text-secondary);
-  margin: 0;
-}
-
-/* FAQ Section */
-.faq-section .accordion-item {
-  border: none;
-  margin-bottom: 0.75rem;
-}
-
-.faq-section .accordion-button {
-  background-color: #2b2b2b;
-  color: #ffffff;
-  font-weight: 600;
-}
-
-.faq-section .accordion-button:not(.collapsed) {
-  background-color: #3a3a3a;
-  color: #ffffff;
-  box-shadow: none;
-}
-
-.faq-section .accordion-button:focus {
-  box-shadow: none;
-  border-color: var(--accent);
-}
-
-.faq-section .accordion-body {
-  background-color: #151515;
-  color: var(--text-secondary);
-}
-
 /* Free Resources Section */
 .free-resources-section {
   padding: 5rem 0;
   background: var(--bg-dark);
+}
+
+/* Contact Section */
+.contact-section {
+  background: radial-gradient(circle at top left, rgba(249, 170, 51, 0.15), transparent 50%),
+    radial-gradient(circle at bottom right, rgba(249, 170, 51, 0.15), transparent 50%),
+    var(--bg-dark);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(10px);
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.footer {
+  background: rgba(5, 5, 5, 0.95);
 }
 
 /* Backgrounds para secciones informativas principales */

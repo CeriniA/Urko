@@ -91,7 +91,9 @@ const ContactSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="contact-social-logo">IG</span>
+                <span className="contact-social-logo">
+                  <i className="bi bi-instagram"></i>
+                </span>
                 <span className="contact-social-text">Instagram · @urkotantric</span>
               </a>
               <a
@@ -100,7 +102,9 @@ const ContactSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="contact-social-logo">TT</span>
+                <span className="contact-social-logo">
+                  <i className="bi bi-tiktok"></i>
+                </span>
                 <span className="contact-social-text">TikTok · @urkotantric</span>
               </a>
               <a
@@ -109,7 +113,9 @@ const ContactSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="contact-social-logo">YT</span>
+                <span className="contact-social-logo">
+                  <i className="bi bi-youtube"></i>
+                </span>
                 <span className="contact-social-text">YouTube · @lucasflesia</span>
               </a>
               <a
@@ -118,14 +124,18 @@ const ContactSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="contact-social-logo">WA</span>
+                <span className="contact-social-logo">
+                  <i className="bi bi-whatsapp"></i>
+                </span>
                 <span className="contact-social-text">WhatsApp · +54 9 XXXXXXXXX</span>
               </a>
               <a
                 className="contact-social-link"
                 href="mailto:info@urkotantrico.com"
               >
-                <span className="contact-social-logo">@</span>
+                <span className="contact-social-logo">
+                  <i className="bi bi-envelope-fill"></i>
+                </span>
                 <span className="contact-social-text">Email · info@urkotantrico.com</span>
               </a>
             </div>

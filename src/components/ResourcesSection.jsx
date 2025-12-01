@@ -3,7 +3,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import products from '../data/products';
+import Alert from 'react-bootstrap/Alert';
+import { products } from '../data/products';
 import ProgramDetail from './ProgramDetail';
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll';
 import libro1Img from '../assets/images/libro 1.png';
@@ -28,12 +29,14 @@ const loadPayPalScript = () => {
 const ResourcesSection = () => {
   const [selectedProgram, setSelectedProgram] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [newsletterStatus, setNewsletterStatus] = useState('idle');
+  const [formData, setFormData] = useState({ nombre: '', email: '' });
   
   const freeResources = products.filter(p => p.category === 'free');
   const books = products.filter(p => p.category === 'books');
   const programs = products.filter(p => p.category === 'programs');
 
-  const sectionRef = useRevealOnScroll();
+  const { ref: sectionRef, isVisible } = useRevealOnScroll();
 
   // Cargar botones de PayPal para libros y programas (siempre visibles)
   useEffect(() => {
@@ -101,6 +104,50 @@ const ResourcesSection = () => {
     setSelectedProgram(null);
   };
 
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    setNewsletterStatus('submitting');
+
+    try {
+      // Crear FormData para envío silencioso a Google Forms
+      const formDataToSend = new FormData();
+      formDataToSend.append('entry.262434490', formData.nombre);
+      formDataToSend.append('entry.428478300', formData.email);
+
+      // Enviar a Google Forms sin redirección
+      await fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSf79CBylCf0MvPAd64K8lcm_0DIJEBamXyxpPoQyCqH40wpKA/formResponse', {
+        method: 'POST',
+        body: formDataToSend,
+        mode: 'no-cors' // Importante para evitar errores CORS
+      });
+
+      // Mostrar mensaje de éxito
+      setNewsletterStatus('success');
+      setFormData({ nombre: '', email: '' });
+
+      // Ocultar mensaje después de 5 segundos
+      setTimeout(() => {
+        setNewsletterStatus('idle');
+      }, 5000);
+
+    } catch (error) {
+      setNewsletterStatus('error');
+      
+      // Ocultar mensaje de error después de 5 segundos
+      setTimeout(() => {
+        setNewsletterStatus('idle');
+      }, 5000);
+    }
+  };
+
   return (
     <section ref={sectionRef} className="resources-section py-5" id="recursos">
       <Container>
@@ -142,27 +189,50 @@ const ResourcesSection = () => {
             <div className="newsletter-box mx-auto p-4" style={{ maxWidth: '600px', background: 'rgba(255,255,255,0.05)', borderRadius: '10px' }}>
               <h4 className="mb-3">Recibí nuevo contenido gratuito</h4>
               <p className="mb-3">Dejanos tu contacto</p>
+              
+              {newsletterStatus === 'success' && (
+                <Alert variant="success" className="mb-3">
+                  <strong>¡Gracias!</strong> Te has suscrito correctamente. Pronto recibirás contenido exclusivo.
+                </Alert>
+              )}
+
+              {newsletterStatus === 'error' && (
+                <Alert variant="danger" className="mb-3">
+                  <strong>Error:</strong> Hubo un problema al enviar el formulario. Intentá de nuevo.
+                </Alert>
+              )}
+
               <form
                 className="d-flex flex-column flex-md-row gap-3"
-                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf79CBylCf0MvPAd64K8lcm_0DIJEBamXyxpPoQyCqH40wpKA/formResponse"
-                method="POST"
-                target="_blank"
+                onSubmit={handleNewsletterSubmit}
               >
                 <input
                   type="text"
-                  name="entry.262434490"
+                  name="nombre"
+                  value={formData.nombre}
+                  onChange={handleInputChange}
                   className="form-control"
                   placeholder="Nombre"
                   required
+                  disabled={newsletterStatus === 'submitting'}
                 />
                 <input
                   type="email"
-                  name="entry.428478300"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   className="form-control"
                   placeholder="Email"
                   required
+                  disabled={newsletterStatus === 'submitting'}
                 />
-                <Button variant="primary" type="submit">Enviar</Button>
+                <Button 
+                  variant="primary" 
+                  type="submit"
+                  disabled={newsletterStatus === 'submitting'}
+                >
+                  {newsletterStatus === 'submitting' ? 'Enviando...' : 'Enviar'}
+                </Button>
               </form>
             </div>
           </div>
