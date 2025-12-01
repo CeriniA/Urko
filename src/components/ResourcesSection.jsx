@@ -142,9 +142,26 @@ const ResourcesSection = () => {
             <div className="newsletter-box mx-auto p-4" style={{ maxWidth: '600px', background: 'rgba(255,255,255,0.05)', borderRadius: '10px' }}>
               <h4 className="mb-3">Recibí nuevo contenido gratuito</h4>
               <p className="mb-3">Dejanos tu contacto</p>
-              <form className="d-flex flex-column flex-md-row gap-3">
-                <input type="text" className="form-control" placeholder="Nombre" />
-                <input type="email" className="form-control" placeholder="Email" />
+              <form
+                className="d-flex flex-column flex-md-row gap-3"
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf79CBylCf0MvPAd64K8lcm_0DIJEBamXyxpPoQyCqH40wpKA/formResponse"
+                method="POST"
+                target="_blank"
+              >
+                <input
+                  type="text"
+                  name="entry.262434490"
+                  className="form-control"
+                  placeholder="Nombre"
+                  required
+                />
+                <input
+                  type="email"
+                  name="entry.428478300"
+                  className="form-control"
+                  placeholder="Email"
+                  required
+                />
                 <Button variant="primary" type="submit">Enviar</Button>
               </form>
             </div>

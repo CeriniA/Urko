@@ -84,38 +84,49 @@ const ContactSection = () => {
             <p className="section-subtitle">
               Completá el formulario o escribime directo por WhatsApp para coordinar la primera llamada.
             </p>
-            <div className="d-flex gap-3 flex-wrap mt-4">
+            <div className="contact-socials mt-4">
               <a
-                className="btn btn-outline-light btn-lg"
-                href="https://wa.me/549XXXXXXXXX"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                WhatsApp directo
-              </a>
-              <a
-                className="btn btn-outline-light"
+                className="contact-social-link"
                 href="https://www.instagram.com/urkotantric"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Instagram
+                <span className="contact-social-logo">IG</span>
+                <span className="contact-social-text">Instagram · @urkotantric</span>
               </a>
               <a
-                className="btn btn-outline-light"
+                className="contact-social-link"
                 href="https://www.tiktok.com/@urkotantric"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                TikTok
+                <span className="contact-social-logo">TT</span>
+                <span className="contact-social-text">TikTok · @urkotantric</span>
               </a>
               <a
-                className="btn btn-outline-light"
+                className="contact-social-link"
                 href="https://youtube.com/@lucasflesia"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                YouTube
+                <span className="contact-social-logo">YT</span>
+                <span className="contact-social-text">YouTube · @lucasflesia</span>
+              </a>
+              <a
+                className="contact-social-link"
+                href="https://wa.me/549XXXXXXXXX"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="contact-social-logo">WA</span>
+                <span className="contact-social-text">WhatsApp · +54 9 XXXXXXXXX</span>
+              </a>
+              <a
+                className="contact-social-link"
+                href="mailto:info@urkotantrico.com"
+              >
+                <span className="contact-social-logo">@</span>
+                <span className="contact-social-text">Email · info@urkotantrico.com</span>
               </a>
             </div>
           </Col>
