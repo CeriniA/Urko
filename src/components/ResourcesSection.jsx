@@ -102,7 +102,7 @@ const ResourcesSection = () => {
   return (
     <section ref={sectionRef} className="resources-section py-5" id="recursos">
       <Container>
-        <h2 className="text-center mb-4">Recursos</h2>
+        <h2 className="section-title text-center mb-4">Recursos</h2>
         
         {/* RECURSOS GRATUITOS */}
         <div className="mb-5" id="recursos-gratuitos">

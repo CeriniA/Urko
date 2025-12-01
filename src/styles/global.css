@@ -71,15 +71,20 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('../assets/images/WhatsApp Image 2025-11-26 at 6.57.33 PM.jpeg') center/cover no-repeat;
-  opacity: 0.98;
+  /* MOBILE: imagen vertical del hombre con símbolo + velo oscuro para legibilidad */
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85)),
+    url('../assets/images/WhatsApp Image 2025-11-26 at 6.57.33 PM.jpeg') center/cover no-repeat;
+  opacity: 1;
 }
 
 /* En desktop aplicamos degradado lateral solo sobre la imagen usando mask-image */
 @media (min-width: 768px) {
   .hero::before {
-    background-size: cover;
-    background-position: center 12%;
+    /* DESKTOP: imagen más horizontal (yin-yang fuego/agua) con degradado oscuro */
+    background:
+      radial-gradient(circle at center, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.85) 85%),
+      url('../assets/images/WhatsApp Image 2025-11-26 at 6.58.23 PM (1).jpeg') center/cover no-repeat;
     -webkit-mask-image: linear-gradient(to right,
       transparent 0%,
       black 8%,
@@ -116,16 +121,35 @@ body {
 
 .hero__subtitle {
   max-width: 42rem;
-  font-size: 1.25rem;
+  font-size: clamp(1.3rem, 2.6vw, 1.6rem);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+}
+.hero__description {
+  max-width: 42rem;
+  font-size: clamp(1.1rem, 2.1vw, 1.35rem);
   color: rgba(255, 255, 255, 0.85);
   font-weight: 400;
 }
 
 .section-title {
   font-weight: 700;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.site-logo-img {
+  height: 72px;
+  width: auto;
+  display: block;
+}
+
+.site-logo-img-footer {
+  height: 80px;
+  width: auto;
+  display: block;
 }
 
 .section-subtitle {
@@ -612,6 +636,15 @@ body {
 /* Free Resources Section */
 .free-resources-section {
   padding: 5rem 0;
+  background: var(--bg-dark);
+}
+
+/* Backgrounds para secciones informativas principales */
+.what-is-tantra {
+  background: var(--bg-section);
+}
+
+.about-urko {
   background: var(--bg-dark);
 }
 

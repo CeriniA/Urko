@@ -4,7 +4,7 @@ const CTASection = () => (
   <section className="cta-section">
     <Container>
       <div className="cta-content">
-        <h2 className="cta-title">Si sentís el fuego, es hora de actuar</h2>
+        <h2 className="section-title">Si sentís el fuego, es hora de actuar</h2>
         <p className="cta-text">
           Cambiá tu vida de una vez y para siempre.
           <br />

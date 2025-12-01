@@ -4,8 +4,8 @@ import Button from 'react-bootstrap/Button';
 const Hero = () => (
   <section className="hero" id="top">
     <Container className="d-flex flex-column align-items-start justify-content-center hero__content">
-      <span className="hero__eyebrow">Bienvenido.</span>
-      <h1 className="hero__title">Escuela de tantra para varones.</h1>
+      <span className="hero__eyebrow">¡Bienvenido!</span>
+      <h1 className="hero__title">Escuela de tantra para varones</h1>
       <p className="hero__subtitle">
         Un camino hacia el paraíso terrenal
       </p>

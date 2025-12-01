@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import logo from '../assets/images/logo.png';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -23,8 +24,8 @@ const Header = () => {
       className={`urko-navbar ${scrolled ? 'urko-navbar--scrolled' : ''}`}
     >
       <Container>
-        <Navbar.Brand href="#top" className="fw-bold text-uppercase">
-          Urko Tántrico
+        <Navbar.Brand href="#top" className="d-flex align-items-center">
+          <img src={logo} alt="Urko Tántrico" className="site-logo-img" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="main-nav" />
         <Navbar.Collapse id="main-nav" className="justify-content-end">

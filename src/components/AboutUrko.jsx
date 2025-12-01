@@ -7,7 +7,7 @@ const AboutUrko = () => {
   return (
     <section ref={sectionRef} className="about-urko py-5" id="sobre-urko">
       <Container>
-        <h2 className="text-center mb-5">Sobre mí</h2>
+        <h2 className="section-title text-center mb-5">Sobre mí</h2>
         <div className="about-content mx-auto" style={{ maxWidth: '900px' }}>
           <p className="lead text-center mb-4">
             <strong>Soy Lucas Flesia.</strong>

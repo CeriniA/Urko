@@ -7,7 +7,7 @@ const WhatIsTantra = () => {
   return (
     <section ref={sectionRef} className="what-is-tantra py-5" id="que-es-tantra">
       <Container>
-        <h2 className="text-center mb-4">¿Qué es el Tantra?</h2>
+        <h2 className="section-title text-center mb-4">¿Qué es el Tantra?</h2>
         <div className="tantra-description text-center mx-auto" style={{ maxWidth: '800px' }}>
           <p className="lead">
             Tantra es la armonía entre el hombre y la mujer durante el maithuna. Pero también es la armonía entre 
