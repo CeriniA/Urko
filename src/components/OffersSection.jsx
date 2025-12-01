@@ -34,11 +34,11 @@ const OffersSection = () => {
 
         window.paypal.Buttons({
           style: { 
-            layout: 'horizontal',
-            color: 'gold',
+            layout: 'vertical',
+            color: 'blue',
             shape: 'rect',
             label: 'paypal',
-            height: 45,
+            height: 40,
             tagline: false
           },
           createOrder: (_, actions) =>
@@ -115,12 +115,12 @@ const OffersSection = () => {
               {/* Botones de pago */}
               <div className="offer-actions">
                 <a
-                  className="offer-button offer-button--primary"
+                  className="offer-button offer-button--primary btn-mp"
                   href={product.mpLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  💳 Pagar con Mercado Pago
+                  💳 Comprar con Mercado Pago
                 </a>
                 {product.paypalScriptId && PAYPAL_CLIENT_ID && (
                   <>

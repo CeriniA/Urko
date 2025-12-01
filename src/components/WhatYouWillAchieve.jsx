@@ -7,30 +7,30 @@ import { useRevealOnScroll } from '../hooks/useRevealOnScroll';
 const WhatYouWillAchieve = () => {
   const achievements = [
     'Erradicar la eyaculación precoz o la disfunción eréctil de raíz, para siempre.',
-    'Recuperar tu identidad como hombre',
+    'Recuperar tu identidad como hombre.',
     'Superar el miedo en el encuentro sexoafectivo.',
     'Complacer plenamente a tu mujer.',
-    'Atraer a una mujer de alto valor',
+    'Atraer a una mujer de alto valor.',
     'Sanar dolor por ruptura.',
     'Liberarte de traumas.',
-    'Dejar hábitos autodestructivos',
-    'Crear al masculino que deseás ser',
-    'Vivir tu sexualidad de forma plena',
+    'Dejar hábitos autodestructivos.',
+    'Crear al masculino que deseás ser.',
+    'Vivir tu sexualidad de forma plena.',
     'Ver a tu mujer llegar al clímax y poder acompañarla en sus orgasmos.',
     'Comprender que la conciencia sexual, es conciencia social.',
     'Mejoras en todos los pilares de tu vida',
     'Salud física y mental, relaciones, espiritualidad, propósito, finanzas.',
-    'Más presencia, menos eyaculaciones',
-    'Más placer, más conexión'
+    'Más presencia, menos eyaculaciones.',
+    'Más placer, más conexión.'
   ];
 
   const learnings = [
     'Retención seminal consciente',
     'Transmutación real de energía sexual',
     'Control y gobierno de tu poder sexual',
-    'Templanza emocional.',
+    'Templanza emocional',
     'Reequilibrio energético',
-    'Técnicas milenarias aplicadas en nuestros tiempos para construir el ser que deseas ser.'
+    'Técnicas milenarias para construir el ser que deseas ser'
   ];
 
   const learningIcons = [

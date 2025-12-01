@@ -51,11 +51,11 @@ const ResourcesSection = () => {
 
         window.paypal.Buttons({
           style: { 
-            layout: 'horizontal',
-            color: 'gold',
+            layout: 'vertical',
+            color: 'blue',
             shape: 'rect',
             label: 'paypal',
-            height: 45,
+            height: 40,
             tagline: false
           },
           createOrder: (_, actions) =>
@@ -175,7 +175,7 @@ const ResourcesSection = () => {
                         href={book.mpLink} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="btn btn-primary w-100 mb-2"
+                        className="btn btn-mp w-100 mb-2"
                       >
                         Comprar con Mercado Pago
                       </a>
@@ -224,9 +224,9 @@ const ResourcesSection = () => {
                         href={program.mpLink} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="btn btn-primary w-100 mb-2"
+                        className="btn btn-mp w-100 mb-2"
                       >
-                        Pagar con Mercado Pago
+                        Comprar con Mercado Pago
                       </a>
                       <div id={program.paypalScriptId} className="paypal-button-container"></div>
                     </div>

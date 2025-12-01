@@ -374,9 +374,28 @@ body {
   color: #1a1a1a;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
   background: var(--accent-dark);
   border-color: var(--accent-dark);
+  color: #1a1a1a;
+}
+
+/* Botones específicos de Mercado Pago (azul similar a PayPal) */
+.btn-mp {
+  background: #0070ba;
+  border-color: #0070ba;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.btn-mp:hover,
+.btn-mp:focus,
+.btn-mp:active {
+  background: #005c99;
+  border-color: #005c99;
+  color: #ffffff;
 }
 
 /* Benefits Section - Yin Yang Design */
@@ -633,6 +652,34 @@ body {
   margin: 0;
 }
 
+/* FAQ Section */
+.faq-section .accordion-item {
+  border: none;
+  margin-bottom: 0.75rem;
+}
+
+.faq-section .accordion-button {
+  background-color: #2b2b2b;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.faq-section .accordion-button:not(.collapsed) {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.faq-section .accordion-button:focus {
+  box-shadow: none;
+  border-color: var(--accent);
+}
+
+.faq-section .accordion-body {
+  background-color: #151515;
+  color: var(--text-secondary);
+}
+
 /* Free Resources Section */
 .free-resources-section {
   padding: 5rem 0;
@@ -824,6 +871,15 @@ body {
 
   .cta-button {
     width: 100%;
+  }
+
+  .paypal-button-container {
+    width: 100%;
+  }
+
+  .paypal-button-container iframe {
+    width: 100% !important;
+    border-radius: 0.375rem;
   }
 }
 
