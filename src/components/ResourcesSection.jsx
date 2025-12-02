@@ -30,7 +30,11 @@ const ResourcesSection = () => {
   const [selectedProgram, setSelectedProgram] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [newsletterStatus, setNewsletterStatus] = useState('idle');
-  const [formData, setFormData] = useState({ nombre: '', email: '' });
+  const [formData, setFormData] = useState({
+    nombre: '',
+    email: '',
+    website: '' // Honeypot field - should remain empty
+  });
   
   const freeResources = products.filter(p => p.category === 'free');
   const books = products.filter(p => p.category === 'books');
@@ -116,14 +120,31 @@ const ResourcesSection = () => {
     e.preventDefault();
     setNewsletterStatus('submitting');
 
+    // Anti-spam: Si el honeypot tiene contenido, es probable que sea un bot
+    if (formData.website) {
+      console.log('Bot detected - honeypot filled');
+      setNewsletterStatus('error');
+      setTimeout(() => setNewsletterStatus('idle'), 5000);
+      return;
+    }
+
     try {
+      // Usar variables de entorno para mayor seguridad
+      const formUrl = import.meta.env.VITE_NEWSLETTER_FORM_URL;
+      const nameField = import.meta.env.VITE_NEWSLETTER_NAME_FIELD;
+      const emailField = import.meta.env.VITE_NEWSLETTER_EMAIL_FIELD;
+
+      if (!formUrl || !nameField || !emailField) {
+        throw new Error('Newsletter form configuration missing');
+      }
+
       // Crear FormData para envío silencioso a Google Forms
       const formDataToSend = new FormData();
-      formDataToSend.append('entry.262434490', formData.nombre);
-      formDataToSend.append('entry.428478300', formData.email);
+      formDataToSend.append(nameField, formData.nombre);
+      formDataToSend.append(emailField, formData.email);
 
       // Enviar a Google Forms sin redirección
-      await fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSf79CBylCf0MvPAd64K8lcm_0DIJEBamXyxpPoQyCqH40wpKA/formResponse', {
+      await fetch(formUrl, {
         method: 'POST',
         body: formDataToSend,
         mode: 'no-cors' // Importante para evitar errores CORS
@@ -131,7 +152,7 @@ const ResourcesSection = () => {
 
       // Mostrar mensaje de éxito
       setNewsletterStatus('success');
-      setFormData({ nombre: '', email: '' });
+      setFormData({ nombre: '', email: '', website: '' });
 
       // Ocultar mensaje después de 5 segundos
       setTimeout(() => {
@@ -139,6 +160,7 @@ const ResourcesSection = () => {
       }, 5000);
 
     } catch (error) {
+      console.error('Newsletter submission error:', error);
       setNewsletterStatus('error');
       
       // Ocultar mensaje de error después de 5 segundos
@@ -206,6 +228,16 @@ const ResourcesSection = () => {
                 className="d-flex flex-column flex-md-row gap-3"
                 onSubmit={handleNewsletterSubmit}
               >
+                {/* Honeypot field - invisible to users, but bots might fill it */}
+                <input
+                  type="text"
+                  name="website"
+                  value={formData.website}
+                  onChange={handleInputChange}
+                  style={{ display: 'none' }}
+                  tabIndex="-1"
+                  autoComplete="off"
+                />
                 <input
                   type="text"
                   name="nombre"

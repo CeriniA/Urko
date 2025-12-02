@@ -12,6 +12,7 @@ const ContactSection = () => {
   const [formData, setFormData] = useState({
     Nombre: '',
     Email: '',
+    Telefono: '',
     Edad: '',
     Residencia: '',
     Motivo: '',
@@ -59,6 +60,7 @@ const ContactSection = () => {
         setFormData({
           Nombre: '',
           Email: '',
+          Telefono: '',
           Edad: '',
           Residencia: '',
           Motivo: '',
@@ -120,14 +122,14 @@ const ContactSection = () => {
               </a>
               <a
                 className="contact-social-link"
-                href="https://wa.me/549XXXXXXXXX"
+                href="https://wa.me/5493492210169"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="contact-social-logo">
                   <i className="bi bi-whatsapp"></i>
                 </span>
-                <span className="contact-social-text">WhatsApp · +54 9 XXXXXXXXX</span>
+                <span className="contact-social-text">WhatsApp · +54 9 03492 210169</span>
               </a>
               <a
                 className="contact-social-link"
@@ -143,8 +145,7 @@ const ContactSection = () => {
           <Col md={6}>
             {status === 'success' && (
               <Alert variant="success" onClose={() => setStatus('idle')} dismissible className="mb-3">
-                <strong>¡Solicitud enviada!</strong> Gracias por tu interés. Te contactaremos pronto para coordinar la
-                primera llamada.
+                <strong>¡Solicitud enviada!</strong> Gracias por tu interés. Te contactaremos pronto!. x
               </Alert>
             )}
 
@@ -176,6 +177,18 @@ const ContactSection = () => {
                   onChange={handleChange}
                   required
                   placeholder="tu@email.com"
+                  disabled={status === 'submitting'}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="telefono">
+                <Form.Label>Teléfono *</Form.Label>
+                <Form.Control
+                  type="tel"
+                  name="Telefono"
+                  value={formData.Telefono}
+                  onChange={handleChange}
+                  required
+                  placeholder="+54 9 11 1234 5678"
                   disabled={status === 'submitting'}
                 />
               </Form.Group>
