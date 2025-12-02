@@ -41,10 +41,11 @@ const products = [
     title: 'Entrenamiento URKO, El que no tiene maestro pierde',
     price: 11,
     currency: 'USD',
-    description: '"El que no tiene maestro, pierde"\n\nEl camino del conocimiento se pasa de maestro alumno desde hace cientos o miles de años. Los secretos se develan al alumno, este toma el conocimiento de su maestro, lo entrena, lo practica, lo interioriza y lo traduce a sabiduría cuando empieza a vivir lo aprendido.\n\nEse conocimiento se solidifica y ese alumno pasa a ser un discípulo que conjuga ese saber con la experiencia propia, honrar el linaje y le suma valores para expandir la doctrina con tintes personales.\n\nLos tiempos cambian y adaptar el lenguaje es fundamental para no morir. Lo único permanente es el cambio. Lo vemos en la simplicidad de la naturaleza: la raíz es lo que sostiene el árbol en pie; mientras más profunda esa raíz, más frondosa será la copa que alberga a innumerables brotes.\n\nRomper creencias limitantes y trascender dolores es crecer y crecer es estar vivo; cuando entendemos este concepto todo en la vida progresa, avanzás.\n\nLa energía sexual es energía de vida; si se comprende y se vive en plenitud y consciencia todo se alinea para bien.\n\nTal vez leíste "Si yo pude vos podes", ese escrito es el puntapié de este entrenamiento.\n\nEspero ser tu maestro en este camino sin fin de conocer y conocernos. Apropiarte de este método y experimentarlo es la senda para gobernar tu poder sexual. Si así lo hacés entendiste todo lo necesario para vivir una vida plena y abundante.',
+    description: '"El que no tiene maestro, pierde"\n\nEl camino del conocimiento se pasa de maestro alumno desde hace cientos o miles de años. Los secretos se develan al alumno, este toma el conocimiento de su maestro, lo entrena, lo practica, lo interioriza y lo traduce a sabiduría cuando empieza a vivir lo aprendido.\n\n PRÓXIMAMENTE\n\nEste libro estará disponible muy pronto.\n\nEspero ser tu maestro en este camino sin fin de conocer y conocernos. Apropiarte de este método y experimentarlo es la senda para gobernar tu poder sexual.',
     mpLink: '#',
     paypalScriptId: 'paypal-book-entrenamiento-urko',
     category: 'books',
+    comingSoon: true,
   },
   
   // PROGRAMAS
@@ -80,7 +81,7 @@ const products = [
   },
   {
     id: 'group',
-    title: 'La Senda del Varón en Tribu',
+    title: 'La Senda del Varón Presente. Tribu',
     price: 369,
     currency: 'USD',
     description: 'Trabajo terapéutico grupal de 3 meses de duración.\n\nIncluye:\n✅ Acceso al grupo privado de trabajo\n✅ 2 llamadas 1 a 1 de inicio\n✅ Seguimiento en equipo, con enfoque individual\n✅ Contacto directo y permanente vía WhatsApp\n✅ 1 Clase maestra quincenal de preguntas y respuestas - grupal -\n✅ Incluye el PROGRAMA la senda del varón presente\n\nInversión única, Cambia tu vida x solo $369 USD.\n\nGanancias de trabajar EN EQUIPO:\n✔️ Apertura\n✔️ Apoyo real\n✔️ Comprensión y contención\n✔️ Feedback constante\n✔️ Actualización permanente\n✔️ Contacto directo con Urko',

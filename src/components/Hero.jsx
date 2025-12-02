@@ -5,12 +5,12 @@ const Hero = () => (
   <section className="hero" id="top">
     <Container className="d-flex flex-column align-items-start justify-content-center hero__content">
       <span className="hero__eyebrow">¡Bienvenido!</span>
-      <h1 className="hero__title">Escuela de Tantra para Varones</h1>
+      <h1 className="hero__title">Escuela Urko - Sexualidad Sana, Masculinidad Consciente</h1>
       <p className="hero__subtitle">
-        Desarrollá tu sexualidad consciente y masculinidad sana
+        Vivir una vida sexual plena es vivir una vida plena
       </p>
       <p className="hero__description">
-        Transformá tu vida como hombre a través del tantra masculino. Coaching especializado para varones que buscan desarrollar su presencia, sexualidad consciente y crecimiento auténtico.
+        Transformá tu vida a través de tu sexualidad. Coaching especializado para varones que buscan desarrollarse en la vida y en la cama con presencia, vigor y vitalidad, eso es crecimiento auténtico.
       </p>
       <div className="d-flex flex-column flex-md-row gap-3">
         <Button

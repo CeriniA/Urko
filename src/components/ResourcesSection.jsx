@@ -153,9 +153,9 @@ const ResourcesSection = () => {
       <Container>
         {/* RECURSOS GRATUITOS */}
         <div className="mb-5" id="recursos-gratuitos">
-          <h2 className="section-title text-center mb-4">Recursos Gratuitos de Tantra para Varones</h2>
+          <h2 className="section-title text-center mb-4">Recursos Gratuitos método Urko. cura/control/conexión</h2>
           <p className="text-center lead mb-4">
-            Comenzá a desarrollar tu masculinidad consciente y sexualidad consciente con estos recursos gratuitos de tantra para hombres. Entrenamientos especializados para varones que buscan crecimiento auténtico:
+            Comenzá a desarrollar tu masculinidad y sexualidad consciente con estos recursos gratuitos de la escuela urko. Entrenamientos especializados para varones y guía para parejas que buscan crecimiento auténtico:
           </p>
             
           <Row className="g-4">
@@ -258,15 +258,24 @@ const ResourcesSection = () => {
                   <div className="free-resource-body flex-grow-1 d-flex flex-column">
                     {/* Botones de pago */}
                     <div className="payment-buttons mb-3">
-                      <a 
-                        href={book.mpLink} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="btn btn-mp w-100 mb-2"
-                      >
-                        Comprar con Mercado Pago
-                      </a>
-                      <div id={book.paypalScriptId} className="paypal-button-container"></div>
+                      {book.comingSoon ? (
+                        <div className="text-center">
+                          <p className="text-warning mb-2"><strong>PRÓXIMAMENTE</strong></p>
+                          <p className="text-muted small">Este libro estará disponible muy pronto</p>
+                        </div>
+                      ) : (
+                        <>
+                          <a 
+                            href={book.mpLink} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="btn btn-mp w-100 mb-2"
+                          >
+                            Comprar con Mercado Pago
+                          </a>
+                          <div id={book.paypalScriptId} className="paypal-button-container"></div>
+                        </>
+                      )}
                     </div>
                     
                     {/* Botón ver detalles siempre al final */}

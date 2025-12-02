@@ -3,6 +3,7 @@ import Hero from './components/Hero.jsx';
 import WhatIsTantra from './components/WhatIsTantra.jsx';
 import AboutUrko from './components/AboutUrko.jsx';
 import WhatYouWillAchieve from './components/WhatYouWillAchieve.jsx';
+import Testimonials from './components/Testimonials.jsx';
 import ResourcesSection from './components/ResourcesSection.jsx';
 import FAQ from './components/FAQ.jsx';
 import CTASection from './components/CTASection.jsx';
@@ -18,6 +19,7 @@ function App() {
         <WhatIsTantra />
         <AboutUrko />
         <WhatYouWillAchieve />
+        <Testimonials />
         <ResourcesSection />
         <FAQ />
         <CTASection />

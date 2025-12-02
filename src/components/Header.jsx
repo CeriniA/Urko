@@ -34,6 +34,7 @@ const Header = () => {
         <Navbar.Collapse id="main-nav" className="justify-content-end">
           <Nav className="align-items-lg-center">
             <Nav.Link href="#sobre-urko" onClick={() => setExpanded(false)}>Sobre Urko</Nav.Link>
+            <Nav.Link href="#testimonios" onClick={() => setExpanded(false)}>Testimonios</Nav.Link>
             <NavDropdown title="Recursos" id="recursos-dropdown" menuVariant="dark">
               <NavDropdown.Item href="#recursos-gratuitos" onClick={() => setExpanded(false)}>Recursos gratuitos</NavDropdown.Item>
               <NavDropdown.Item href="#recursos-libros" onClick={() => setExpanded(false)}>Libros</NavDropdown.Item>

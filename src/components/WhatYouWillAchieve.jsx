@@ -47,7 +47,7 @@ const WhatYouWillAchieve = () => {
   return (
     <section ref={sectionRef} className="what-you-will-achieve py-5" id="que-vas-a-lograr">
       <Container>
-        <h2 className="section-title text-center mb-5">Qué vas a lograr al iniciar este camino</h2>
+        <h2 className="section-title text-center mb-5">¿Qué vas a lograr al iniciar este camino?</h2>
         {/* Lista simple de logros con puntito discreto */}
         <Row className="mb-5">
           <Col lg={10} className="mx-auto">

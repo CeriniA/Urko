@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll';
-import sobreMiImg from '../assets/images/Sobre Mi.png';
+import sobreMiImg from '../assets/images/Sobre mi 2.png';
 
 const AboutUrko = () => {
   const sectionRef = useRevealOnScroll();
@@ -22,14 +22,16 @@ const AboutUrko = () => {
                 por mis maestros de medicina ancestral.
               </p>
               <p className="mb-4">
-                La doctrina tantrico taoista la aprendí luego de hacer un largo proceso de búsqueda interna, de atravesar 
-                mi noche oscura del alma.
+                La doctrina tántrico taoísta la aprendí luego de hacer un largo proceso de búsqueda interna, de atravesar 
+                mi noche oscura del alma. Fui un adolescente atascado en un proceso autodestructivo, fiestas, noche, sobrepeso, 
+                drogas, alcohol, Eyaculador Precoz, Bajo de vigor, que buscaba validación en mujeres, sin respetarme ni respetar 
+                a mi compañera. Un niño que no quería crecer por carencia y dolor. Un inconsciente negador de mi potencial masculino.
               </p>
               <p className="mb-4">
-                Cuando resignado a vivir una vida sexual mediocre aparece mi maestro Norberto Litvinoff
+                Cuando me estaba resignando a vivir una vida y una sexualidad mediocre aparece mi maestro Norberto Litvinoff.
               </p>
               <p>
-                Decidí hacerme responsable y no dejar pendiente para otra vida que pudiera solucionar en esta. 
+                Entonces decidí hacerme responsable y no dejar pendiente para otra vida lo que pudiera solucionar en esta. 
                 Allí nació Urko tántrico.
               </p>
             </div>
