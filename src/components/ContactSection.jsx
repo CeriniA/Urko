@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
 
 const CONTACT_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT;
+const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || '6LfISSYsAAAAAGgcCmobY7rBnXSW25mbu5ZZkglO';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -36,7 +37,7 @@ const ContactSection = () => {
 
     try {
       // Obtener token de reCAPTCHA v3
-      const recaptchaToken = await window.grecaptcha.execute('6LccbxUsAAAAAErNnrc9XD8wb4ga74P4QNI-o7RH', {
+      const recaptchaToken = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
         action: 'submit',
       });
 
