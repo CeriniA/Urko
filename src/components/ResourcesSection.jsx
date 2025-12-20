@@ -228,7 +228,7 @@ const ResourcesSection = () => {
               )}
 
               <form
-                className="d-flex flex-column flex-md-row gap-3"
+                className="d-flex flex-column gap-3"
                 onSubmit={handleNewsletterSubmit}
               >
                 {/* Honeypot field - invisible to users, but bots might fill it */}
@@ -241,26 +241,28 @@ const ResourcesSection = () => {
                   tabIndex="-1"
                   autoComplete="off"
                 />
-                <input
-                  type="text"
-                  name="nombre"
-                  value={formData.nombre}
-                  onChange={handleInputChange}
-                  className="form-control"
-                  placeholder="Nombre"
-                  required
-                  disabled={newsletterStatus === 'submitting'}
-                />
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="form-control"
-                  placeholder="Email"
-                  required
-                  disabled={newsletterStatus === 'submitting'}
-                />
+                <div className="d-flex flex-column flex-md-row gap-3">
+                  <input
+                    type="text"
+                    name="nombre"
+                    value={formData.nombre}
+                    onChange={handleInputChange}
+                    className="form-control"
+                    placeholder="Nombre"
+                    required
+                    disabled={newsletterStatus === 'submitting'}
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="form-control"
+                    placeholder="Email"
+                    required
+                    disabled={newsletterStatus === 'submitting'}
+                  />
+                </div>
                 <div className="d-flex align-items-center text-start">
                   <input
                     type="checkbox"
@@ -284,6 +286,7 @@ const ResourcesSection = () => {
                 <Button 
                   variant="primary" 
                   type="submit"
+                  className="w-100"
                   disabled={newsletterStatus === 'submitting'}
                 >
                   {newsletterStatus === 'submitting' ? 'Enviando...' : 'Enviar'}
