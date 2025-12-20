@@ -33,7 +33,8 @@ const ResourcesSection = () => {
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
-    website: '' // Honeypot field - should remain empty
+    website: '', // Honeypot field - should remain empty
+    consent: false
   });
   
   const freeResources = products.filter(p => p.category === 'free');
@@ -133,8 +134,9 @@ const ResourcesSection = () => {
       const formUrl = import.meta.env.VITE_NEWSLETTER_FORM_URL;
       const nameField = import.meta.env.VITE_NEWSLETTER_NAME_FIELD;
       const emailField = import.meta.env.VITE_NEWSLETTER_EMAIL_FIELD;
+      const consentField = import.meta.env.VITE_NEWSLETTER_CONSENT_FIELD;
 
-      if (!formUrl || !nameField || !emailField) {
+      if (!formUrl || !nameField || !emailField || !consentField) {
         throw new Error('Newsletter form configuration missing');
       }
 
@@ -142,6 +144,7 @@ const ResourcesSection = () => {
       const formDataToSend = new FormData();
       formDataToSend.append(nameField, formData.nombre);
       formDataToSend.append(emailField, formData.email);
+      formDataToSend.append(consentField, formData.consent ? 'Sí, acepto recibir emails' : 'No');
 
       // Enviar a Google Forms sin redirección
       await fetch(formUrl, {
@@ -152,7 +155,7 @@ const ResourcesSection = () => {
 
       // Mostrar mensaje de éxito
       setNewsletterStatus('success');
-      setFormData({ nombre: '', email: '', website: '' });
+      setFormData({ nombre: '', email: '', website: '', consent: false });
 
       // Ocultar mensaje después de 5 segundos
       setTimeout(() => {
@@ -258,6 +261,26 @@ const ResourcesSection = () => {
                   required
                   disabled={newsletterStatus === 'submitting'}
                 />
+                <div className="d-flex align-items-center text-start">
+                  <input
+                    type="checkbox"
+                    id="newsletter-consent"
+                    name="consent"
+                    checked={formData.consent}
+                    onChange={(e) =>
+                      setFormData(prev => ({
+                        ...prev,
+                        consent: e.target.checked
+                      }))
+                    }
+                    required
+                    disabled={newsletterStatus === 'submitting'}
+                    className="me-2"
+                  />
+                  <label htmlFor="newsletter-consent" className="mb-0 small">
+                    Acepto recibir información y novedades por email.
+                  </label>
+                </div>
                 <Button 
                   variant="primary" 
                   type="submit"
