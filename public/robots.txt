@@ -10,7 +10,7 @@ Disallow: /api/
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://urko.com/sitemap.xml
+Sitemap: https://urkotantrico.com/sitemap.xml
 
 # Additional directives for better SEO
 User-agent: Googlebot
