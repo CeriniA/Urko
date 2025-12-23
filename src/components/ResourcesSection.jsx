@@ -135,8 +135,9 @@ const ResourcesSection = () => {
       const nameField = import.meta.env.VITE_NEWSLETTER_NAME_FIELD;
       const emailField = import.meta.env.VITE_NEWSLETTER_EMAIL_FIELD;
       const consentField = import.meta.env.VITE_NEWSLETTER_CONSENT_FIELD;
+      const consentSentinel = import.meta.env.VITE_NEWSLETTER_CONSENT_SENTINEL;
 
-      if (!formUrl || !nameField || !emailField || !consentField) {
+      if (!formUrl || !nameField || !emailField || !consentField || !consentSentinel) {
         throw new Error('Newsletter form configuration missing');
       }
 
@@ -144,7 +145,23 @@ const ResourcesSection = () => {
       const formDataToSend = new FormData();
       formDataToSend.append(nameField, formData.nombre);
       formDataToSend.append(emailField, formData.email);
-      formDataToSend.append(consentField, formData.consent ? 'Sí, acepto recibir emails' : 'No');
+      
+      // Checkbox: Google Forms requiere DOS campos
+      if (formData.consent) {
+        formDataToSend.append(consentField, 'Si, acepto.');
+        formDataToSend.append(consentSentinel, '');
+      }
+      
+      // Campos del sistema que Google Forms espera
+      formDataToSend.append('fvv', '1');
+      formDataToSend.append('pageHistory', '0');
+
+      // Debug: Ver qué se está enviando (puedes comentar esto después)
+      console.log('📧 Enviando a Google Forms:');
+      console.log('URL:', formUrl);
+      for (let [key, value] of formDataToSend.entries()) {
+        console.log(`  ${key}: ${value}`);
+      }
 
       // Enviar a Google Forms sin redirección
       await fetch(formUrl, {
