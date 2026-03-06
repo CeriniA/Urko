@@ -4,21 +4,24 @@ import Button from 'react-bootstrap/Button';
 const Hero = () => (
   <section className="hero" id="top">
     <Container className="d-flex flex-column align-items-start justify-content-center hero__content">
-      <span className="hero__eyebrow">¡Bienvenido!</span>
-      <h1 className="hero__title">Escuela Urko - Sexualidad Sana, Masculinidad Consciente</h1>
-      <p className="hero__subtitle">
-        Vivir una vida sexual plena es vivir una vida plena
+      <h1 className="hero__title">ESCUELA URKO</h1>
+      <h2 className="hero__subtitle">
+        Reconocimiento y Dominio del Poder Sexual Masculino
+      </h2>
+      <p className="hero__description">
+        Un sistema con raíces en las enseñanzas del tantra y el tao, adaptado a la realidad del hombre actual, para reconocer y reconectar con la energía primordial, recuperar firmeza, sostener estabilidad y construir dominio a través de práctica concreta.
       </p>
       <p className="hero__description">
-        Transformá tu vida a través de tu sexualidad. Coaching especializado para varones que buscan desarrollarse en la vida y en la cama con presencia, vigor y vitalidad, eso es crecimiento auténtico.
+        No promuevo soluciones rápidas ni atajos artificiales.<br />
+        El camino es orgánico, natural y exige compromiso.
       </p>
       <div className="d-flex flex-column flex-md-row gap-3">
         <Button
           size="lg"
           variant="primary"
-          href="#recursos"
+          href="#escuela-urko"
         >
-          Activar mi fuego
+          Bienvenido a la Escuela Urko
         </Button>
       </div>
     </Container>

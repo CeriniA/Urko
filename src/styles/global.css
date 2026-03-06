@@ -65,7 +65,6 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  backdrop-filter: blur(1px);
 }
 
 /* Capa de imagen del hero: por defecto (mobile) sin degradado, imagen completa */
@@ -73,11 +72,10 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  /* MOBILE: imagen vertical del hombre con símbolo + velo oscuro para legibilidad */
-  background:
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.85)),
-    url('../assets/images/WhatsApp Image 2025-11-26 at 6.57.33 PM.jpeg') center top/cover no-repeat;
+  /* MOBILE: imagen sin efectos */
+  background: url('../assets/images/nuevaportada.jpg.jpeg') center center/cover no-repeat;
   opacity: 1;
+  z-index: 0;
 }
 
 /* En desktop aplicamos degradado lateral solo sobre la imagen usando mask-image */
@@ -88,20 +86,8 @@ body {
   }
   
   .hero::before {
-    /* DESKTOP: imagen hero principal con degradado oscuro */
-    background:
-      radial-gradient(circle at center, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.85) 85%),
-      url('../assets/images/Hero.jpeg') center top/60% no-repeat;
-    -webkit-mask-image: linear-gradient(to right,
-      transparent 0%,
-      black 8%,
-      black 92%,
-      transparent 100%);
-    mask-image: linear-gradient(to right,
-      transparent 0%,
-      black 8%,
-      black 92%,
-      transparent 100%);
+    /* DESKTOP: imagen sin efectos */
+    background: url('../assets/images/nuevaportada.jpg.jpeg') center center/cover no-repeat;
   }
   
   .hero__content {
@@ -1228,5 +1214,449 @@ body {
   .achievement-card,
   .learning-card {
     padding: 0.5rem 0;
+  }
+}
+
+/* ========================================
+   NUEVOS ESTILOS PARA COMPONENTES 2025
+   ======================================== */
+
+/* Sobre Urko */
+.sobre-urko {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.sobre-urko-content {
+  text-align: center;
+}
+
+/* Escuela Urko */
+.escuela-urko {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.escuela-urko-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.escuela-urko-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.escuela-urko-list li:last-child {
+  border-bottom: none;
+}
+
+/* Cómo Funciona */
+.como-funciona {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.metodo-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.metodo-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.metodo-card p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.metodo-card-ideal {
+  color: rgba(255, 255, 255, 0.75);
+  font-style: italic;
+}
+
+.metodo-card--clickable {
+  cursor: pointer;
+}
+
+.metodo-card:hover,
+.metodo-card-link:hover .metodo-card {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 193, 7, 0.5);
+}
+
+.metodo-card-link:hover .metodo-card .text-warning {
+  color: var(--accent) !important;
+  text-decoration: underline;
+}
+
+/* Es Tu Camino */
+.es-tu-camino {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.camino-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.camino-card--si {
+  border-color: rgba(76, 175, 80, 0.5);
+}
+
+.camino-card--si:hover {
+  background: rgba(76, 175, 80, 0.1);
+  border-color: rgba(76, 175, 80, 0.8);
+}
+
+.camino-card--no {
+  border-color: rgba(244, 67, 54, 0.5);
+}
+
+.camino-card--no:hover {
+  background: rgba(244, 67, 54, 0.1);
+  border-color: rgba(244, 67, 54, 0.8);
+}
+
+.camino-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.camino-list li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.camino-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* Entrenamientos Urko */
+.entrenamientos-urko {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.programa-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.programa-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-color: var(--primary-color);
+}
+
+.programa-icon {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.programa-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.programa-title--colored {
+  color: var(--accent);
+}
+
+.programa-access {
+  text-align: center;
+  color: rgba(76, 175, 80, 0.9);
+  font-weight: 600;
+}
+
+.programa-description {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.programa-subtitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+}
+
+.programa-includes {
+  list-style: none;
+  padding-left: 0;
+}
+
+.programa-includes li {
+  padding: 0.3rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.programa-includes li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Comparación de Programas */
+.comparacion-programas {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.comparacion-table {
+  background: #1a1a1a;
+  color: #e0e0e0;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.comparacion-table thead {
+  background: #2a2a2a;
+  border-bottom: 2px solid rgba(255, 193, 7, 0.3);
+}
+
+.comparacion-table th {
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  padding: 1.25rem 1rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.comparacion-table td {
+  vertical-align: middle;
+  padding: 1rem 0.75rem;
+  border: none;
+  color: #e0e0e0;
+}
+
+.comparacion-table td:first-child {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.comparacion-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background-color 0.2s ease;
+}
+
+.comparacion-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.comparacion-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.table-recommended {
+  background: rgba(255, 193, 7, 0.15) !important;
+  position: relative;
+  font-weight: 600;
+}
+
+.comparacion-table thead .table-recommended {
+  background: rgba(255, 193, 7, 0.25) !important;
+  color: var(--accent);
+  border-left: 3px solid var(--accent);
+  border-right: 3px solid var(--accent);
+}
+
+.comparacion-table tbody .table-recommended {
+  color: #ffffff;
+}
+
+/* Recursos Gratuitos */
+.recursos-gratuitos {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.recurso-gratuito-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+/* Newsletter */
+.newsletter-section {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.newsletter-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.75rem 1rem;
+}
+
+.newsletter-form input[type="text"]:focus,
+.newsletter-form input[type="email"]:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+.newsletter-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Biblioteca Urko */
+.biblioteca-urko {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.libro-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.libro-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-color: var(--primary-color);
+}
+
+.libro-card--special {
+  border-color: rgba(255, 193, 7, 0.5);
+  background: rgba(255, 193, 7, 0.05);
+}
+
+.libro-card--special:hover {
+  border-color: rgba(255, 193, 7, 0.8);
+  background: rgba(255, 193, 7, 0.1);
+}
+
+.libro-icon {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.libro-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.libro-title--colored {
+  color: var(--accent);
+}
+
+.libro-subtitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+}
+
+.libro-card .book-cover-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 180px;
+}
+
+.libro-footer .btn-mp,
+.libro-footer .paypal-button-container {
+  margin-bottom: 0.5rem;
+}
+
+/* Botones centrados y mismo ancho en pack de libros */
+.libro-card--special .libro-footer {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.libro-card--special .libro-footer .btn-mp,
+.libro-card--special .libro-footer .paypal-button-container {
+  width: 100%;
+}
+
+.testimonial-mini {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Sobre Mí */
+.sobre-mi {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.sobre-mi-image {
+  /* border: 3px solid rgba(255, 255, 255, 0.2); */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón Mercado Pago */
+.btn-mp {
+  background: #009ee3;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-mp:hover {
+  background: #0082c3;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 158, 227, 0.4);
+}
+
+.paypal-button-container {
+  min-height: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .programa-card,
+  .libro-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .comparacion-table {
+    font-size: 0.85rem;
+  }
+  
+  .comparacion-table th,
+  .comparacion-table td {
+    padding: 0.5rem;
   }
 }

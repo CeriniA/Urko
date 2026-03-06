@@ -33,14 +33,12 @@ const Header = () => {
         <Navbar.Toggle aria-controls="main-nav" />
         <Navbar.Collapse id="main-nav" className="justify-content-end">
           <Nav className="align-items-lg-center">
-            <Nav.Link href="#sobre-urko" onClick={() => setExpanded(false)}>Sobre Urko</Nav.Link>
+            <Nav.Link href="#escuela-urko" onClick={() => setExpanded(false)}>Escuela Urko</Nav.Link>
+            <Nav.Link href="#entrenamientos" onClick={() => setExpanded(false)}>Entrenamientos</Nav.Link>
+            <Nav.Link href="#biblioteca" onClick={() => setExpanded(false)}>Biblioteca</Nav.Link>
+            <Nav.Link href="#recursos-gratuitos" onClick={() => setExpanded(false)}>Recursos Gratuitos</Nav.Link>
             <Nav.Link href="#testimonios" onClick={() => setExpanded(false)}>Testimonios</Nav.Link>
-            <NavDropdown title="Recursos" id="recursos-dropdown" menuVariant="dark">
-              <NavDropdown.Item href="#recursos-gratuitos" onClick={() => setExpanded(false)}>Recursos gratuitos</NavDropdown.Item>
-              <NavDropdown.Item href="#recursos-libros" onClick={() => setExpanded(false)}>Libros</NavDropdown.Item>
-              <NavDropdown.Item href="#programas" onClick={() => setExpanded(false)}>Programas</NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#preguntas" onClick={() => setExpanded(false)}>Preguntas Frecuentes</Nav.Link>
+            <Nav.Link href="#sobre-mi" onClick={() => setExpanded(false)}>Sobre Mí</Nav.Link>
             <Nav.Link href="#contacto" onClick={() => setExpanded(false)}>Contacto</Nav.Link>
           </Nav>
         </Navbar.Collapse>

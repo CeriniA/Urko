@@ -1,12 +1,17 @@
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
-import WhatIsTantra from './components/WhatIsTantra.jsx';
-import AboutUrko from './components/AboutUrko.jsx';
-import WhatYouWillAchieve from './components/WhatYouWillAchieve.jsx';
+import SobreUrko from './components/SobreUrko.jsx';
+import EscuelaUrko from './components/EscuelaUrko.jsx';
+import ComoFunciona from './components/ComoFunciona.jsx';
+import EsTuCamino from './components/EsTuCamino.jsx';
+import EntrenamientosUrko from './components/EntrenamientosUrko.jsx';
+import ComparacionProgramas from './components/ComparacionProgramas.jsx';
 import Testimonials from './components/Testimonials.jsx';
-import ResourcesSection from './components/ResourcesSection.jsx';
+import SobreMi from './components/SobreMi.jsx';
+import RecursosGratuitos from './components/RecursosGratuitos.jsx';
+import NewsletterSection from './components/NewsletterSection.jsx';
+import BibliotecaUrko from './components/BibliotecaUrko.jsx';
 import FAQ from './components/FAQ.jsx';
-import CTASection from './components/CTASection.jsx';
 import ContactSection from './components/ContactSection.jsx';
 import Footer from './components/Footer.jsx';
 
@@ -16,13 +21,18 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <WhatIsTantra />
-        <AboutUrko />
-        <WhatYouWillAchieve />
+        <SobreUrko />
+        <EscuelaUrko />
+        <ComoFunciona />
+        <EsTuCamino />
+        <EntrenamientosUrko />
+        <ComparacionProgramas />
         <Testimonials />
-        <ResourcesSection />
+        <SobreMi />
+        <RecursosGratuitos />
+        <NewsletterSection />
+        <BibliotecaUrko />
         <FAQ />
-        <CTASection />
         <ContactSection />
       </main>
       <Footer />
