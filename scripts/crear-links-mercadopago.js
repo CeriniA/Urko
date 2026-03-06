@@ -4,7 +4,7 @@
  * REQUISITOS:
  * 1. Instalar SDK: npm install mercadopago
  * 2. Obtener Access Token de Mercado Pago: https://www.mercadopago.com.ar/developers/panel/credentials
- * 3. Crear archivo .env con: MP_ACCESS_TOKEN=tu_access_token_aqui
+ * 3. Crear archivo .env con: VITE_ACCESS_TOKEN=tu_access_token_aqui
  * 
  * USO:
  * node scripts/crear-links-mercadopago.js
@@ -24,7 +24,7 @@ dotenv.config();
 
 // Configurar Mercado Pago
 mercadopago.configure({
-  access_token: process.env.MP_ACCESS_TOKEN
+  access_token: process.env.VITE_ACCESS_TOKEN
 });
 
 // Productos a crear

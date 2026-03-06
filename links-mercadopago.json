@@ -1,0 +1,37 @@
+[
+  {
+    "id": "libro-1",
+    "title": "Si yo pude, vos podés - Libro Digital",
+    "price": 15,
+    "link": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-57f06a2f-4cc5-4017-8e7d-c95d172f42da",
+    "preference_id": "3020489059-57f06a2f-4cc5-4017-8e7d-c95d172f42da"
+  },
+  {
+    "id": "libro-2",
+    "title": "El Entrenamiento Urko - Libro Digital",
+    "price": 20,
+    "link": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-29400bf9-5bab-4fcf-b284-0f32e4486419",
+    "preference_id": "3020489059-29400bf9-5bab-4fcf-b284-0f32e4486419"
+  },
+  {
+    "id": "pack-libros",
+    "title": "Pack Completo de Libros - 2 Libros Digitales",
+    "price": 30,
+    "link": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-8e8e16c0-3e6e-4e43-90af-7b02d20f1bb7",
+    "preference_id": "3020489059-8e8e16c0-3e6e-4e43-90af-7b02d20f1bb7"
+  },
+  {
+    "id": "programa-fundamental",
+    "title": "PROGRAMA FUNDAMENTAL - Acceso de por vida",
+    "price": 247,
+    "link": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-320bcf3e-9106-4ca3-b5d7-40265116d261",
+    "preference_id": "3020489059-320bcf3e-9106-4ca3-b5d7-40265116d261"
+  },
+  {
+    "id": "entrenamiento-trimestral",
+    "title": "ENTRENAMIENTO TRIMESTRAL - 3 meses con encuentros en vivo",
+    "price": 497,
+    "link": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-ec96c2ca-1602-4caf-b16e-8aeb230f01f7",
+    "preference_id": "3020489059-ec96c2ca-1602-4caf-b16e-8aeb230f01f7"
+  }
+]

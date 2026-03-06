@@ -4,7 +4,7 @@
  * 
  * PASOS:
  * 1. Obtener Access Token: https://www.mercadopago.com.ar/developers/panel/credentials
- * 2. Agregar en .env: MP_ACCESS_TOKEN=tu_token_aqui
+ * 2. Agregar en .env: VITE_ACCESS_TOKEN=tu_token_aqui
  * 3. Ejecutar: node scripts/crear-links-mp-simple.js
  */
 
@@ -15,8 +15,28 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// ⚠️ CONFIGURACIÓN - Pegar tu Access Token aquí
-const ACCESS_TOKEN = process.env.MP_ACCESS_TOKEN || 'PEGAR_TU_ACCESS_TOKEN_AQUI';
+// Cargar variables de entorno desde .env
+function loadEnv() {
+  const envPath = path.join(__dirname, '..', '.env');
+  if (fs.existsSync(envPath)) {
+    const envContent = fs.readFileSync(envPath, 'utf-8');
+    envContent.split('\n').forEach(line => {
+      const trimmed = line.trim();
+      if (trimmed && !trimmed.startsWith('#')) {
+        const [key, ...valueParts] = trimmed.split('=');
+        const value = valueParts.join('=');
+        if (key && value) {
+          process.env[key.trim()] = value.trim();
+        }
+      }
+    });
+  }
+}
+
+loadEnv();
+
+// ⚠️ CONFIGURACIÓN - Token desde .env
+const ACCESS_TOKEN = process.env.VITE_ACCESS_TOKEN;
 
 // ⚠️ CAMBIAR por tu dominio real
 const BASE_URL = 'https://urkotantrico.com';

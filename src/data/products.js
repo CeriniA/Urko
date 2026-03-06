@@ -13,30 +13,30 @@ const products = [
   {
     id: 'libro-1',
     title: 'Si yo pude, vos podés',
-    price: 15, // ACTUALIZAR PRECIO
+    price: 15,
     currency: 'USD',
     description: 'Testimonio directo de transformación. Desde la pérdida de firmeza y la eyaculación precoz, hasta la recuperación del vigor masculino.',
-    mpLink: '#', // AGREGAR LINK DE MERCADO PAGO
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-57f06a2f-4cc5-4017-8e7d-c95d172f42da',
     paypalScriptId: 'paypal-libro-1',
     category: 'books',
   },
   {
     id: 'libro-2',
     title: 'El Entrenamiento Urko',
-    price: 20, // ACTUALIZAR PRECIO
+    price: 20,
     currency: 'USD',
     description: 'La guía definitiva de 10 pasos para el vigor masculino. Sistematización completa del método tántrico-taoísta aplicado.',
-    mpLink: '#', // AGREGAR LINK DE MERCADO PAGO
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-29400bf9-5bab-4fcf-b284-0f32e4486419',
     paypalScriptId: 'paypal-libro-2',
     category: 'books',
   },
   {
     id: 'pack-libros',
     title: 'Pack Completo de Libros',
-    price: 30, // ACTUALIZAR PRECIO
+    price: 30,
     currency: 'USD',
     description: 'Ambos libros en un solo pack con precio especial.',
-    mpLink: '#', // AGREGAR LINK DE MERCADO PAGO
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-8e8e16c0-3e6e-4e43-90af-7b02d20f1bb7',
     paypalScriptId: 'paypal-pack-libros',
     category: 'books',
     isSpecial: true,
@@ -49,7 +49,7 @@ const products = [
     price: 247,
     currency: 'USD',
     description: 'Acceso completo al método en formato autónomo.',
-    mpLink: '#', // AGREGAR LINK DE MERCADO PAGO
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-320bcf3e-9106-4ca3-b5d7-40265116d261',
     paypalScriptId: 'paypal-programa-fundamental',
     category: 'programs',
   },
@@ -59,7 +59,7 @@ const products = [
     price: 497,
     currency: 'USD',
     description: 'Tres meses de estructura grupal con encuentros en vivo.',
-    mpLink: '#', // AGREGAR LINK DE MERCADO PAGO
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-ec96c2ca-6602-4caf-b16e-8aeb230f01f7',
     paypalScriptId: 'paypal-entrenamiento-trimestral',
     recommended: true,
     category: 'programs',
