@@ -1544,30 +1544,71 @@ body {
   font-size: 1rem;
 }
 
-/* Última fila (precio) destacada */
-.comparacion-table tbody tr:last-child td {
-  background: rgba(0, 0, 0, 0.3);
+/* Penúltima fila (precio) destacada */
+.comparacion-table tbody tr:nth-last-child(2) td {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.15) 0%, rgba(255, 193, 7, 0.05) 100%);
   font-weight: 700;
-  font-size: 1rem;
-  padding: 0.75rem 0.4rem;
-  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.15rem;
+  padding: 1rem 0.5rem;
+  border-top: 3px solid rgba(255, 193, 7, 0.5);
+  border-bottom: 3px solid rgba(255, 193, 7, 0.5);
+  color: #fff;
 }
 
-.comparacion-table tbody tr:last-child .table-recommended {
-  background: rgba(255, 193, 7, 0.2);
+.comparacion-table tbody tr:nth-last-child(2) td:first-child {
   color: var(--accent);
+  font-size: 1rem;
+}
+
+.comparacion-table tbody tr:nth-last-child(2) .table-recommended {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.3) 0%, rgba(255, 193, 7, 0.15) 100%);
+  color: var(--accent);
+  font-size: 1.3rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Fila de botones de compra */
+.tabla-compra-row td {
+  background: rgba(0, 0, 0, 0.4) !important;
+  padding: 0.6rem 0.4rem !important;
+  border-top: none !important;
+}
+
+.btn-tabla-compra {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.btn-tabla-compra:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.btn-tabla-compra-destacado {
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
+}
+
+.btn-tabla-compra-destacado:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(255, 193, 7, 0.6);
 }
 
 /* Responsive para tabla de comparación */
 @media (max-width: 991px) {
   .comparacion-table th {
     font-size: 0.7rem;
-    padding: 0.75rem 0.4rem;
+    padding: 0.5rem 0.3rem;
   }
   
   .comparacion-table td {
     font-size: 0.75rem;
-    padding: 0.6rem 0.3rem;
+    padding: 0.4rem 0.25rem;
   }
   
   .comparacion-table td:first-child {
@@ -1578,14 +1619,29 @@ body {
     font-size: 1rem;
   }
   
-  .comparacion-table tbody tr:last-child td {
-    font-size: 0.9rem;
+  .comparacion-table tbody tr:nth-last-child(2) td {
+    font-size: 1rem;
     padding: 0.75rem 0.3rem;
+  }
+  
+  .comparacion-table tbody tr:nth-last-child(2) .table-recommended {
+    font-size: 1.1rem;
   }
   
   .comparacion-table thead .table-recommended::after {
     font-size: 0.55rem;
     padding: 0.15rem 0.4rem;
+    top: -12px;
+  }
+  
+  .btn-tabla-compra {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.6rem;
+    min-width: 80px;
+  }
+  
+  .tabla-compra-row td {
+    padding: 0.5rem 0.25rem !important;
   }
 }
 

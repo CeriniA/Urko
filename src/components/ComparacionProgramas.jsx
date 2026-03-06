@@ -1,5 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll';
 
 const ComparacionProgramas = () => {
@@ -25,6 +26,13 @@ const ComparacionProgramas = () => {
     if (value === true) return <span className="text-success">✓</span>;
     if (value === false) return <span className="text-muted">—</span>;
     return value;
+  };
+
+  const scrollToProgram = () => {
+    const element = document.getElementById('entrenamientos');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   return (
@@ -53,14 +61,51 @@ const ComparacionProgramas = () => {
                   <td className="text-center">{renderCell(feature.individual)}</td>
                 </tr>
               ))}
+              <tr className="tabla-compra-row">
+                <td className="fw-bold"></td>
+                <td className="text-center">
+                  <Button 
+                    variant="outline-light" 
+                    size="sm" 
+                    onClick={scrollToProgram}
+                    className="btn-tabla-compra"
+                  >
+                    Comprar
+                  </Button>
+                </td>
+                <td className="text-center table-recommended">
+                  <Button 
+                    variant="warning" 
+                    size="sm" 
+                    onClick={scrollToProgram}
+                    className="btn-tabla-compra btn-tabla-compra-destacado"
+                  >
+                    Comprar Ahora
+                  </Button>
+                </td>
+                <td className="text-center">
+                  <Button 
+                    variant="outline-light" 
+                    size="sm" 
+                    onClick={scrollToProgram}
+                    className="btn-tabla-compra"
+                  >
+                    Comprar
+                  </Button>
+                </td>
+                <td className="text-center">
+                  <Button 
+                    variant="outline-light" 
+                    size="sm" 
+                    onClick={scrollToProgram}
+                    className="btn-tabla-compra"
+                  >
+                    Comprar
+                  </Button>
+                </td>
+              </tr>
             </tbody>
           </Table>
-        </div>
-
-        <div className="text-center mt-4">
-          <p className="text-muted fst-italic">
-            <span className="badge bg-warning text-dark">Recomendado</span> El Entrenamiento Trimestral ofrece el mejor equilibrio entre estructura, apoyo grupal y precio.
-          </p>
         </div>
       </Container>
     </section>
