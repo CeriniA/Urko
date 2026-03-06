@@ -47,7 +47,7 @@ const RecursosGratuitos = () => {
               <Button
                 variant="primary"
                 size="lg"
-                href="https://drive.google.com/file/d/10QBRg2TAFkV7rZSLadpJLNz4sJRQCZC0/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1tnBWJDB4DINCs0AdAvYFpgJzCAJSK8Md/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >

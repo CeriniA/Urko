@@ -1,0 +1,84 @@
+Crea un formulario de aplicación profesional con el siguiente contenido:
+
+TÍTULO: Formulario de Aplicación - Proceso 1 a 1 | Método Urko
+
+DESCRIPCIÓN DEL FORMULARIO:
+Este proceso no es informativo.
+Es trabajo directo, estructura personalizada y compromiso real.
+
+Completar este formulario no garantiza acceso al programa.
+La selección es parte del entrenamiento.
+
+SECCIÓN 1 - DATOS PERSONALES
+
+1. Nombre completo (respuesta corta, obligatorio)
+
+2. Edad (respuesta corta, obligatorio)
+
+3. Ciudad y país (respuesta corta, obligatorio)
+
+4. Estado civil (opción múltiple, obligatorio)
+Opciones: Soltero, En pareja, Casado, Otro
+
+5. Número de WhatsApp (respuesta corta, obligatorio)
+Texto de ayuda: Incluye código de país (ej: +54 9 11 1234-5678)
+
+6. Correo electrónico (respuesta corta, obligatorio, validar como email)
+
+SECCIÓN 2 - SITUACIÓN ACTUAL
+
+7. ¿Cuál es el principal síntoma o dificultad que estás viviendo actualmente? (párrafo, obligatorio)
+
+8. ¿Hace cuánto tiempo estás en esta situación? (párrafo, obligatorio)
+
+9. ¿Qué impacto está teniendo esto en tu confianza, tu relación o tu vida personal? (párrafo, obligatorio)
+
+SECCIÓN 3 - HISTORIAL Y CONTEXTO
+
+10. ¿Has intentado resolver esto antes? ¿Qué has probado? (párrafo, obligatorio)
+
+11. ¿Estás tomando algún medicamento o suplemento actualmente? (párrafo, obligatorio)
+Texto de ayuda: Si es así, ¿cuál y desde cuándo?
+
+12. ¿Tienes alguna condición médica diagnosticada relacionada con esto? (párrafo, obligatorio)
+
+SECCIÓN 4 - COMPROMISO Y DISPONIBILIDAD
+
+13. ¿Por qué quieres trabajar en el proceso 1 a 1 y no en una opción grupal o autónoma? (párrafo, obligatorio)
+
+14. ¿Estás dispuesto a comprometerte con práctica diaria durante 3 meses? (opción múltiple, obligatorio)
+Opciones: Sí, No estoy seguro, No
+
+15. ¿Tienes disponibilidad para videollamadas semanales? (opción múltiple, obligatorio)
+Opciones: Sí, No estoy seguro, No
+
+16. ¿Cuál es tu disponibilidad horaria para las sesiones? (párrafo, obligatorio)
+Texto de ayuda: Indica días y horarios (incluye tu zona horaria)
+
+SECCIÓN 5 - EXPECTATIVAS Y MOTIVACIÓN
+
+17. ¿Qué esperas lograr al finalizar este proceso? (párrafo, obligatorio)
+
+18. ¿Estás dispuesto a trabajar desde el cuerpo, la respiración y la práctica concreta (no solo desde lo mental)? (opción múltiple, obligatorio)
+Opciones: Sí, No estoy seguro, No
+
+19. En una escala del 1 al 10, ¿qué tan comprometido estás con este cambio? (escala lineal de 1 a 10, obligatorio)
+
+20. ¿Hay algo más que quieras compartir sobre tu situación o motivación? (párrafo, opcional)
+
+MENSAJE DE CONFIRMACIÓN:
+Aplicación recibida.
+
+Cada solicitud es revisada personalmente.
+
+Si tu perfil está alineado con el nivel de compromiso que requiere el proceso 1 a 1, recibirás contacto por WhatsApp dentro de las próximas 48 horas.
+
+La selección es parte del entrenamiento.
+
+— Método Urko
+
+CONFIGURACIÓN:
+- Recopilar direcciones de correo electrónico
+- Limitar a 1 respuesta por persona
+- Mostrar barra de progreso
+- Tema oscuro (negro o gris)

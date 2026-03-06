@@ -94,7 +94,7 @@ const EntrenamientosUrko = () => {
       description: 'Modalidad personalizada para quienes requieren profundidad y seguimiento directo.',
       subtitle: 'Acceso solo mediante evaluación previa.',
       notIncludes: '(no se puede comprar por acá)',
-      formLink: '#',
+      formLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfLX9CAuPe1KbbLUhiOoK8OiyzvyBxnV-49rRe0xVny_SzIUg/viewform',
       buttonText: 'Solicitar evaluación',
       buttonType: 'form'
     }
@@ -222,13 +222,14 @@ const EntrenamientosUrko = () => {
                   )}
 
                   {program.buttonType === 'form' && (
-                    <button 
-                      className="btn btn-secondary w-100"
-                      disabled
-                      style={{ cursor: 'not-allowed', opacity: 0.6 }}
+                    <a 
+                      href={program.formLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="btn btn-warning w-100"
                     >
-                      {program.buttonText} (Próximamente)
-                    </button>
+                      {program.buttonText}
+                    </a>
                   )}
                 </div>
               </div>
