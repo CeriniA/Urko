@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll';
+import { scrollToElement } from '../utils/scrollHelpers';
 
 const ComparacionProgramas = () => {
   const sectionRef = useRevealOnScroll();
@@ -29,10 +30,7 @@ const ComparacionProgramas = () => {
   };
 
   const scrollToProgram = () => {
-    const element = document.getElementById('entrenamientos');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    scrollToElement('entrenamientos');
   };
 
   return (

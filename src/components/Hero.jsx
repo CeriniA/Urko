@@ -5,7 +5,7 @@ const Hero = () => (
   <section className="hero" id="top">
     <Container className="d-flex flex-column align-items-start justify-content-center hero__content">
       <h1 className="hero__title">ESCUELA URKO</h1>
-      <h2 className="hero__subtitle">
+      <h2 className="hero__subtitle fw-bold">
         Reconocimiento y Dominio del Poder Sexual Masculino
       </h2>
       <p className="hero__description">

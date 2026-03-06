@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll';
 import perfilImg from '../assets/images/Nuevafotoperfil.jpeg';
 
@@ -28,9 +29,11 @@ const SobreMi = () => {
                 No enseño lo que leí: enseño lo que he recorrido.
               </p>
               <div className="mt-4">
-                <Button variant="outline-secondary" href="#sobre-mi-completo">
-                  Más sobre mí
-                </Button>
+                <Link to="/biografia">
+                  <Button variant="outline-secondary">
+                    Más sobre mí
+                  </Button>
+                </Link>
               </div>
             </div>
           </Col>

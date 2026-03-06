@@ -2,9 +2,15 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll';
+import { scrollToElement } from '../utils/scrollHelpers';
 
 const ComoFunciona = () => {
   const sectionRef = useRevealOnScroll();
+  
+  const handleCardClick = (e) => {
+    e.preventDefault();
+    scrollToElement('entrenamientos');
+  };
 
   return (
     <section ref={sectionRef} className="como-funciona py-5" id="como-funciona">
@@ -23,7 +29,7 @@ const ComoFunciona = () => {
           
           <Row className="g-4 mb-5">
             <Col md={6}>
-              <a href="#entrenamientos" className="metodo-card-link">
+              <a href="#entrenamientos" onClick={handleCardClick} className="metodo-card-link">
                 <div className="metodo-card metodo-card--clickable h-100 p-4">
                   <h4 className="mb-3 text-white">1. Trabajo autónomo</h4>
                   <p className="mb-3">
@@ -39,7 +45,7 @@ const ComoFunciona = () => {
               </a>
             </Col>
             <Col md={6}>
-              <a href="#entrenamientos" className="metodo-card-link">
+              <a href="#entrenamientos" onClick={handleCardClick} className="metodo-card-link">
                 <div className="metodo-card metodo-card--clickable h-100 p-4">
                   <h4 className="mb-3 text-white">2. Proceso trimestral acompañado</h4>
                   <p className="mb-3">

@@ -1,114 +1,85 @@
 const products = [
   // RECURSOS GRATUITOS
   {
-    id: 'free-beginners',
-    title: 'Guía para principiantes',
-    description: 'Comienza tu transformación con este entrenamiento gratuito. Tómalo como un regalo divino.',
-    driveLinks: [
-      {
-        label: 'Acceder al entrenamiento',
-        url: 'https://drive.google.com/drive/folders/1-z_BmV_TJ2WhzjCsQVxhD-DZFvRrbeEh?usp=drive_link',
-      },
-    ],
-    category: 'free',
-  },
-  {
-    id: 'free-couples',
-    title: 'Guía para parejas',
-    description: 'Prácticas y ejercicios para conectar con el placer sexual en pareja. ✅ Prácticas individuales para llevarlo al encuentro. ✅ Prácticas en equipo para vivir mejor.',
-    driveLinks: [
-      {
-        label: 'Acceder a la guía',
-        url: 'https://drive.google.com/drive/folders/12g02DC2gq6jJBBTPZy1ruAt-St580TMI',
-      },
-    ],
+    id: 'free-guide',
+    title: 'Guía Gratuita: 10 Pasos para Superar EP/DE',
+    description: 'Descargá gratis la guía completa con los 10 pasos fundamentales del Método Urko para superar la eyaculación precoz y disfunción eréctil.',
+    pdfLink: '#', // AGREGAR LINK AL PDF
+    videoLink: '#', // AGREGAR LINK AL VIDEO
     category: 'free',
   },
   
   // LIBROS
   {
-    id: 'book-si-yo-pude',
-    title: 'Si yo pude, vos podes',
-    price: 11,
+    id: 'libro-1',
+    title: 'Si yo pude, vos podés',
+    price: 15, // ACTUALIZAR PRECIO
     currency: 'USD',
-    description: 'Guia testimonial de cómo transformar tu vida desde la sexualidad tántrica taoista en el mundo real.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-35bd627f-68d0-4f9d-bc10-b73a70a0f6ad',
-    paypalScriptId: 'paypal-book-si-yo-pude',
+    description: 'Testimonio directo de transformación. Desde la pérdida de firmeza y la eyaculación precoz, hasta la recuperación del vigor masculino.',
+    mpLink: '#', // AGREGAR LINK DE MERCADO PAGO
+    paypalScriptId: 'paypal-libro-1',
     category: 'books',
   },
   {
-    id: 'book-entrenamiento-urko',
-    title: 'Entrenamiento URKO, El que no tiene maestro pierde',
-    price: 11,
+    id: 'libro-2',
+    title: 'El Entrenamiento Urko',
+    price: 20, // ACTUALIZAR PRECIO
     currency: 'USD',
-    description: '"El que no tiene maestro, pierde"\n\nEl camino del conocimiento se pasa de maestro alumno desde hace cientos o miles de años. Los secretos se develan al alumno, este toma el conocimiento de su maestro, lo entrena, lo practica, lo interioriza y lo traduce a sabiduría cuando empieza a vivir lo aprendido.\n\n PRÓXIMAMENTE\n\nEste libro estará disponible muy pronto.\n\nEspero ser tu maestro en este camino sin fin de conocer y conocernos. Apropiarte de este método y experimentarlo es la senda para gobernar tu poder sexual.',
-    mpLink: '#',
-    paypalScriptId: 'paypal-book-entrenamiento-urko',
+    description: 'La guía definitiva de 10 pasos para el vigor masculino. Sistematización completa del método tántrico-taoísta aplicado.',
+    mpLink: '#', // AGREGAR LINK DE MERCADO PAGO
+    paypalScriptId: 'paypal-libro-2',
     category: 'books',
-    comingSoon: true,
+  },
+  {
+    id: 'pack-libros',
+    title: 'Pack Completo de Libros',
+    price: 30, // ACTUALIZAR PRECIO
+    currency: 'USD',
+    description: 'Ambos libros en un solo pack con precio especial.',
+    mpLink: '#', // AGREGAR LINK DE MERCADO PAGO
+    paypalScriptId: 'paypal-pack-libros',
+    category: 'books',
+    isSpecial: true,
   },
   
-  // PROGRAMAS
+  // PROGRAMAS DE ENTRENAMIENTO
   {
-    id: 'intensive',
-    title: 'El hombre que despierta: 6 días para ganar',
-    price: 39,
+    id: 'programa-fundamental',
+    title: 'PROGRAMA FUNDAMENTAL',
+    price: 247,
     currency: 'USD',
-    description: '👉 Transformá tu energía por $39 USD\n\nINCLUYE:\n✅ Acceso privado al video guiado\n✅ Guía escrita para 3 días de trabajo\n✅ Ejercicios Prácticos\n✅ Video terapia del Método Urko\n✅ Planilla de acción para seguir el paso a paso\n\nSerán:\n💥3 días de acción explosiva\n🏋️‍♂️3 días de Repaso',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-ba3540d5-e598-43d2-9730-44e20414a84a',
-    paypalScriptId: 'paypal-intensive',
+    description: 'Acceso completo al método en formato autónomo.',
+    mpLink: '#', // AGREGAR LINK DE MERCADO PAGO
+    paypalScriptId: 'paypal-programa-fundamental',
     category: 'programs',
   },
   {
-    id: 'monthly',
-    title: 'La Senda del Varón Presente - Mensual',
-    price: 69,
+    id: 'entrenamiento-trimestral',
+    title: 'ENTRENAMIENTO TRIMESTRAL',
+    price: 497,
     currency: 'USD',
-    description: 'Si queres un cambio real y profundo, pero a tu ritmo, este ENTRENAMIENTO en formato solitario es para vos.\n\nINCLUYE:\n✅ Acceso al ENTRENAMIENTO Privado\n✅ Guía de Trabajo\n✅ Plan de Acción\n✅ Video terapia\n✅ Biblioteca\n\n*No incluye videollamada Con Urko, ni acceso al grupo Privado\n\nInicia el cambio acompañado por solo: $69 Dólares al mes.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-4b268bf2-603d-40ae-9a8f-968070975cc0',
-    paypalScriptId: 'paypal-monthly',
-    category: 'programs',
-  },
-  {
-    id: 'quarterly',
-    title: 'La Senda del Varón Presente - Trimestral',
-    price: 120,
-    currency: 'USD',
-    description: 'Pago único por 3 meses.\n\nINCLUYE:\n✅ Acceso al ENTRENAMIENTO Privado\n✅ Guía de Trabajo\n✅ Plan de Acción\n✅ Video terapia\n✅ Biblioteca\n\n*No incluye videollamada Con Urko, ni acceso al grupo Privado\n\n$120 Dólares x tres meses.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-09e1938c-ba25-4378-a2bf-617a99aff3a2',
-    paypalScriptId: 'paypal-quarterly',
-    category: 'programs',
-  },
-  {
-    id: 'group',
-    title: 'La Senda del Varón Presente. Tribu',
-    price: 369,
-    currency: 'USD',
-    description: 'Trabajo terapéutico grupal de 3 meses de duración.\n\nIncluye:\n✅ Acceso al grupo privado de trabajo\n✅ 2 llamadas 1 a 1 de inicio\n✅ Seguimiento en equipo, con enfoque individual\n✅ Contacto directo y permanente vía WhatsApp\n✅ 1 Clase maestra quincenal de preguntas y respuestas - grupal -\n✅ Incluye el PROGRAMA la senda del varón presente\n\nInversión única, Cambia tu vida x solo $369 USD.\n\nGanancias de trabajar EN EQUIPO:\n✔️ Apertura\n✔️ Apoyo real\n✔️ Comprensión y contención\n✔️ Feedback constante\n✔️ Actualización permanente\n✔️ Contacto directo con Urko',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-894235b1-fca8-4bb9-956f-2da31d07fbbb',
-    paypalScriptId: 'paypal-group',
+    description: 'Tres meses de estructura grupal con encuentros en vivo.',
+    mpLink: '#', // AGREGAR LINK DE MERCADO PAGO
+    paypalScriptId: 'paypal-entrenamiento-trimestral',
     recommended: true,
     category: 'programs',
   },
   {
-    id: 'exclusive-full',
-    title: 'El camino del Hombre Superior - Pago único',
-    price: 999,
+    id: 'proceso-acompanado',
+    title: 'PROCESO ACOMPAÑADO',
+    price: 750,
     currency: 'USD',
-    description: 'Si queres un cambio real y profundo con acompañamiento terapéutico en equipo con enfoque personalizado, este programa es para vos.\n\nIncluye:\n✅ Exclusividad\n✅ Espacio íntimo y profundo\n✅ Trabajo específico según tu caso\n✅ Guía y herramientas personalizadas, desde el cuerpo al espíritu\n✅ Coach para la vida, y para la cama\n✅ 2 Video llamadas 1 a 1 al mes\n✅ Contacto directo vía Whatsapp\n\nInicia un cambio profundo: $999usd x 3 meses',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-3d6813fd-e0fb-4bd1-87f4-a19af9f3864d',
-    paypalScriptId: 'paypal-exclusive-full',
+    description: 'Tres meses con guía directa, seguimiento y videollamadas semanales.',
+    whatsappLink: 'https://wa.me/5493492210169?text=Hola,%20quiero%20información%20sobre%20el%20Proceso%20Acompañado',
     category: 'programs',
   },
   {
-    id: 'exclusive-installments',
-    title: 'El camino del Hombre Superior - 3 pagos mensuales',
-    price: 369,
+    id: 'acompanamiento-individual',
+    title: 'ACOMPAÑAMIENTO INDIVIDUAL 1-1',
+    price: 3000,
     currency: 'USD',
-    description: 'Mismo programa exclusivo, con opción de pago en 3 cuotas mensuales de $369 USD.\n\nIncluye:\n✅ Exclusividad\n✅ Espacio íntimo y profundo\n✅ Trabajo específico según tu caso\n✅ Guía y herramientas personalizadas, desde el cuerpo al espíritu\n✅ Coach para la vida, y para la cama\n✅ 2 Video llamadas 1 a 1 al mes\n✅ Contacto directo vía Whatsapp\n\nInicia un cambio profundo: $369usd x mes',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-590e3a63-96ce-467b-9bf1-1ffdc3f7bea1',
-    paypalScriptId: 'paypal-exclusive-installments',
-    badge: '3 cuotas',
+    description: 'Trabajo exclusivo y personalizado según tu caso específico.',
+    formLink: '#', // AGREGAR LINK AL FORMULARIO DE EVALUACIÓN
     category: 'programs',
   },
 ];

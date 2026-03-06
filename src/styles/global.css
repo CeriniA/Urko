@@ -65,6 +65,8 @@ body {
   content: '';
   position: absolute;
   inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Capa oscura para mejorar legibilidad */
+  z-index: 0;
 }
 
 /* Capa de imagen del hero: por defecto (mobile) sin degradado, imagen completa */
@@ -1643,6 +1645,83 @@ body {
   .tabla-compra-row td {
     padding: 0.5rem 0.25rem !important;
   }
+}
+
+/* Sobre Mí Completo - Página Biografía */
+.sobre-mi-completo {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+  min-height: 100vh;
+  padding-top: 100px !important; /* Espacio para el navbar fijo */
+}
+
+.btn-volver-biografia {
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-volver-biografia:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateX(-5px);
+}
+
+.bio-section {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 3px solid var(--accent);
+}
+
+.bio-title {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.bio-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.bio-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bio-list li {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.bio-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.bio-quote {
+  background: rgba(255, 193, 7, 0.1);
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  color: var(--accent);
+}
+
+.bio-quote p {
+  color: var(--accent);
+  font-weight: 500;
 }
 
 /* Recursos Gratuitos */
