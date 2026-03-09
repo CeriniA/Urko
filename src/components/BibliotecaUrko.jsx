@@ -211,7 +211,7 @@ const BibliotecaUrko = () => {
 
                 <div className="libro-footer">
                   <p className="text-center mb-3">
-                    <strong className="fs-4">Valor: {book.currency} {book.price}</strong>
+                    <strong className="fs-4">Valor: <span className="text-warning">{book.currency} {book.price}</span></strong>
                     {book.isSpecial && <span className="badge bg-warning text-dark ms-2">Valor especial</span>}
                   </p>
 
