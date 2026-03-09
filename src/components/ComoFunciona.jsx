@@ -12,6 +12,20 @@ const ComoFunciona = () => {
     scrollToElement('entrenamientos');
   };
 
+  const handleProcesoAcompanadoClick = (e) => {
+    e.preventDefault();
+    scrollToElement('entrenamientos');
+    // Esperar a que se haga el scroll y luego hacer scroll al card específico
+    setTimeout(() => {
+      const procesoCard = document.querySelector('[data-program-id="acompanado"]');
+      if (procesoCard) {
+        const navbarHeight = 80;
+        const cardTop = procesoCard.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 20;
+        window.scrollTo({ top: cardTop, behavior: 'smooth' });
+      }
+    }, 500);
+  };
+
   return (
     <section ref={sectionRef} className="como-funciona py-5" id="como-funciona">
       <Container>
@@ -45,7 +59,7 @@ const ComoFunciona = () => {
               </a>
             </Col>
             <Col md={6}>
-              <a href="#entrenamientos" onClick={handleCardClick} className="metodo-card-link">
+              <a href="#entrenamientos" onClick={handleProcesoAcompanadoClick} className="metodo-card-link">
                 <div className="metodo-card metodo-card--clickable h-100 p-4">
                   <h4 className="mb-3 text-white">2. Proceso trimestral acompañado</h4>
                   <p className="mb-3">

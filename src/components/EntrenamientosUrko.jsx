@@ -165,7 +165,7 @@ const EntrenamientosUrko = () => {
         <Row className="g-4">
           {programs.map((program) => (
             <Col key={program.id} md={6} lg={6}>
-              <div className="programa-card h-100 d-flex flex-column p-4">
+              <div className="programa-card h-100 d-flex flex-column p-4" data-program-id={program.id}>
                 <div className="programa-header mb-3">
                   <h4 className="programa-title programa-title--colored mb-3">{program.title}</h4>
                   {program.access && <p className="programa-access mb-2">{program.access}</p>}
