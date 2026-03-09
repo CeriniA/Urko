@@ -10,7 +10,7 @@ const RecursosGratuitos = () => {
       <Container>
         <h2 className="section-title text-center mb-4">Recursos Gratuitos</h2>
         <p className="text-center lead mb-5">
-          Comenzá a desarrollar tu masculinidad y sexualidad consciente con estos recursos gratuitos de la escuela urko. Entrenamientos especializados para varones
+          Comenzá a desarrollar tu masculinidad y sexualidad consciente con estos recursos gratuitos de la Escuela Urko. Entrenamientos especializados para varones.
         </p>
 
         <div className="recursos-gratuitos-content mx-auto" style={{ maxWidth: '900px' }}>

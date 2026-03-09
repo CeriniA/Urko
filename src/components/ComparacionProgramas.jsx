@@ -33,6 +33,19 @@ const ComparacionProgramas = () => {
     scrollToElement('entrenamientos');
   };
 
+  const scrollToSpecificProgram = (programId) => {
+    scrollToElement('entrenamientos');
+    // Esperar a que se haga el scroll y luego hacer scroll al card específico
+    setTimeout(() => {
+      const programCard = document.querySelector(`[data-program-id="${programId}"]`);
+      if (programCard) {
+        const navbarHeight = 80;
+        const cardTop = programCard.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 20;
+        window.scrollTo({ top: cardTop, behavior: 'smooth' });
+      }
+    }, 500);
+  };
+
   return (
     <section ref={sectionRef} className="comparacion-programas py-5" id="comparacion">
       <Container>
@@ -85,7 +98,7 @@ const ComparacionProgramas = () => {
                   <Button 
                     variant="outline-light" 
                     size="sm" 
-                    onClick={scrollToProgram}
+                    onClick={() => scrollToSpecificProgram('acompanado')}
                     className="btn-tabla-compra"
                   >
                     Solicitar
@@ -95,7 +108,7 @@ const ComparacionProgramas = () => {
                   <Button 
                     variant="outline-light" 
                     size="sm" 
-                    onClick={scrollToProgram}
+                    onClick={() => scrollToSpecificProgram('individual')}
                     className="btn-tabla-compra"
                   >
                     Aplicar

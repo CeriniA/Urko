@@ -191,7 +191,7 @@ const EntrenamientosUrko = () => {
 
                 <div className="programa-footer">
                   <p className="text-center mb-3">
-                    <strong className="fs-4">💰 Inversión {program.id === 'fundamental' ? 'única' : ''}: ${program.price} {program.currency}</strong>
+                    <strong className="fs-4">💰 Inversión{program.id === 'fundamental' ? ' única' : ''}: ${program.price} {program.currency}</strong>
                   </p>
 
                   {program.buttonType === 'buy' && (

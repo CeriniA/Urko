@@ -17,7 +17,7 @@ const HomePage = () => {
   return (
     <main>
       <Hero />
-      <SobreUrko />
+      
       <EscuelaUrko />
       <ComoFunciona />
       <EsTuCamino />

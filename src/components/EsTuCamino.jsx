@@ -39,15 +39,18 @@ const EsTuCamino = () => {
                   <li>No es para quienes prefieren anestesiar el síntoma en lugar de comprender el origen.</li>
                   <li>No es para curiosos que solo desean "probar" sin compromiso real.</li>
                 </ul>
-                <p className="mt-3 fst-italic">
-                  Este camino exige presencia, práctica y decisión.
-                </p>
-                <p className="fw-bold">
-                  Si no estás dispuesto a entrenar, sostener y atravesar el proceso, este espacio no es para vos.
-                </p>
               </div>
             </Col>
           </Row>
+
+          <div className="text-center mt-5 pt-4 border-top">
+            <p className="lead fw-bold text-warning mb-3">
+              ⚠️ Advertencia
+            </p>
+            <p className="fs-5 fst-italic">
+              Este espacio exige presencia, práctica y decisión. Si no estás dispuesto a sostener el proceso, este no es tu lugar.
+            </p>
+          </div>
         </div>
       </Container>
     </section>
