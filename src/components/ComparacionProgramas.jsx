@@ -88,7 +88,7 @@ const ComparacionProgramas = () => {
                     onClick={scrollToProgram}
                     className="btn-tabla-compra"
                   >
-                    Comprar
+                    Solicitar
                   </Button>
                 </td>
                 <td className="text-center">
@@ -98,7 +98,7 @@ const ComparacionProgramas = () => {
                     onClick={scrollToProgram}
                     className="btn-tabla-compra"
                   >
-                    Comprar
+                    Aplicar
                   </Button>
                 </td>
               </tr>

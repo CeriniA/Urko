@@ -72,6 +72,12 @@ const productos = [
     title: 'ENTRENAMIENTO TRIMESTRAL - 3 meses con encuentros en vivo',
     description: 'Tres meses de estructura grupal con encuentros en vivo. Incluye calendario definido, 6 encuentros grupales en vivo, método completo, acceso de por vida y actualizaciones.',
     price: 497,
+  },
+  {
+    id: 'proceso-acompanado',
+    title: 'PROCESO ACOMPAÑADO - 3 meses con guía directa',
+    description: 'Tres meses con guía directa, seguimiento personalizado y videollamadas semanales. Incluye método completo, calendario definido, encuentros semanales en vivo, seguimiento personalizado, correcciones y guía directa, contacto directo vía WhatsApp.',
+    price: 750,
   }
 ];
 

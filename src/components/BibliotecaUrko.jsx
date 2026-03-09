@@ -42,8 +42,11 @@ const BibliotecaUrko = () => {
       mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-35bd627f-68d0-4f9d-bc10-b73a70a0f6ad',
       paypalScriptId: 'paypal-libro-1',
       testimonials: [
-        { id: 1, text: 'Aquí va el testimonio 1' },
-        { id: 2, text: 'Aquí va el testimonio 2' }
+        { 
+          id: 1, 
+          text: 'Te agradezco de corazón. Lo puse en práctica. Y volví a enamorar a mi mujer!!! Estoy trabajando mucho para seguir mejorando y voy a leerlo de nuevo... pero mejore notablemente.... y me gustaría tener una charla con vos...',
+          author: 'Lector del libro'
+        }
       ]
     },
     {
@@ -64,8 +67,11 @@ const BibliotecaUrko = () => {
       mpLink: '#',
       paypalScriptId: 'paypal-libro-2',
       testimonials: [
-        { id: 1, text: 'Aquí va el testimonio 1' },
-        { id: 2, text: 'Aquí va el testimonio 2' }
+        { 
+          id: 1, 
+          text: 'Hola quería decirte que seguí la guía y funcionó!! Padecía EP, pero seguir los pasos hizo que pueda disfrutar de los encuentros. Un saludo! Muchas gracias!! Solucioné un problema que últimamente me hacía ganas de no estar con mujeres, pero ahora todo es distinto. Sos crack!',
+          author: 'Lector del libro'
+        }
       ]
     },
     {
@@ -225,7 +231,7 @@ const BibliotecaUrko = () => {
                     <h5 className="mb-3">Testimonios</h5>
                     <Row className="g-3">
                       {book.testimonials.map((testimonial) => (
-                        <Col key={testimonial.id} md={6}>
+                        <Col key={testimonial.id} md={12}>
                           <div className="testimonial-mini p-3">
                             <p className="mb-0 fst-italic">"{testimonial.text}"</p>
                           </div>
