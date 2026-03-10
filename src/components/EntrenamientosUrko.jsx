@@ -80,7 +80,6 @@ const EntrenamientosUrko = () => {
         'Correcciones y guía directa.',
         'Plan estructurado de 90 días.'
       ],
-      notIncludes: '(no se puede comprar por acá)',
       whatsappLink: 'https://wa.me/5491234567890',
       buttonText: 'Aplicar al proceso',
       buttonType: 'whatsapp'
@@ -93,7 +92,6 @@ const EntrenamientosUrko = () => {
       currency: 'USD',
       description: 'Modalidad personalizada para quienes requieren profundidad y seguimiento directo.',
       subtitle: 'Acceso solo mediante evaluación previa.',
-      notIncludes: '(no se puede comprar por acá)',
       formLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfLX9CAuPe1KbbLUhiOoK8OiyzvyBxnV-49rRe0xVny_SzIUg/viewform',
       buttonText: 'Solicitar evaluación',
       buttonType: 'form'
