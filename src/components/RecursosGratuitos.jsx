@@ -15,7 +15,7 @@ const RecursosGratuitos = () => {
 
         <div className="recursos-gratuitos-content mx-auto" style={{ maxWidth: '900px' }}>
           <div className="recurso-gratuito-card p-4 mb-4">
-            <h3 className="mb-3">ENTRENAMIENTO URKO:</h3>
+            <h3 className="mb-3 text-warning">ENTRENAMIENTO URKO:</h3>
             <h4 className="mb-4">Guía Gratuita: 10 pasos para recuperar control y estabilidad sexual</h4>
             
             <p className="mb-3">

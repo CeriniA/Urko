@@ -1,5 +1,4 @@
 import Hero from '../components/Hero.jsx';
-import SobreUrko from '../components/SobreUrko.jsx';
 import EscuelaUrko from '../components/EscuelaUrko.jsx';
 import ComoFunciona from '../components/ComoFunciona.jsx';
 import EsTuCamino from '../components/EsTuCamino.jsx';
