@@ -1903,7 +1903,7 @@ body::before {
 
 /* Sobre Mí */
 .sobre-mi {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(10, 10, 10, 0.95);
 }
 
 .sobre-mi-image {

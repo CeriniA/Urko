@@ -30,14 +30,11 @@ const EsTuCamino = () => {
             <Col md={6}>
               <div className="camino-card camino-card--no h-100 p-4">
                 <h3 className="mb-4 text-center">Este camino NO es para vos si:</h3>
-                <p className="mb-3">
-                  Este proceso no es para hombres que buscan una solución rápida sin asumir responsabilidad.
-                </p>
                 <ul className="camino-list">
-                  <li>No es para quienes esperan que alguien más resuelva lo que ellos no están dispuestos a trabajar.</li>
-                  <li>No es para quienes quieren resultados sin disciplina ni constancia.</li>
-                  <li>No es para quienes prefieren anestesiar el síntoma en lugar de comprender el origen.</li>
-                  <li>No es para curiosos que solo desean "probar" sin compromiso real.</li>
+                  <li><strong>Buscás el "atajo":</strong> Esperás una solución mágica o momentánea, sin esfuerzo personal.</li>
+                  <li><strong>Delegás tu poder:</strong> Buscás que alguien externo resuelva lo que vos no estás dispuesto a trabajar.</li>
+                  <li><strong>Sos un curioso:</strong> Solo querés "probar" contenido sin intención de aplicarlo con constancia.</li>
+                  <li><strong>Preferís la anestesia:</strong> Elegís ocultar el síntoma en lugar de comprender y transformar el origen.</li>
                 </ul>
               </div>
             </Col>
