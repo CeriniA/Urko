@@ -16,15 +16,31 @@ body {
   color: var(--text-primary);
   font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
   line-height: 1.6;
+  position: relative;
 }
 
 body {
   margin: 0;
 }
 
+/* Fondo fijo global con parallax */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/images/nuevaportada.jpg.jpeg') center center/cover no-repeat fixed;
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
+}
+
 .app-bg {
   min-height: 100vh;
-  background: var(--bg-dark);
+  background: transparent;
+  position: relative;
 }
 
 /* Aparición suave al hacer scroll */
@@ -54,42 +70,34 @@ body {
   position: relative;
   min-height: 100vh;
   color: #fff;
-  padding: 6rem 0 4rem;
-  background: var(--bg-dark);
-  overflow: hidden;
   display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 8rem 0 5rem;
   align-items: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../assets/images/nuevaportada.jpg.jpeg') center center/cover no-repeat;
+  z-index: -1;
 }
 
 .hero::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* Capa oscura para mejorar legibilidad */
+  background: rgba(0, 0, 0, 0.3); /* Capa oscura para mejorar legibilidad */
   z-index: 0;
 }
 
-/* Capa de imagen del hero: por defecto (mobile) sin degradado, imagen completa */
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  /* MOBILE: imagen sin efectos */
-  background: url('../assets/images/nuevaportada.jpg.jpeg') center center/cover no-repeat;
-  opacity: 1;
-  z-index: 0;
-}
-
-/* En desktop aplicamos degradado lateral solo sobre la imagen usando mask-image */
+/* En desktop ajustamos padding */
 @media (min-width: 768px) {
   .hero {
     padding: 4rem 0 3rem;
     min-height: 100vh;
-  }
-  
-  .hero::before {
-    /* DESKTOP: imagen sin efectos */
-    background: url('../assets/images/nuevaportada.jpg.jpeg') center center/cover no-repeat;
   }
   
   .hero__content {
@@ -1234,29 +1242,62 @@ body {
 
 /* Escuela Urko */
 .escuela-urko {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(5px);
 }
 
-.escuela-urko-list {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  max-width: 700px;
-  margin: 0 auto;
+/* Cards de Pilares - Diseño Circular Minimalista */
+.pilar-card {
+  background: transparent;
+  border: none;
+  transition: all 0.4s ease;
+  position: relative;
 }
 
-.escuela-urko-list li {
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.pilar-icon {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: rgba(255, 193, 7, 0.9);
+  background: radial-gradient(circle, rgba(255, 193, 7, 0.08) 0%, transparent 70%);
+  box-shadow: 0 0 40px rgba(255, 193, 7, 0.15),
+              inset 0 0 30px rgba(255, 193, 7, 0.05);
+  transition: all 0.4s ease;
+  position: relative;
+  font-weight: 300;
+  letter-spacing: -0.05em;
 }
 
-.escuela-urko-list li:last-child {
-  border-bottom: none;
+.pilar-card:hover .pilar-icon {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(255, 193, 7, 0.25),
+              inset 0 0 40px rgba(255, 193, 7, 0.08);
+  background: radial-gradient(circle, rgba(255, 193, 7, 0.12) 0%, transparent 70%);
+}
+
+.pilar-title {
+  color: rgba(255, 193, 7, 0.95);
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.pilar-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  font-weight: 300;
 }
 
 /* Cómo Funciona */
 .como-funciona {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(10, 10, 10, 0.95);
 }
 
 .metodo-card-link {
@@ -1352,7 +1393,8 @@ body {
 
 /* Entrenamientos Urko */
 .entrenamientos-urko {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(5px);
 }
 
 .programa-card {
@@ -1423,7 +1465,7 @@ body {
 
 /* Comparación de Programas - Estilo Moderno */
 .comparacion-programas {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background: rgba(10, 10, 10, 0.95);
 }
 
 .table-responsive {
@@ -1768,7 +1810,8 @@ body {
 
 /* Biblioteca Urko */
 .biblioteca-urko {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(5px);
 }
 
 .libro-card {

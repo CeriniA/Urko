@@ -12,7 +12,7 @@ const SobreMi = () => {
   return (
     <section ref={sectionRef} className="sobre-mi py-5" id="sobre-mi">
       <Container>
-        <h2 className="section-title text-center mb-5">Sobre Mí</h2>
+        <h2 className="section-title text-center mb-5">Sobre mí</h2>
         <Row className="align-items-center g-4">
           <Col md={6}>
             <div className="sobre-mi-content">

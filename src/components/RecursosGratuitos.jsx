@@ -8,7 +8,7 @@ const RecursosGratuitos = () => {
   return (
     <section ref={sectionRef} className="recursos-gratuitos py-5" id="recursos-gratuitos">
       <Container>
-        <h2 className="section-title text-center mb-4">Recursos Gratuitos</h2>
+        <h2 className="section-title text-center mb-4">Recursos gratuitos</h2>
         <p className="text-center lead mb-5">
           Comenzá a desarrollar tu masculinidad y sexualidad consciente con estos recursos gratuitos de la Escuela Urko. Entrenamientos especializados para varones.
         </p>

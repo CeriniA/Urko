@@ -157,7 +157,7 @@ const EntrenamientosUrko = () => {
   return (
     <section ref={sectionRef} className="entrenamientos-urko py-5" id="entrenamientos">
       <Container>
-        <h2 className="section-title text-center mb-4">ENTRENAMIENTOS URKO</h2>
+        <h2 className="section-title text-center mb-4">Entrenamientos Urko</h2>
         <p className="text-center lead mb-5">
           Transformá tu vida con los programas de entrenamiento para varones de la Escuela Urko
         </p>

@@ -45,7 +45,7 @@ const FAQ = () => {
   return (
     <section className="faq-section py-5" id="preguntas">
       <Container>
-        <h2 className="section-title text-center mb-5">Preguntas Frecuentes</h2>
+        <h2 className="section-title text-center mb-5">Preguntas frecuentes</h2>
         <div className="mx-auto" style={{ maxWidth: '800px' }}>
           <Accordion>
             {faqs.map((faq, index) => (

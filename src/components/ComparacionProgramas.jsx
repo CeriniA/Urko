@@ -49,7 +49,7 @@ const ComparacionProgramas = () => {
   return (
     <section ref={sectionRef} className="comparacion-programas py-5" id="comparacion">
       <Container>
-        <h2 className="section-title text-center mb-5">Comparación de Programas</h2>
+        <h2 className="section-title text-center mb-4">Comparación de programas</h2>
         
         <div className="table-responsive">
           <Table striped bordered hover className="comparacion-table">

@@ -150,7 +150,7 @@ const BibliotecaUrko = () => {
   return (
     <section ref={sectionRef} className="biblioteca-urko py-5" id="biblioteca">
       <Container>
-        <h2 className="section-title text-center mb-4">BIBLIOTECA URKO</h2>
+        <h2 className="section-title text-center mb-4">Biblioteca Urko</h2>
         <p className="text-center lead mb-5 fst-italic">
           Cada libro es una senda.<br />
           Disciplina, conciencia y transformación masculina real.

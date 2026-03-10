@@ -12,7 +12,7 @@ const EsTuCamino = () => {
         <h2 className="section-title text-center mb-5">¿Es este tu camino?</h2>
         <div className="es-tu-camino-content mx-auto" style={{ maxWidth: '900px' }}>
           <p className="lead text-center mb-5">
-            Este proceso no es una formación teórica; es un entrenamiento de vida. Está diseñado para hombres que han decidido dejar de ignorar su realidad y están listos para reclamar su dominio.
+            Este proceso no es una formación teórica, es un entrenamiento de vida. Está diseñado para hombres que han decidido dejar de ignorar su realidad y están listos para reclamar su dominio.
           </p>
 
           <Row className="g-4 mb-5">
