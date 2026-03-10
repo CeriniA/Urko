@@ -6,7 +6,8 @@
   --text-primary: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.7);
   --border-subtle: rgba(255, 255, 255, 0.08);
-  --yinyang-bg: #111111; /* Color de fondo para el círculo del Yin Yang */
+  --yinyang-bg: #111111;
+  /* Color de fondo para el círculo del Yin Yang */
 }
 
 html,
@@ -60,6 +61,7 @@ body::before {
     opacity: 0;
     transform: translateY(14px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -89,7 +91,8 @@ body::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.15); /* Capa oscura muy sutil para legibilidad */
+  background: rgba(0, 0, 0, 0.15);
+  /* Capa oscura muy sutil para legibilidad */
   z-index: 1;
 }
 
@@ -99,20 +102,20 @@ body::before {
     padding: 4rem 0 3rem;
     min-height: 100vh;
   }
-  
+
   .hero__content {
     gap: 1rem;
   }
-  
+
   .hero__title {
     font-size: clamp(2.8rem, 5vw, 3.5rem);
     line-height: 1.05;
   }
-  
+
   .hero__subtitle {
     font-size: clamp(1.1rem, 2vw, 1.3rem);
   }
-  
+
   .hero__description {
     font-size: clamp(0.95rem, 1.6vw, 1.1rem);
   }
@@ -147,6 +150,7 @@ body::before {
   color: rgba(255, 255, 255, 0.9);
   font-weight: 400;
 }
+
 .hero__description {
   max-width: 42rem;
   font-size: clamp(1rem, 1.8vw, 1.2rem);
@@ -666,8 +670,13 @@ body::before {
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .yinyang-symbol svg {
@@ -758,7 +767,8 @@ body::before {
    TESTIMONIALS SECTION
    ============================================ */
 .testimonials {
-  background: var(--bg-section);
+  background: rgba(0, 0, 0, 0.3);
+  /* 30% oscuro */
   color: var(--text-primary);
 }
 
@@ -805,7 +815,7 @@ body::before {
   .testimonials {
     padding: 3rem 0;
   }
-  
+
   .testimonial-card {
     margin-bottom: 1rem;
   }
@@ -1185,7 +1195,7 @@ body::before {
   border-radius: 999px;
   position: relative;
   background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.4), transparent 60%),
-              radial-gradient(circle at 70% 70%, rgba(249, 170, 51, 0.7), rgba(242, 120, 12, 0.3));
+    radial-gradient(circle at 70% 70%, rgba(249, 170, 51, 0.7), rgba(242, 120, 12, 0.3));
   box-shadow: 0 0 18px rgba(249, 170, 51, 0.35);
   overflow: hidden;
 }
@@ -1221,6 +1231,7 @@ body::before {
 }
 
 @media (max-width: 767px) {
+
   .achievement-card,
   .learning-card {
     padding: 0.5rem 0;
@@ -1233,7 +1244,9 @@ body::before {
 
 /* Sobre Urko */
 .sobre-urko {
-  background: rgba(0, 0, 0, 0.3);
+  /* background: rgba(0, 0, 0, 0); */
+  /* background: var(--bg-section); */
+
 }
 
 .sobre-urko-content {
@@ -1266,7 +1279,7 @@ body::before {
   color: rgba(255, 193, 7, 0.9);
   background: radial-gradient(circle, rgba(255, 193, 7, 0.08) 0%, transparent 70%);
   box-shadow: 0 0 40px rgba(255, 193, 7, 0.15),
-              inset 0 0 30px rgba(255, 193, 7, 0.05);
+    inset 0 0 30px rgba(255, 193, 7, 0.05);
   transition: all 0.4s ease;
   position: relative;
   font-weight: 300;
@@ -1276,7 +1289,7 @@ body::before {
 .pilar-card:hover .pilar-icon {
   transform: scale(1.05);
   box-shadow: 0 0 60px rgba(255, 193, 7, 0.25),
-              inset 0 0 40px rgba(255, 193, 7, 0.08);
+    inset 0 0 40px rgba(255, 193, 7, 0.08);
   background: radial-gradient(circle, rgba(255, 193, 7, 0.12) 0%, transparent 70%);
 }
 
@@ -1649,41 +1662,41 @@ body::before {
     font-size: 0.7rem;
     padding: 0.5rem 0.3rem;
   }
-  
+
   .comparacion-table td {
     font-size: 0.75rem;
     padding: 0.4rem 0.25rem;
   }
-  
+
   .comparacion-table td:first-child {
     font-size: 0.7rem;
   }
-  
+
   .comparacion-table .text-success {
     font-size: 1rem;
   }
-  
+
   .comparacion-table tbody tr:nth-last-child(2) td {
     font-size: 1rem;
     padding: 0.75rem 0.3rem;
   }
-  
+
   .comparacion-table tbody tr:nth-last-child(2) .table-recommended {
     font-size: 1.1rem;
   }
-  
+
   .comparacion-table thead .table-recommended::after {
     font-size: 0.55rem;
     padding: 0.15rem 0.4rem;
     top: -12px;
   }
-  
+
   .btn-tabla-compra {
     font-size: 0.65rem;
     padding: 0.3rem 0.6rem;
     min-width: 80px;
   }
-  
+
   .tabla-compra-row td {
     padding: 0.5rem 0.25rem !important;
   }
@@ -1693,7 +1706,8 @@ body::before {
 .sobre-mi-completo {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
   min-height: 100vh;
-  padding-top: 100px !important; /* Espacio para el navbar fijo */
+  padding-top: 100px !important;
+  /* Espacio para el navbar fijo */
 }
 
 .btn-volver-biografia {
@@ -1923,15 +1937,16 @@ body::before {
 
 /* Responsive adjustments */
 @media (max-width: 767px) {
+
   .programa-card,
   .libro-card {
     margin-bottom: 1.5rem;
   }
-  
+
   .comparacion-table {
     font-size: 0.85rem;
   }
-  
+
   .comparacion-table th,
   .comparacion-table td {
     padding: 0.5rem;

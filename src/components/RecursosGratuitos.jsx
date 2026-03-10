@@ -16,7 +16,7 @@ const RecursosGratuitos = () => {
         <div className="recursos-gratuitos-content mx-auto" style={{ maxWidth: '900px' }}>
           <div className="recurso-gratuito-card p-4 mb-4">
             <h3 className="mb-3 text-warning">ENTRENAMIENTO URKO:</h3>
-            <h4 className="mb-4">Guía Gratuita: 10 pasos para recuperar control y estabilidad sexual</h4>
+            <h4 className="mb-4">Guía gratuita: 10 pasos para recuperar control y estabilidad sexual.</h4>
             
             <p className="mb-3">
               Una guía práctica de 12 páginas donde sintetizo los fundamentos reales del entrenamiento aplicado al varón moderno.
@@ -25,9 +25,9 @@ const RecursosGratuitos = () => {
             <div className="mb-4">
               <p className="fw-bold mb-2">Incluye:</p>
               <ul>
-                <li>Los pilares del Método Urko</li>
-                <li>Ejercicios prácticos y aplicables desde el primer día</li>
-                <li>Un enfoque claro, directo y sin misticismo innecesario</li>
+                <li>Los pilares del Método Urko.</li>
+                <li>Ejercicios prácticos y aplicables desde el primer día.</li>
+                <li>Un enfoque claro, directo y sin misticismo innecesario.</li>
               </ul>
             </div>
 

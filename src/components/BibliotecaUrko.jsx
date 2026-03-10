@@ -77,7 +77,7 @@ const BibliotecaUrko = () => {
     {
       id: 'pack-2',
       icon: '📚',
-      title: 'Pack x 2: "Si yo pude vos podes" + "Entrenamiento Urko"',
+      title: 'Pack x 2: "Si yo pude, vos podes" + "Entrenamiento Urko"',
       price: 18,
       currency: 'USD',
       description: 'Ambos libros que pueden leerse por separado pero juntos forman el proceso completo:',

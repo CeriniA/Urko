@@ -68,9 +68,9 @@ const Header = () => {
             <Nav.Link onClick={() => handleNavClick('escuela-urko')}>Escuela Urko</Nav.Link>
             <Nav.Link onClick={() => handleNavClick('entrenamientos')}>Entrenamientos</Nav.Link>
             <Nav.Link onClick={() => handleNavClick('biblioteca')}>Biblioteca</Nav.Link>
-            <Nav.Link onClick={() => handleNavClick('recursos-gratuitos')}>Recursos Gratuitos</Nav.Link>
+            <Nav.Link onClick={() => handleNavClick('recursos-gratuitos')}>Recursos gratuitos</Nav.Link>
             <Nav.Link onClick={() => handleNavClick('testimonios')}>Testimonios</Nav.Link>
-            <Nav.Link onClick={() => handleNavClick('sobre-mi')}>Sobre Mí</Nav.Link>
+            <Nav.Link onClick={() => handleNavClick('sobre-mi')}>Sobre mí</Nav.Link>
             <Nav.Link onClick={() => handleNavClick('contacto')}>Contacto</Nav.Link>
           </Nav>
         </Navbar.Collapse>

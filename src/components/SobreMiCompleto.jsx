@@ -51,7 +51,7 @@ const SobreMiCompleto = () => {
           <Col lg={10} xl={9}>
             {/* Origen del nombre */}
             <div className="bio-section mb-5">
-              <h3 className="bio-title mb-4">El Origen de URKO</h3>
+              <h3 className="bio-title mb-4">El origen de URKO</h3>
               <p className="bio-text">
                 Urko Tántrico proviene de <strong>"Urko Kjampis"</strong>, expresión en lengua quechua que significa <em>Cerro Sanador</em>, nombre otorgado por mis maestros de medicina ancestral andina como reconocimiento a un proceso profundo de iniciación y transformación.
               </p>
@@ -62,7 +62,7 @@ const SobreMiCompleto = () => {
 
             {/* Formación */}
             <div className="bio-section mb-5">
-              <h3 className="bio-title mb-4">Un Puente entre lo Ancestral y lo Moderno</h3>
+              <h3 className="bio-title mb-4">Un puente entre lo ancestral y lo moderno</h3>
               <p className="bio-text">
                 Mi camino comienza en la medicina tradicional de los Andes, donde fui iniciado y acompañado por maestros <strong>Jampiq Qmayoc y Mamacuna</strong>, dentro del linaje ancestral andino. Allí comprendí la dimensión energética, espiritual y ritual del proceso de sanación.
               </p>
@@ -82,7 +82,7 @@ const SobreMiCompleto = () => {
 
             {/* Obras */}
             <div className="bio-section mb-5">
-              <h3 className="bio-title mb-4">Obras Publicadas</h3>
+              <h3 className="bio-title mb-4">Obras publicadas</h3>
               <p className="bio-text mb-3">
                 He volcado mi recorrido en tres obras fundamentales:
               </p>
@@ -101,7 +101,7 @@ const SobreMiCompleto = () => {
 
             {/* Formación Complementaria */}
             <div className="bio-section mb-5">
-              <h3 className="bio-title mb-4">Formación Complementaria</h3>
+              <h3 className="bio-title mb-4">Formación complementaria</h3>
               <ul className="bio-list">
                 <li>
                   <strong>Método Silva de Ultracontrol Mental</strong>, desarrollado por José Silva.
@@ -129,7 +129,7 @@ const SobreMiCompleto = () => {
 
             {/* Experiencia y Misión */}
             <div className="bio-section mb-5">
-              <h3 className="bio-title mb-4">Experiencia y Misión</h3>
+              <h3 className="bio-title mb-4">Experiencia y misión</h3>
               <p className="bio-text">
                 En este recorrido he acompañado a <strong>cientos de hombres</strong> en la superación de disfunciones sexuales, especialmente eyaculación precoz y bajo vigor, observando cómo la recuperación de la energía sexual impacta directamente en los pilares fundamentales del ser: <strong>autoestima, propósito, presencia, vínculos y liderazgo personal</strong>.
               </p>
@@ -166,7 +166,7 @@ const SobreMiCompleto = () => {
                   }, 300);
                 }}
               >
-                Conocer los Entrenamientos
+                Conocer los entrenamientos
               </Button>
             </div>
           </Col>
