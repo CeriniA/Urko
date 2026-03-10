@@ -91,7 +91,7 @@ const NewsletterSection = () => {
     <section ref={sectionRef} className="newsletter-section py-5" id="newsletter">
       <Container>
         <div className="newsletter-box mx-auto p-5" style={{ maxWidth: '700px' }}>
-          <h2 className="section-title text-center mb-3">SUMATE AL NEWSLETTER</h2>
+          <h2 className="section-title text-center mb-3">Sumate al newsletter</h2>
           <h3 className="text-center mb-4">"ESCRITOS PARA EL VARÓN PRESENTE"</h3>
           <p className="text-center lead mb-4">
             Recibí nuevo contenido gratuito todos los meses

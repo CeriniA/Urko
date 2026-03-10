@@ -183,7 +183,7 @@ const EntrenamientosUrko = () => {
                     </div>
                   )}
                   {program.notIncludes && (
-                    <p className="text-muted fst-italic">{program.notIncludes}</p>
+                    <p className="text-white fst-italic">{program.notIncludes}</p>
                   )}
                 </div>
 

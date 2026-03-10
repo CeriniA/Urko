@@ -30,7 +30,7 @@ const SobreMi = () => {
               </p>
               <div className="mt-4">
                 <Link to="/biografia">
-                  <Button variant="outline-secondary">
+                  <Button variant="primary">
                     Más sobre mí
                   </Button>
                 </Link>
