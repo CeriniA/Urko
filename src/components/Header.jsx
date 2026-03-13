@@ -27,11 +27,11 @@ const Header = () => {
     
     // Siempre navegar a home primero si no estamos ahí
     if (location.pathname !== '/') {
-      navigate('/');
-      // Esperar a que cargue la página y luego hacer scroll
+      navigate('/', { state: { scrollTo: sectionId } });
+      // Esperar a que cargue la página y luego hacer scroll (más tiempo para mobile)
       setTimeout(() => {
         scrollToElement(sectionId);
-      }, 300);
+      }, 500);
     } else {
       // Si ya estamos en home, scroll inmediato
       scrollToElement(sectionId);
