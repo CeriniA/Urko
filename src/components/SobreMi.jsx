@@ -43,6 +43,9 @@ const SobreMi = () => {
               alt="Lucas Flesia - Fundador de Escuela Urko"
               className="sobre-mi-image img-fluid rounded"
               style={{ maxWidth: '400px' }}
+              loading="lazy"
+              width="400"
+              height="400"
             />
           </Col>
         </Row>

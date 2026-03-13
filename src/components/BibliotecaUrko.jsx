@@ -162,10 +162,24 @@ const BibliotecaUrko = () => {
               <div className={`libro-card h-100 p-4 ${book.isSpecial ? 'libro-card--special' : ''}`}>
                 <div className="libro-header mb-4">
                   {book.id === 'libro-1' && (
-                    <img src={libro2Img} alt={book.title} className="book-cover-img mb-3" />
+                    <img 
+                      src={libro2Img} 
+                      alt={book.title} 
+                      className="book-cover-img mb-3"
+                      loading="lazy"
+                      width="180"
+                      height="270"
+                    />
                   )}
                   {book.id === 'libro-2' && (
-                    <img src={libro1Img} alt={book.title} className="book-cover-img mb-3" />
+                    <img 
+                      src={libro1Img} 
+                      alt={book.title} 
+                      className="book-cover-img mb-3"
+                      loading="lazy"
+                      width="180"
+                      height="270"
+                    />
                   )}
                   <h4 className="libro-title libro-title--colored mb-3">{book.title}</h4>
                   {book.subtitle && <p className="libro-subtitle fst-italic mb-3">{book.subtitle}</p>}

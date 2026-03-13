@@ -60,7 +60,13 @@ const Header = () => {
     >
       <Container>
         <Navbar.Brand href="/" onClick={handleLogoClick} className="d-flex align-items-center">
-          <img src={logo} alt="Urko Tántrico" className="site-logo-img" />
+          <img 
+            src={logo} 
+            alt="Urko Tántrico" 
+            className="site-logo-img"
+            width="105"
+            height="41"
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="main-nav" />
         <Navbar.Collapse id="main-nav" className="justify-content-end">
