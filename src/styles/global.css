@@ -211,6 +211,29 @@ body::before {
   color: #ffffff !important;
 }
 
+/* Navbar mobile styles */
+.navbar-collapse {
+  background-color: rgba(10, 10, 10, 0.98);
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .nav-link {
+    padding: 0.75rem 1rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+}
+
 /* Contact socials - lista simple y limpia */
 .contact-socials {
   display: flex;
@@ -1244,9 +1267,7 @@ body::before {
 
 /* Sobre Urko */
 .sobre-urko {
-  /* background: rgba(0, 0, 0, 0); */
-  /* background: var(--bg-section); */
-
+  background: transparent;
 }
 
 .sobre-urko-content {
