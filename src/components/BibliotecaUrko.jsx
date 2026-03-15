@@ -39,7 +39,7 @@ const BibliotecaUrko = () => {
         'Segunda parte: técnicas prácticas y una guía clara para llevar lo aprendido al encuentro íntimo con una mujer.'
       ],
       conclusion: 'Es el puente entre la identificación y la acción.',
-      mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-35bd627f-68d0-4f9d-bc10-b73a70a0f6ad',
+      mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-0a3d0046-ad76-4be8-a1dc-e306b96becde',
       paypalScriptId: 'paypal-libro-1',
       testimonials: [
         { 
@@ -64,7 +64,7 @@ const BibliotecaUrko = () => {
         'Protocolos progresivos de entrenamiento'
       ],
       conclusion: 'Es un manual de práctica. Claro, directo y aplicable. Diseñado para hombres que buscan disciplina, estructura y resultados.',
-      mpLink: '#',
+      mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-54d7b06d-d9e9-4712-b8d6-c7db21b24b49',
       paypalScriptId: 'paypal-libro-2',
       testimonials: [
         { 
@@ -87,7 +87,7 @@ const BibliotecaUrko = () => {
         'Identificación + Entrenamiento'
       ],
       conclusion: 'Si querés entender el camino y aplicarlo con estructura, este es el formato recomendado.',
-      mpLink: '#',
+      mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-71721602-0f63-454d-82e5-f7eb0bc7d7bb',
       paypalScriptId: 'paypal-pack-2',
       isSpecial: true
     }

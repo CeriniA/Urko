@@ -42,7 +42,7 @@ const EntrenamientosUrko = () => {
         'Acceso de por vida.'
       ],
       notIncludes: 'No incluye acompañamiento personalizado.',
-      mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-6e6dabc5-2600-4380-8c4d-5d27aee5e100',
+      mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-4a623548-8bf3-4a06-b6a1-642b58c10a73',
       paypalScriptId: 'paypal-fundamental',
       buttonText: 'Comenzar ahora',
       buttonType: 'buy'
@@ -61,7 +61,7 @@ const EntrenamientosUrko = () => {
         'Espacio de integración y consultas generales.',
         'Plan estructurado de 90 días.'
       ],
-      mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-f3f928a3-9f29-4685-848b-6027f12ce5d0',
+      mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-8f8ef519-92c0-4a71-b791-de49317127c7',
       paypalScriptId: 'paypal-trimestral',
       buttonText: 'Ingresar al Intensivo',
       buttonType: 'buy'

@@ -34,7 +34,7 @@ const productos = [
     id: 'libro-1',
     title: 'Si yo pude, vos podés',
     description: 'Testimonio directo de transformación. Desde la pérdida de firmeza y la eyaculación precoz, hasta la recuperación del vigor masculino.',
-    unit_price: 15,
+    unit_price: 11,
     quantity: 1,
     currency_id: 'USD'
   },
@@ -42,7 +42,7 @@ const productos = [
     id: 'libro-2',
     title: 'El Entrenamiento Urko',
     description: 'La guía definitiva de 10 pasos para el vigor masculino. Sistematización completa del método tántrico-taoísta aplicado.',
-    unit_price: 20,
+    unit_price: 11,
     quantity: 1,
     currency_id: 'USD'
   },
@@ -50,7 +50,7 @@ const productos = [
     id: 'pack-libros',
     title: 'Pack Completo de Libros',
     description: 'Ambos libros en un solo pack con precio especial.',
-    unit_price: 30,
+    unit_price: 18,
     quantity: 1,
     currency_id: 'USD'
   },
