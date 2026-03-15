@@ -1,5 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
+import { scrollToElement } from '../utils/scrollHelpers';
 
 const Hero = () => (
   <section className="hero" id="top">
@@ -19,7 +20,7 @@ const Hero = () => (
         <Button
           size="lg"
           variant="primary"
-          href="#escuela-urko"
+          onClick={() => scrollToElement('escuela-urko')}
         >
           Bienvenido a la Escuela Urko
         </Button>
