@@ -116,10 +116,10 @@ const SobreMiCompleto = () => {
                   Formación en <strong>Pranayamas, meditación y prácticas de Yoga Kundalini</strong> en la escuela DUNIA.YOGA.
                 </li>
                 <li>
-                  Iniciación en <strong>Curso Práctico de Arte Ritual – Nivel 33</strong>, con Brosa Leython, enfocado en reprogramación a través de la música y la acción cotidiana. Encuentro presencial en Chicago, Illinois (noviembre 2025).
+                  Iniciación en <strong>Curso Práctico de Arte Ritual – Nivel 33</strong>, con Brosa Leython, enfocado en reprogramación a través de la acción cotidiana.
                 </li>
                 <li>
-                  Participación activa durante más de seis meses en <strong>Llados University</strong>, campus de formación en mentalidad y desarrollo personal fundado por Amadeo Llados.
+                  Formación en <strong>Llados University</strong>,participante activo del campus y sala vip, sumando intereaccion personal con su fundador Amadeo Llados.
                 </li>
                 <li>
                   Participación en grabaciones y debates sobre los cuatro pilares que atraviesan la sexualidad masculina —mente, emociones, cuerpo y vínculos— junto a <strong>Alexander Gomez</strong>, reconocido terapeuta sexual de amplia trayectoria, con quien mantengo intercambio y estudio permanente.
@@ -131,7 +131,7 @@ const SobreMiCompleto = () => {
             <div className="bio-section mb-5">
               <h3 className="bio-title mb-4">Experiencia y misión</h3>
               <p className="bio-text">
-                En este recorrido he acompañado a <strong>cientos de hombres</strong> en la superación de disfunciones sexuales, especialmente eyaculación precoz y bajo vigor, observando cómo la recuperación de la energía sexual impacta directamente en los pilares fundamentales del ser: <strong>autoestima, propósito, presencia, vínculos y liderazgo personal</strong>.
+                En este recorrido he acompañado a <strong>cientos de hombres</strong> en dispersión de conflictos de índole sexual , especialmente eyaculación precoz y bajo vigor, observando cómo la recuperación de la energía sexual impacta directamente en los pilares fundamentales del ser: <strong>autoestima, propósito, presencia, vínculos y liderazgo personal</strong>.
               </p>
               <p className="bio-text">
                 He comprobado que cuando un hombre recupera su energía sexual, transforma automáticamente su autoestima, su propósito y su capacidad de liderazgo.
@@ -140,7 +140,7 @@ const SobreMiCompleto = () => {
                 Actualmente continúo en formación constante dentro de la doctrina tántrica y taoísta, sosteniendo una práctica activa y una actualización permanente.
               </p>
               <p className="bio-text">
-                Sigo en formación constante —actualmente profundizando en mentalidad y desarrollo personal— porque entiendo que <strong>el dominio de uno mismo no tiene techo</strong>.
+                Sigo en formación constante —actualmente profundizando en mentalidad y desarrollo personal— porque entiendo que <strong>el  trabajo en uno mismo es un proceso constante y permanente</strong>.
               </p>
             </div>
 
