@@ -73,7 +73,7 @@ const Header = () => {
           <Nav className="align-items-lg-center">
             <Nav.Link onClick={() => handleNavClick('escuela-urko')}>Escuela Urko</Nav.Link>
             <Nav.Link onClick={() => handleNavClick('entrenamientos')}>Entrenamientos</Nav.Link>
-            <Nav.Link onClick={() => handleNavClick('biblioteca')}>Biblioteca</Nav.Link>
+            <Nav.Link onClick={() => handleNavClick('biblioteca')}>Libros</Nav.Link>
             <Nav.Link onClick={() => handleNavClick('recursos-gratuitos')}>Recursos gratuitos</Nav.Link>
             <Nav.Link onClick={() => handleNavClick('testimonios')}>Testimonios</Nav.Link>
             <Nav.Link onClick={() => handleNavClick('sobre-mi')}>Sobre mí</Nav.Link>
