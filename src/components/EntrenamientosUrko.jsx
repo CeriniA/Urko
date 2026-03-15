@@ -29,7 +29,7 @@ const EntrenamientosUrko = () => {
       id: 'fundamental',
       title: 'PROGRAMA FUNDAMENTAL',
       icon: '🔹',
-      price: 247,
+      price: 369,
       currency: 'USD',
       description: 'El punto de partida estructurado para iniciar tu proceso con autonomía y disciplina personal.',
       subtitle: 'Para hombres que pueden sostener su entrenamiento sin acompañamiento.',
@@ -42,7 +42,7 @@ const EntrenamientosUrko = () => {
         'Acceso de por vida.'
       ],
       notIncludes: 'No incluye acompañamiento personalizado.',
-      mpLink: '#',
+      mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-6e6dabc5-2600-4380-8c4d-5d27aee5e100',
       paypalScriptId: 'paypal-fundamental',
       buttonText: 'Comenzar ahora',
       buttonType: 'buy'
@@ -51,7 +51,7 @@ const EntrenamientosUrko = () => {
       id: 'trimestral',
       title: 'ENTRENAMIENTO TRIMESTRAL',
       icon: '🔸',
-      price: 497,
+      price: 750,
       currency: 'USD',
       description: 'Para quienes desean más orden y dinámica grupal sin ingresar aún al proceso completo acompañado. Ideal si buscás estructura y ritmo sin seguimiento individual.',
       includes: [
@@ -61,7 +61,7 @@ const EntrenamientosUrko = () => {
         'Espacio de integración y consultas generales.',
         'Plan estructurado de 90 días.'
       ],
-      mpLink: '#',
+      mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-f3f928a3-9f29-4685-848b-6027f12ce5d0',
       paypalScriptId: 'paypal-trimestral',
       buttonText: 'Ingresar al Intensivo',
       buttonType: 'buy'
@@ -70,7 +70,7 @@ const EntrenamientosUrko = () => {
       id: 'acompanado',
       title: 'PROCESO TRIMESTRAL ACOMPAÑADO',
       icon: '🔥',
-      price: 750,
+      price: 1500,
       currency: 'USD',
       description: 'La experiencia completa de la Escuela Urko.',
       subtitle: 'Tres meses de evolución progresiva diseñados para llevarte desde el punto cero hasta el dominio total. Con acompañamiento real en grupos reducidos. Cupos limitados por cohorte.',
@@ -88,7 +88,7 @@ const EntrenamientosUrko = () => {
       id: 'individual',
       title: 'ACOMPAÑAMIENTO INDIVIDUAL 1-1',
       icon: '🔒',
-      price: 3000,
+      price: null,
       currency: 'USD',
       description: 'Modalidad personalizada para quienes requieren profundidad y seguimiento directo.',
       subtitle: 'Acceso solo mediante evaluación previa.',
@@ -188,10 +188,6 @@ const EntrenamientosUrko = () => {
                 </div>
 
                 <div className="programa-footer">
-                  <p className="text-center mb-3">
-                    <strong className="fs-4">💰 Inversión{program.id === 'fundamental' ? ' única' : ''}: ${program.price} {program.currency}</strong>
-                  </p>
-
                   {program.buttonType === 'buy' && (
                     <>
                       <a 

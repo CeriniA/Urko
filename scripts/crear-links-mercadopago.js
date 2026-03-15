@@ -10,7 +10,7 @@
  * node scripts/crear-links-mercadopago.js
  */
 
-import mercadopago from 'mercadopago';
+import { MercadoPagoConfig, Preference } from 'mercadopago';
 import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
@@ -22,10 +22,11 @@ const __dirname = path.dirname(__filename);
 // Cargar variables de entorno
 dotenv.config();
 
-// Configurar Mercado Pago
-mercadopago.configure({
-  access_token: process.env.VITE_ACCESS_TOKEN
+// Configurar Mercado Pago con la nueva API
+const client = new MercadoPagoConfig({ 
+  accessToken: process.env.VITE_ACCESS_TOKEN 
 });
+const preference = new Preference(client);
 
 // Productos a crear
 const productos = [
@@ -57,7 +58,7 @@ const productos = [
     id: 'programa-fundamental',
     title: 'PROGRAMA FUNDAMENTAL',
     description: 'Acceso completo al método Urko en formato autónomo. Incluye método paso a paso, protocolos prácticos, ejercicios progresivos, acceso de por vida y actualizaciones futuras.',
-    unit_price: 247,
+    unit_price: 369,
     quantity: 1,
     currency_id: 'USD'
   },
@@ -65,18 +66,26 @@ const productos = [
     id: 'entrenamiento-trimestral',
     title: 'ENTRENAMIENTO TRIMESTRAL',
     description: 'Tres meses de estructura grupal con encuentros en vivo. Incluye calendario definido, 6 encuentros grupales en vivo, método completo, acceso de por vida y actualizaciones.',
-    unit_price: 497,
+    unit_price: 750,
+    quantity: 1,
+    currency_id: 'USD'
+  },
+  {
+    id: 'proceso-acompanado',
+    title: 'PROCESO ACOMPAÑADO',
+    description: 'Tres meses con guía directa, seguimiento personalizado y videollamadas semanales. Incluye encuentros grupales semanales, videollamadas personalizadas, seguimiento personalizado, correcciones y guía directa.',
+    unit_price: 1500,
     quantity: 1,
     currency_id: 'USD'
   }
 ];
 
 // URLs de retorno (ajustar según tu dominio)
-const BASE_URL = 'https://tu-dominio.com'; // CAMBIAR POR TU DOMINIO
+const BASE_URL = 'https://urkotantrico.com'; // CAMBIAR POR TU DOMINIO
 
 async function crearPreferencia(producto) {
   try {
-    const preference = {
+    const body = {
       items: [
         {
           title: producto.title,
@@ -93,23 +102,23 @@ async function crearPreferencia(producto) {
       },
       auto_return: 'approved',
       external_reference: producto.id,
-      notification_url: `${BASE_URL}/api/mercadopago/webhook`, // Para recibir notificaciones
+      notification_url: `${BASE_URL}/api/mercadopago/webhook`,
       statement_descriptor: 'URKO TANTRICO',
       payment_methods: {
         excluded_payment_types: [],
-        installments: 1 // Número de cuotas permitidas
+        installments: 1
       }
     };
 
-    const response = await mercadopago.preferences.create(preference);
+    const response = await preference.create({ body });
     
     return {
       id: producto.id,
       title: producto.title,
       price: producto.unit_price,
-      init_point: response.body.init_point, // Link para web
-      sandbox_init_point: response.body.sandbox_init_point, // Link de prueba
-      preference_id: response.body.id
+      init_point: response.init_point,
+      sandbox_init_point: response.sandbox_init_point,
+      preference_id: response.id
     };
   } catch (error) {
     console.error(`Error creando preferencia para ${producto.title}:`, error);
@@ -120,10 +129,10 @@ async function crearPreferencia(producto) {
 async function crearTodosLosLinks() {
   console.log('🚀 Iniciando creación de links de Mercado Pago...\n');
   
-  if (!process.env.MP_ACCESS_TOKEN) {
-    console.error('❌ ERROR: No se encontró MP_ACCESS_TOKEN en .env');
+  if (!process.env.VITE_ACCESS_TOKEN) {
+    console.error('❌ ERROR: No se encontró VITE_ACCESS_TOKEN en .env');
     console.log('Por favor, agrega tu Access Token de Mercado Pago en el archivo .env:');
-    console.log('MP_ACCESS_TOKEN=tu_access_token_aqui\n');
+    console.log('VITE_ACCESS_TOKEN=tu_access_token_aqui\n');
     return;
   }
 

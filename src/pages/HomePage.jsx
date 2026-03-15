@@ -4,18 +4,18 @@ import Hero from '../components/Hero.jsx';
 import EscuelaUrko from '../components/EscuelaUrko.jsx';
 import ComoFunciona from '../components/ComoFunciona.jsx';
 import EsTuCamino from '../components/EsTuCamino.jsx';
+import ComparacionProgramas from '../components/ComparacionProgramas.jsx';
+import Testimonials from '../components/Testimonials.jsx';
+import SobreMi from '../components/SobreMi.jsx';
+import RecursosGratuitos from '../components/RecursosGratuitos.jsx';
+import NewsletterSection from '../components/NewsletterSection.jsx';
+import FAQ from '../components/FAQ.jsx';
+import ContactSection from '../components/ContactSection.jsx';
 import { scrollToElement } from '../utils/scrollHelpers';
 
-// Lazy load de componentes pesados (below the fold)
+// Lazy loading para componentes pesados
 const EntrenamientosUrko = lazy(() => import('../components/EntrenamientosUrko.jsx'));
-const ComparacionProgramas = lazy(() => import('../components/ComparacionProgramas.jsx'));
-const Testimonials = lazy(() => import('../components/Testimonials.jsx'));
-const SobreMi = lazy(() => import('../components/SobreMi.jsx'));
-const RecursosGratuitos = lazy(() => import('../components/RecursosGratuitos.jsx'));
-const NewsletterSection = lazy(() => import('../components/NewsletterSection.jsx'));
 const BibliotecaUrko = lazy(() => import('../components/BibliotecaUrko.jsx'));
-const FAQ = lazy(() => import('../components/FAQ.jsx'));
-const ContactSection = lazy(() => import('../components/ContactSection.jsx'));
 
 const HomePage = () => {
   const location = useLocation();
@@ -41,15 +41,20 @@ const HomePage = () => {
       
       <Suspense fallback={<div style={{ minHeight: '400px' }} />}>
         <EntrenamientosUrko />
-        <ComparacionProgramas />
-        <Testimonials />
-        <SobreMi />
-        <RecursosGratuitos />
-        <NewsletterSection />
-        <BibliotecaUrko />
-        <FAQ />
-        <ContactSection />
       </Suspense>
+      
+      <ComparacionProgramas />
+      <Testimonials />
+      <SobreMi />
+      <RecursosGratuitos />
+      <NewsletterSection />
+      
+      <Suspense fallback={<div style={{ minHeight: '400px' }} />}>
+        <BibliotecaUrko />
+      </Suspense>
+      
+      <FAQ />
+      <ContactSection />
     </main>
   );
 };

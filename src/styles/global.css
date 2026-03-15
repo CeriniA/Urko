@@ -56,6 +56,14 @@ body::before {
   transform: translateY(0);
 }
 
+/* Forzar visibilidad en mobile para evitar problemas con IntersectionObserver */
+@media (max-width: 767px) {
+  .reveal-section {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
 @keyframes fadeUpHero {
   from {
     opacity: 0;

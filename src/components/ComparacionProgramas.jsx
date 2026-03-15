@@ -21,7 +21,6 @@ const ComparacionProgramas = () => {
     { name: 'Correcciones y guía directa', fundamental: false, trimestral: false, acompanado: true, individual: true },
     { name: 'Contacto directo vía WhatsApp', fundamental: false, trimestral: false, acompanado: true, individual: true },
     { name: 'Trabajo específico según tu caso', fundamental: false, trimestral: false, acompanado: false, individual: true },
-    { name: 'Precio (USD)', fundamental: '$247', trimestral: '$497', acompanado: '$750', individual: '$3000' },
   ];
 
   const renderCell = (value) => {
