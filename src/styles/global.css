@@ -221,12 +221,14 @@ body::before {
 
 /* Navbar mobile styles */
 .navbar-collapse {
-  background-color: rgba(10, 10, 10, 0.98);
-  backdrop-filter: blur(10px);
+  background-color: transparent;
+  backdrop-filter: none;
 }
 
 @media (max-width: 991px) {
   .navbar-collapse {
+    background-color: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(10px);
     margin-top: 1rem;
     padding: 1rem;
     border-radius: 8px;
