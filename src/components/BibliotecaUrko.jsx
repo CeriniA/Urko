@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll';
+import products from '../data/products';
 import libro1Img from '../assets/images/libro 1.png';
 import libro2Img from '../assets/images/Libro 2.png';
 
@@ -25,73 +26,8 @@ const loadPayPalScript = () => {
 const BibliotecaUrko = () => {
   const sectionRef = useRevealOnScroll();
 
-  const books = [
-    {
-      id: 'libro-1',
-      icon: '📘',
-      title: 'Libro 1: Si yo pude, vos podés',
-      price: 11,
-      currency: 'USD',
-      description: 'Una guía testimonial y práctica. En este libro relato mi proceso real de transformación: desde la disfunción y la desconexión hasta el encuentro con mi maestro y la doctrina tántrico–taoísta.',
-      subtitle: 'No es solo una historia. Desde las primeras páginas encontrarás herramientas concretas para comenzar a aplicar.',
-      parts: [
-        'Primera parte: el recorrido personal y el cambio de paradigma.',
-        'Segunda parte: técnicas prácticas y una guía clara para llevar lo aprendido al encuentro íntimo con una mujer.'
-      ],
-      conclusion: 'Es el puente entre la identificación y la acción.',
-      mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-0a3d0046-ad76-4be8-a1dc-e306b96becde',
-      paypalScriptId: 'paypal-libro-1',
-      testimonials: [
-        { 
-          id: 1, 
-          text: 'Te agradezco de corazón. Lo puse en práctica. Y volví a enamorar a mi mujer!!! Estoy trabajando mucho para seguir mejorando y voy a leerlo de nuevo... pero mejore notablemente.... y me gustaría tener una charla con vos...',
-          author: 'Lector del libro'
-        }
-      ]
-    },
-    {
-      id: 'libro-2',
-      icon: '📕',
-      title: 'Libro 2: Entrenamiento Urko',
-      subtitle: '"El que no tiene maestro, pierde."',
-      price: 11,
-      currency: 'USD',
-      description: 'Este libro sistematiza el método Urko.',
-      includes: [
-        'Técnicas centrales de la doctrina tántrico–taoísta',
-        'Ejercicios desarrollados desde mi experiencia directa',
-        'Adaptaciones prácticas para la realidad del varón actual',
-        'Protocolos progresivos de entrenamiento'
-      ],
-      conclusion: 'Es un manual de práctica. Claro, directo y aplicable. Diseñado para hombres que buscan disciplina, estructura y resultados.',
-      mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-54d7b06d-d9e9-4712-b8d6-c7db21b24b49',
-      paypalScriptId: 'paypal-libro-2',
-      testimonials: [
-        { 
-          id: 1, 
-          text: 'Hola quería decirte que seguí la guía y funcionó!! Padecía EP, pero seguir los pasos hizo que pueda disfrutar de los encuentros. Un saludo! Muchas gracias!! Solucioné un problema que últimamente me hacía ganas de no estar con mujeres, pero ahora todo es distinto. Sos crack!',
-          author: 'Lector del libro'
-        }
-      ]
-    },
-    {
-      id: 'pack-2',
-      icon: '📚',
-      title: 'Pack x 2: "Si yo pude, vos podes" + "Entrenamiento Urko"',
-      price: 18,
-      currency: 'USD',
-      description: 'Ambos libros que pueden leerse por separado pero juntos forman el proceso completo:',
-      features: [
-        'Conciencia + Método',
-        'Historia + Sistema',
-        'Identificación + Entrenamiento'
-      ],
-      conclusion: 'Si querés entender el camino y aplicarlo con estructura, este es el formato recomendado.',
-      mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-71721602-0f63-454d-82e5-f7eb0bc7d7bb',
-      paypalScriptId: 'paypal-pack-2',
-      isSpecial: true
-    }
-  ];
+  // Filtrar solo los productos de categoría 'books' desde products.js
+  const books = products.filter(product => product.category === 'books');
 
   // Cargar botones de PayPal
   useEffect(() => {

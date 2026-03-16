@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll';
+import products from '../data/products';
 
 const PAYPAL_CLIENT_ID = import.meta.env.VITE_PAYPAL_CLIENT_ID;
 
@@ -24,79 +25,8 @@ const loadPayPalScript = () => {
 const EntrenamientosUrko = () => {
   const sectionRef = useRevealOnScroll();
 
-  const programs = [
-    {
-      id: 'fundamental',
-      title: 'PROGRAMA FUNDAMENTAL',
-      icon: '🔹',
-      price: 369,
-      currency: 'USD',
-      description: 'El punto de partida estructurado para iniciar tu proceso con autonomía y disciplina personal.',
-      subtitle: 'Para hombres que pueden sostener su entrenamiento sin acompañamiento.',
-      access: '🔓 Acceso inmediato.',
-      includes: [
-        'Método completo paso a paso.',
-        'Protocolos prácticos.',
-        'Ejercicios progresivos.',
-        'Actualizaciones futuras.',
-        'Acceso de por vida.'
-      ],
-      notIncludes: 'No incluye acompañamiento personalizado.',
-      mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-4a623548-8bf3-4a06-b6a1-642b58c10a73',
-      paypalScriptId: 'paypal-fundamental',
-      buttonText: 'Comenzar ahora',
-      buttonType: 'buy'
-    },
-    {
-      id: 'trimestral',
-      title: 'ENTRENAMIENTO TRIMESTRAL',
-      icon: '🔸',
-      price: 750,
-      currency: 'USD',
-      description: 'Para quienes desean más orden y dinámica grupal sin ingresar aún al proceso completo acompañado. Ideal si buscás estructura y ritmo sin seguimiento individual.',
-      includes: [
-        'Acceso completo al Programa Fundamental',
-        'Calendario de práctica definido.',
-        '6 encuentros grupales en vivo.',
-        'Espacio de integración y consultas generales.',
-        'Plan estructurado de 90 días.'
-      ],
-      mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-8f8ef519-92c0-4a71-b791-de49317127c7',
-      paypalScriptId: 'paypal-trimestral',
-      buttonText: 'Ingresar al Intensivo',
-      buttonType: 'buy'
-    },
-    {
-      id: 'acompanado',
-      title: 'PROCESO TRIMESTRAL ACOMPAÑADO',
-      icon: '🔥',
-      price: 1500,
-      currency: 'USD',
-      description: 'La experiencia completa de la Escuela Urko.',
-      subtitle: 'Tres meses de evolución progresiva diseñados para llevarte desde el punto cero hasta el dominio total. Con acompañamiento real en grupos reducidos. Cupos limitados por cohorte.',
-      includes: [
-        'Videollamadas semanales.',
-        'Seguimiento durante el proceso.',
-        'Correcciones y guía directa.',
-        'Plan estructurado de 90 días.'
-      ],
-      whatsappLink: 'https://wa.me/5491234567890',
-      buttonText: 'Aplicar al proceso',
-      buttonType: 'whatsapp'
-    },
-    {
-      id: 'individual',
-      title: 'ACOMPAÑAMIENTO INDIVIDUAL 1-1',
-      icon: '🔒',
-      price: null,
-      currency: 'USD',
-      description: 'Modalidad personalizada para quienes requieren profundidad y seguimiento directo.',
-      subtitle: 'Acceso solo mediante evaluación previa.',
-      formLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfLX9CAuPe1KbbLUhiOoK8OiyzvyBxnV-49rRe0xVny_SzIUg/viewform',
-      buttonText: 'Solicitar evaluación',
-      buttonType: 'form'
-    }
-  ];
+  // Filtrar solo los productos de categoría 'programs' desde products.js
+  const programs = products.filter(product => product.category === 'programs');
 
   // Cargar botones de PayPal para programas con compra directa
   useEffect(() => {
