@@ -23,7 +23,7 @@ const products = [
       'Segunda parte: técnicas prácticas y una guía clara para llevar lo aprendido al encuentro íntimo con una mujer.'
     ],
     conclusion: 'Es el puente entre la identificación y la acción.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-0a3d0046-ad76-4be8-a1dc-e306b96becde',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-ca8ea2a0-14cf-4b4e-86a2-11526555b1a7',
     paypalScriptId: 'paypal-libro-1',
     category: 'books',
     testimonials: [
@@ -49,7 +49,7 @@ const products = [
       'Protocolos progresivos de entrenamiento'
     ],
     conclusion: 'Es un manual de práctica. Claro, directo y aplicable. Diseñado para hombres que buscan disciplina, estructura y resultados.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-54d7b06d-d9e9-4712-b8d6-c7db21b24b49',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-b0afa927-87dc-4764-80ef-e7158586022c',
     paypalScriptId: 'paypal-libro-2',
     category: 'books',
     testimonials: [
@@ -73,7 +73,7 @@ const products = [
       'Identificación + Entrenamiento'
     ],
     conclusion: 'Si querés entender el camino y aplicarlo con estructura, este es el formato recomendado.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-71721602-0f63-454d-82e5-f7eb0bc7d7bb',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-dab77f33-7441-495c-8d75-45e4a58f801a',
     paypalScriptId: 'paypal-pack-libros',
     category: 'books',
     isSpecial: true,
@@ -97,7 +97,7 @@ const products = [
       'Acceso de por vida.'
     ],
     notIncludes: 'No incluye acompañamiento personalizado.',
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-4a623548-8bf3-4a06-b6a1-642b58c10a73',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-d4d50249-d14b-4ef2-ac9d-e19dc17fcf02',
     paypalScriptId: 'paypal-programa-fundamental',
     buttonText: 'Comenzar ahora',
     buttonType: 'buy',
@@ -117,7 +117,7 @@ const products = [
       'Espacio de integración y consultas generales.',
       'Plan estructurado de 90 días.'
     ],
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-8f8ef519-92c0-4a71-b791-de49317127c7',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-74bc57ba-90b7-48c6-bdea-c772564c1689',
     paypalScriptId: 'paypal-entrenamiento-trimestral',
     buttonText: 'Ingresar al Intensivo',
     buttonType: 'buy',
@@ -138,7 +138,7 @@ const products = [
       'Correcciones y guía directa.',
       'Plan estructurado de 90 días.'
     ],
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-23a5976f-0d7b-4e8b-a29b-14df98804696',
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-1c753929-1b95-4a58-b894-350ea64bb1d1',
     paypalScriptId: 'paypal-proceso-acompanado',
     whatsappLink: 'https://wa.me/5491234567890',
     buttonText: 'Aplicar al proceso',
