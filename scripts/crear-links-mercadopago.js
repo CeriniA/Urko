@@ -83,6 +83,10 @@ const productos = [
 // URLs de retorno (ajustar según tu dominio)
 const BASE_URL = 'https://urkotantrico.com'; // CAMBIAR POR TU DOMINIO
 
+// IMPORTANTE: Reemplazar con tu URL de webhook de Make
+// La encontrás en tu escenario de Make, en el módulo "Webhooks"
+const MAKE_WEBHOOK_URL = 'https://hook.us2.make.com/ylhtebvebmkrge47jkl2oq41qynzuswb';
+
 async function crearPreferencia(producto) {
   try {
     const body = {
@@ -102,7 +106,7 @@ async function crearPreferencia(producto) {
       },
       auto_return: 'approved',
       external_reference: producto.id,
-      notification_url: `${BASE_URL}/api/mercadopago/webhook`,
+      notification_url: MAKE_WEBHOOK_URL,
       statement_descriptor: 'URKO TANTRICO',
       payment_methods: {
         excluded_payment_types: [],

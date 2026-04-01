@@ -3,48 +3,48 @@
     "id": "libro-1",
     "title": "Si yo pude, vos podés",
     "price": 11,
-    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-ca8ea2a0-14cf-4b4e-86a2-11526555b1a7",
-    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-ca8ea2a0-14cf-4b4e-86a2-11526555b1a7",
-    "preference_id": "3020489059-ca8ea2a0-14cf-4b4e-86a2-11526555b1a7"
+    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-b417ca72-c711-4e4b-b0ac-d272a0621f92",
+    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-b417ca72-c711-4e4b-b0ac-d272a0621f92",
+    "preference_id": "3020489059-b417ca72-c711-4e4b-b0ac-d272a0621f92"
   },
   {
     "id": "libro-2",
     "title": "El Entrenamiento Urko",
     "price": 11,
-    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-b0afa927-87dc-4764-80ef-e7158586022c",
-    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-b0afa927-87dc-4764-80ef-e7158586022c",
-    "preference_id": "3020489059-b0afa927-87dc-4764-80ef-e7158586022c"
+    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-53cf127f-2ddf-4537-b71c-5cfe7acb10f5",
+    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-53cf127f-2ddf-4537-b71c-5cfe7acb10f5",
+    "preference_id": "3020489059-53cf127f-2ddf-4537-b71c-5cfe7acb10f5"
   },
   {
     "id": "pack-libros",
     "title": "Pack Completo de Libros",
     "price": 18,
-    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-dab77f33-7441-495c-8d75-45e4a58f801a",
-    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-dab77f33-7441-495c-8d75-45e4a58f801a",
-    "preference_id": "3020489059-dab77f33-7441-495c-8d75-45e4a58f801a"
+    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-ce22eafa-f3ac-4ad4-ad88-eaf8068fb725",
+    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-ce22eafa-f3ac-4ad4-ad88-eaf8068fb725",
+    "preference_id": "3020489059-ce22eafa-f3ac-4ad4-ad88-eaf8068fb725"
   },
   {
     "id": "programa-fundamental",
     "title": "PROGRAMA FUNDAMENTAL",
     "price": 369,
-    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-d4d50249-d14b-4ef2-ac9d-e19dc17fcf02",
-    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-d4d50249-d14b-4ef2-ac9d-e19dc17fcf02",
-    "preference_id": "3020489059-d4d50249-d14b-4ef2-ac9d-e19dc17fcf02"
+    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-99a82e8f-f337-496e-b84d-d4c5c535bbc9",
+    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-99a82e8f-f337-496e-b84d-d4c5c535bbc9",
+    "preference_id": "3020489059-99a82e8f-f337-496e-b84d-d4c5c535bbc9"
   },
   {
     "id": "entrenamiento-trimestral",
     "title": "ENTRENAMIENTO TRIMESTRAL",
     "price": 750,
-    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-74bc57ba-90b7-48c6-bdea-c772564c1689",
-    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-74bc57ba-90b7-48c6-bdea-c772564c1689",
-    "preference_id": "3020489059-74bc57ba-90b7-48c6-bdea-c772564c1689"
+    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-4d55c893-f99b-42d6-a760-2b5b9d05ef3b",
+    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-4d55c893-f99b-42d6-a760-2b5b9d05ef3b",
+    "preference_id": "3020489059-4d55c893-f99b-42d6-a760-2b5b9d05ef3b"
   },
   {
     "id": "proceso-acompanado",
     "title": "PROCESO ACOMPAÑADO",
     "price": 1500,
-    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-1c753929-1b95-4a58-b894-350ea64bb1d1",
-    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-1c753929-1b95-4a58-b894-350ea64bb1d1",
-    "preference_id": "3020489059-1c753929-1b95-4a58-b894-350ea64bb1d1"
+    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-aa6aac42-137b-4ae6-869b-d7ae7c698b24",
+    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-aa6aac42-137b-4ae6-869b-d7ae7c698b24",
+    "preference_id": "3020489059-aa6aac42-137b-4ae6-869b-d7ae7c698b24"
   }
 ]
