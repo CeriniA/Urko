@@ -4,7 +4,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll';
-import EmailCaptureModal from './EmailCaptureModal';
 import products from '../data/products';
 
 const PAYPAL_CLIENT_ID = import.meta.env.VITE_PAYPAL_CLIENT_ID;
@@ -25,55 +24,9 @@ const loadPayPalScript = () => {
 
 const EntrenamientosUrko = () => {
   const sectionRef = useRevealOnScroll();
-  const [showEmailModal, setShowEmailModal] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [paymentMethod, setPaymentMethod] = useState(null);
 
   // Filtrar solo los productos de categoría 'programs' desde products.js
   const programs = products.filter(product => product.category === 'programs');
-
-  const handlePaymentClick = (program, method) => {
-    setSelectedProduct(program);
-    setPaymentMethod(method);
-    setShowEmailModal(true);
-  };
-
-  const handleEmailConfirm = async (email) => {
-    setShowEmailModal(false);
-    
-    if (paymentMethod === 'mercadopago') {
-      try {
-        const response = await fetch('https://hook.us2.make.com/ylhtebvebmkrge47jkl2oq41qynzuswb', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            action: 'create_preference',
-            product_id: selectedProduct.id,
-            product_title: selectedProduct.title,
-            product_price: selectedProduct.price,
-            access_email: email
-          })
-        });
-        
-        const data = await response.json();
-        
-        if (data.init_point) {
-          window.open(data.init_point, '_blank');
-        } else {
-          alert('Error al crear el link de pago. Por favor, intentá nuevamente.');
-        }
-      } catch (error) {
-        console.error('Error creando preferencia:', error);
-        alert('Error al crear el link de pago. Por favor, intentá nuevamente.');
-      }
-    } else if (paymentMethod === 'paypal') {
-      sessionStorage.setItem('userAccessEmail', email);
-      const paypalButton = document.querySelector(`#${selectedProduct.paypalScriptId} iframe`);
-      if (paypalButton) {
-        paypalButton.click();
-      }
-    }
-  };
 
   // Cargar botones de PayPal para programas con compra directa
   useEffect(() => {
@@ -167,21 +120,16 @@ const EntrenamientosUrko = () => {
                 <div className="programa-footer">
                   {program.buttonType === 'buy' && (
                     <>
-                      <button 
-                        onClick={() => handlePaymentClick(program, 'mercadopago')}
+                      <a 
+                        href={program.mpLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
                         className="btn btn-mp w-100 mb-2"
                       >
                         Comprar con Mercado Pago
-                      </button>
-                      <button 
-                        onClick={() => handlePaymentClick(program, 'paypal')}
-                        className="btn btn-primary w-100 mb-2"
-                        style={{ backgroundColor: '#0070ba', borderColor: '#0070ba' }}
-                      >
-                        Comprar con PayPal
-                      </button>
+                      </a>
                       {program.paypalScriptId && (
-                        <div id={program.paypalScriptId} className="paypal-button-container" style={{ display: 'none' }}></div>
+                        <div id={program.paypalScriptId} className="paypal-button-container"></div>
                       )}
                     </>
                   )}
@@ -213,13 +161,6 @@ const EntrenamientosUrko = () => {
           ))}
         </Row>
       </Container>
-
-      <EmailCaptureModal
-        show={showEmailModal}
-        onHide={() => setShowEmailModal(false)}
-        onConfirm={handleEmailConfirm}
-        productTitle={selectedProduct?.title || ''}
-      />
     </section>
   );
 };
