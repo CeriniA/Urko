@@ -132,14 +132,14 @@ body::before {
 
 @media (max-width: 767px) {
   .hero::before {
-    background: url('../assets/images/HeroMobile.jpeg') center center/cover no-repeat;
+    background: url('../assets/images/HeroMobile.jpeg') center top/contain no-repeat;
     background-color: #000000;
     top: 0;
   }
 
   .boton-hero-urko {
     width: 80%;
-    bottom: 200px;
+    bottom: 35vh;
     transform: translateX(-50%) !important;
   }
 }
@@ -1107,7 +1107,7 @@ body::before {
 
 @media (max-width: 767px) {
   .hero {
-    padding: 8rem 0 5rem;
+    padding: 5rem 0 2rem;
   }
 
   .urko-navbar {
