@@ -194,7 +194,7 @@ const ContactSection = () => {
                 />
               </Form.Group>
               <Row className="mb-3">
-                <Col>
+                <Col xs={12} sm={6}>
                   <Form.Group controlId="edad">
                     <Form.Label>Edad *</Form.Label>
                     <Form.Control
@@ -209,7 +209,7 @@ const ContactSection = () => {
                     />
                   </Form.Group>
                 </Col>
-                <Col>
+                <Col xs={12} sm={6}>
                   <Form.Group controlId="ciudad">
                     <Form.Label>Ciudad / País *</Form.Label>
                     <Form.Control

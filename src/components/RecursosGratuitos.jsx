@@ -1,6 +1,11 @@
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll';
+import guiaImg from '../assets/images/Guia.png';
+
+const YOUTUBE_VIDEO_ID = 'LsdhL9xcZlE';
+const YOUTUBE_WATCH_URL = `https://www.youtube.com/watch?v=${YOUTUBE_VIDEO_ID}`;
+const YOUTUBE_EMBED_URL = `https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${YOUTUBE_VIDEO_ID}&controls=0&showinfo=0&modestbranding=1&rel=0`;
 
 const RecursosGratuitos = () => {
   const sectionRef = useRevealOnScroll();
@@ -13,56 +18,50 @@ const RecursosGratuitos = () => {
           Comenzá a desarrollar tu masculinidad y sexualidad consciente con estos recursos gratuitos de la Escuela Urko. Entrenamientos especializados para varones.
         </p>
 
-        <div className="recursos-gratuitos-content mx-auto" style={{ maxWidth: '900px' }}>
-          <div className="recurso-gratuito-card p-4 mb-4">
-            <h3 className="mb-3 text-warning">ENTRENAMIENTO URKO:</h3>
-            <h4 className="mb-4">Guía gratuita: 10 pasos para recuperar control y estabilidad sexual.</h4>
-            
-            <p className="mb-3">
-              Una guía práctica de 12 páginas donde sintetizo los fundamentos reales del entrenamiento aplicado al varón moderno.
-            </p>
+        <div className="recursos-guia-content mx-auto guia-imagen-wrapper" style={{ maxWidth: '900px', position: 'relative' }}>
+          <img
+            src={guiaImg}
+            alt="Guía gratuita: 10 pasos para recuperar control y estabilidad sexual"
+            className="guia-imagen img-fluid"
+            loading="lazy"
+            width="900"
+          />
 
-            <div className="mb-4">
-              <p className="fw-bold mb-2">Incluye:</p>
-              <ul>
-                <li>Los pilares del Método Urko.</li>
-                <li>Ejercicios prácticos y aplicables desde el primer día.</li>
-                <li>Un enfoque claro, directo y sin misticismo innecesario.</li>
-              </ul>
-            </div>
+          <Button
+            variant="primary"
+            size="lg"
+            href="https://drive.google.com/file/d/1tnBWJDB4DINCs0AdAvYFpgJzCAJSK8Md/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="guia-boton-descarga"
+          >
+            Descargar PDF
+          </Button>
+        </div>
 
-            <p className="mb-3">
-              La guía está acompañada por una clase gratuita de 40 minutos donde explico en profundidad cómo aplicar correctamente cada paso y evitar los errores más comunes.
-            </p>
+        <div className="masterclass-section mt-5 pt-5">
+          <h2 className="masterclass-title text-center mb-4">Masterclass</h2>
 
-            <p className="mb-4 fst-italic">
-              Este material es suficiente para que cualquier hombre comprometido - incluso sin experiencia o recursos económicos - pueda iniciar y sostener su proceso de recuperación.
-            </p>
+          <div className="masterclass-video-wrapper mx-auto">
+            <iframe
+              src={YOUTUBE_EMBED_URL}
+              title="Masterclass Urko"
+              allow="autoplay; encrypted-media; accelerometer; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
 
-            <p className="text-center fw-bold mb-4">
-              Acceso libre. Compromiso personal.
-            </p>
-
-            <div className="d-flex flex-column flex-md-row gap-3 justify-content-center">
-              <Button
-                variant="primary"
-                size="lg"
-                href="https://drive.google.com/file/d/1tnBWJDB4DINCs0AdAvYFpgJzCAJSK8Md/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Descargar PDF
-              </Button>
-              <Button
-                variant="outline-primary"
-                size="lg"
-                href="https://www.youtube.com/live/LsdhL9xcZlE?si=IfJQkWIVvd8EClGH"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Ver Video (40 min)
-              </Button>
-            </div>
+          <div className="text-center mt-4">
+            <Button
+              variant="primary"
+              size="lg"
+              href={YOUTUBE_WATCH_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ▶ Ver en YouTube
+            </Button>
           </div>
         </div>
       </Container>

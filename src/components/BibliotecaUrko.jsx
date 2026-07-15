@@ -2,86 +2,18 @@ import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll';
 import products from '../data/products';
 import libro1Img from '../assets/images/libro 1.png';
 import libro2Img from '../assets/images/Libro 2.png';
 
-const PAYPAL_CLIENT_ID = import.meta.env.VITE_PAYPAL_CLIENT_ID;
-
-const loadPayPalScript = () => {
-  const src = `https://www.paypal.com/sdk/js?client-id=${PAYPAL_CLIENT_ID}&currency=USD`;
-  let script = document.querySelector(`script[src="${src}"]`);
-
-  if (!script) {
-    script = document.createElement('script');
-    script.src = src;
-    script.async = true;
-    document.body.appendChild(script);
-  }
-
-  return script;
-};
-
 const BibliotecaUrko = () => {
   const sectionRef = useRevealOnScroll();
 
-  // Filtrar solo los productos de categoría 'books' desde products.js
-  const books = products.filter(product => product.category === 'books');
-
-  // Cargar botones de PayPal
-  useEffect(() => {
-    if (!PAYPAL_CLIENT_ID) return;
-
-    const script = loadPayPalScript();
-
-    const renderButtons = () => {
-      books.forEach((book) => {
-        if (!book.paypalScriptId) return;
-        const container = document.getElementById(book.paypalScriptId);
-        if (!container || container.children.length > 0) return;
-
-        window.paypal.Buttons({
-          style: { 
-            layout: 'vertical',
-            color: 'blue',
-            shape: 'rect',
-            label: 'paypal',
-            height: 40,
-            tagline: false
-          },
-          createOrder: (_, actions) =>
-            actions.order.create({
-              purchase_units: [
-                {
-                  amount: { value: book.price.toFixed(2) },
-                  description: book.title,
-                  custom_id: book.id,
-                },
-              ],
-            }),
-          onApprove: async (_, actions) => {
-            const order = await actions.order.capture();
-            alert(`Pago exitoso! ID de orden: ${order.id}`);
-          },
-          onError: (err) => {
-            console.error('Error en PayPal:', err);
-            alert('Hubo un error procesando el pago. Por favor, intentá de nuevo.');
-          },
-        }).render(`#${book.paypalScriptId}`);
-      });
-    };
-
-    if (window.paypal) {
-      renderButtons();
-    } else {
-      script.addEventListener('load', renderButtons);
-    }
-
-    return () => {
-      script.removeEventListener('load', renderButtons);
-    };
-  }, []);
+  const books = products.filter(
+    (product) => product.category === 'books' && product.isHidden !== true
+  );
 
   return (
     <section ref={sectionRef} className="biblioteca-urko py-5" id="biblioteca">
@@ -98,9 +30,9 @@ const BibliotecaUrko = () => {
               <div className={`libro-card h-100 p-4 ${book.isSpecial ? 'libro-card--special' : ''}`}>
                 <div className="libro-header mb-4">
                   {book.id === 'libro-1' && (
-                    <img 
-                      src={libro2Img} 
-                      alt={book.title} 
+                    <img
+                      src={libro2Img}
+                      alt={book.title}
                       className="book-cover-img mb-3"
                       loading="lazy"
                       width="180"
@@ -108,9 +40,9 @@ const BibliotecaUrko = () => {
                     />
                   )}
                   {book.id === 'libro-2' && (
-                    <img 
-                      src={libro1Img} 
-                      alt={book.title} 
+                    <img
+                      src={libro1Img}
+                      alt={book.title}
                       className="book-cover-img mb-3"
                       loading="lazy"
                       width="180"
@@ -160,20 +92,38 @@ const BibliotecaUrko = () => {
                 </div>
 
                 <div className="libro-footer">
-                  <p className="text-center mb-3">
-                    <strong className="fs-4">Valor: <span className="text-warning">${book.price} {book.currency}</span></strong>
-                    {book.isSpecial && <span className="badge bg-warning text-dark ms-2">Valor especial</span>}
-                  </p>
-
-                  <a 
-                    href={book.mpLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="btn btn-mp w-100 mb-2"
-                  >
-                    Comprar con Mercado Pago
-                  </a>
-                  <div id={book.paypalScriptId} className="paypal-button-container"></div>
+                  <div className="d-grid gap-2">
+                    {book.amazonLink && (
+                      <a
+                        href={book.amazonLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-warning text-dark fw-bold"
+                      >
+                        🛒 Comprar en Amazon
+                      </a>
+                    )}
+                    {book.appleLink && (
+                      <a
+                        href={book.appleLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-dark fw-bold"
+                      >
+                        🍎 Comprar en Apple Books
+                      </a>
+                    )}
+                    {book.googlePlayLink && (
+                      <a
+                        href={book.googlePlayLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-success fw-bold"
+                      >
+                        ▶ Comprar en Google Play
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 {book.testimonials && (

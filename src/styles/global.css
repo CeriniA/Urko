@@ -10,10 +10,40 @@
   /* Color de fondo para el círculo del Yin Yang */
 }
 
+/* Fuentes personalizadas para botón SVG del Hero */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('/fonts/CormorantGaramond-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('/fonts/CormorantGaramond-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cinzel';
+  src: url('/fonts/Cinzel-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cinzel';
+  src: url('/fonts/Cinzel-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 html,
 body {
   height: 100%;
-  background: var(--bg-dark);
+  background: #000000;
   color: var(--text-primary);
   font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
   line-height: 1.6;
@@ -24,7 +54,7 @@ body {
   margin: 0;
 }
 
-/* Fondo fijo global con parallax */
+/* Fondo fijo global con parallax (todo el sitio menos el HERO) */
 body::before {
   content: '';
   position: fixed;
@@ -32,7 +62,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('../assets/images/nuevaportada.jpg.jpeg') center center/cover no-repeat fixed;
+  background: url('../assets/images/Fondo web.png') center center/50% no-repeat fixed;
   opacity: 0.25;
   z-index: -1;
   pointer-events: none;
@@ -85,14 +115,83 @@ body::before {
   text-align: left;
   padding: 8rem 0 5rem;
   align-items: center;
+  background-color: #000000;
 }
 
 .hero::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: url('../assets/images/nuevaportada.jpg.jpeg') center center/cover no-repeat;
+  top: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../assets/images/Hero.png') center center/contain no-repeat;
+  background-color: #000000;
   z-index: 0;
+}
+
+@media (max-width: 767px) {
+  .hero::before {
+    background: url('../assets/images/HeroMobile.jpeg') center center/cover no-repeat;
+    background-color: #000000;
+    top: 0;
+  }
+
+  .boton-hero-urko {
+    width: 80%;
+    bottom: 120px;
+  }
+}
+
+/* Botón SVG del Hero */
+.boton-hero-urko {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(calc(-50% - 3px));
+  width: clamp(256px, 52%, 640px);
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  z-index: 2;
+  animation: botonBreathe 3s ease-in-out infinite;
+}
+
+@keyframes botonBreathe {
+  0%, 100% {
+    transform: translateX(calc(-50% - 3px)) scale(1);
+    filter: drop-shadow(0 0 6px rgba(255, 211, 109, 0.25));
+  }
+  50% {
+    transform: translateX(calc(-50% - 3px)) scale(1.02);
+    filter: drop-shadow(0 0 18px rgba(255, 211, 109, 0.55));
+  }
+}
+
+.boton-hero-urko:hover {
+  transform: translateX(calc(-50% - 3px)) scale(1.05);
+  filter: drop-shadow(0 0 22px rgba(255, 211, 109, 0.7));
+  animation-play-state: paused;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.boton-hero-urko:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 8px;
+  border-radius: 4px;
+}
+
+.boton-hero-urko:active {
+  transform: translateX(calc(-50% - 3px)) scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boton-hero-urko {
+    animation: none;
+  }
 }
 
 .hero::after {
@@ -1813,13 +1912,91 @@ body::before {
 
 /* Recursos Gratuitos */
 .recursos-gratuitos {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .recurso-gratuito-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* Botón "Descargar PDF" sobre la imagen de la guía */
+.guia-imagen-wrapper {
+  position: relative;
+}
+
+.guia-imagen {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.guia-boton-descarga {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 576px) {
+  .guia-boton-descarga {
+    bottom: 12px;
+    right: 12px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* === Masterclass === */
+.masterclass-section {
+  border-top: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.masterclass-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-shadow: 0 2px 20px rgba(249, 170, 51, 0.3);
+  margin-bottom: 2rem;
+}
+
+.masterclass-link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.masterclass-video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  background: #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.masterclass-link:hover .masterclass-video-wrapper {
+  transform: scale(1.01);
+  box-shadow: 0 25px 80px rgba(249, 170, 51, 0.2);
+}
+
+.masterclass-video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
 }
 
 /* Newsletter */
@@ -1966,20 +2143,221 @@ body::before {
   min-height: 40px;
 }
 
+/* Cards mobile para la tabla de comparación (no se usa actualmente, se mantiene por compat) */
+.comparacion-cards-mobile {
+  display: none;
+}
+
+.comparacion-card-mobile {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.25rem;
+  position: relative;
+}
+
+.comparacion-card-mobile--recommended {
+  border-color: var(--accent);
+  background: rgba(255, 193, 7, 0.08);
+  box-shadow: 0 8px 24px rgba(255, 193, 7, 0.15);
+}
+
+.comparacion-card-mobile__badge {
+  position: absolute;
+  top: -10px;
+  right: 12px;
+  background: var(--accent);
+  color: #000;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.comparacion-card-mobile__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.comparacion-card-mobile--recommended .comparacion-card-mobile__title {
+  color: var(--accent);
+}
+
+.comparacion-card-mobile__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  font-size: 0.85rem;
+}
+
+.comparacion-card-mobile__features li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.4;
+}
+
+.comparacion-card-mobile__features li:last-child {
+  border-bottom: none;
+}
+
+.comparacion-card-mobile__feature-name {
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 500;
+}
+
+.comparacion-card-mobile__feature-value {
+  color: #fff;
+  font-weight: 600;
+}
+
+.comparacion-card-mobile__feature-value .text-muted {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.comparacion-card-mobile__btn {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.6rem 1rem;
+}
+
 /* Responsive adjustments */
 @media (max-width: 767px) {
 
   .programa-card,
   .libro-card {
     margin-bottom: 1.5rem;
+    padding: 1.25rem !important;
   }
 
+  .libro-title,
+  .programa-title {
+    font-size: 1.15rem;
+  }
+
+  .libro-subtitle,
+  .programa-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .libro-body p,
+  .programa-body p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .libro-body ul,
+  .programa-includes {
+    font-size: 0.85rem;
+    padding-left: 0;
+  }
+
+  .libro-body li,
+  .programa-includes li {
+    margin-bottom: 0.3rem;
+  }
+
+  .book-cover-img {
+    max-width: 140px !important;
+  }
+
+  .libro-card .book-cover-img {
+    max-width: 140px;
+  }
+
+  .libro-footer .btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  /* Tabla comparativa mucho más compacta en mobile */
   .comparacion-table {
+    font-size: 0.65rem;
+  }
+
+  .comparacion-table th {
+    font-size: 0.6rem;
+    padding: 0.35rem 0.2rem !important;
+    letter-spacing: 0;
+  }
+
+  .comparacion-table td {
+    font-size: 0.65rem;
+    padding: 0.35rem 0.2rem !important;
+    line-height: 1.2;
+  }
+
+  .comparacion-table td:first-child {
+    font-size: 0.65rem;
+  }
+
+  .comparacion-table .text-success {
     font-size: 0.85rem;
   }
 
-  .comparacion-table th,
-  .comparacion-table td {
-    padding: 0.5rem;
+  .comparacion-table .text-muted {
+    font-size: 0.7rem;
+  }
+
+  /* Ocultar el badge "⭐ RECOMENDADO" en mobile (no entra) */
+  .comparacion-table thead .table-recommended::after {
+    display: none;
+  }
+
+  /* Quitar scale del recomendado en mobile */
+  .comparacion-table thead .table-recommended {
+    transform: none;
+  }
+
+  /* Fila de precio destacada más chica en mobile */
+  .comparacion-table tbody tr:nth-last-child(2) td {
+    font-size: 0.75rem !important;
+    padding: 0.5rem 0.2rem !important;
+  }
+
+  .comparacion-table tbody tr:nth-last-child(2) .table-recommended {
+    font-size: 0.8rem !important;
+  }
+
+  /* Botones de la última fila, muy compactos */
+  .btn-tabla-compra {
+    font-size: 0.55rem !important;
+    padding: 0.25rem 0.4rem !important;
+    min-width: auto !important;
+    letter-spacing: 0;
+  }
+
+  .tabla-compra-row td {
+    padding: 0.3rem 0.15rem !important;
+  }
+
+  /* Testimonials en mobile */
+  .testimonial-card {
+    padding: 1.25rem !important;
+  }
+
+  .testimonial-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .testimonial-category .badge {
+    font-size: 0.7rem;
+  }
+
+  /* Section titles en mobile */
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  /* Container padding mobile */
+  .py-5 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
   }
 }

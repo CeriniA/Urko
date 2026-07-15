@@ -1,50 +1,26 @@
 [
   {
-    "id": "libro-1",
-    "title": "Si yo pude, vos podés",
-    "price": 11,
-    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-b417ca72-c711-4e4b-b0ac-d272a0621f92",
-    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-b417ca72-c711-4e4b-b0ac-d272a0621f92",
-    "preference_id": "3020489059-b417ca72-c711-4e4b-b0ac-d272a0621f92"
-  },
-  {
-    "id": "libro-2",
-    "title": "El Entrenamiento Urko",
-    "price": 11,
-    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-53cf127f-2ddf-4537-b71c-5cfe7acb10f5",
-    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-53cf127f-2ddf-4537-b71c-5cfe7acb10f5",
-    "preference_id": "3020489059-53cf127f-2ddf-4537-b71c-5cfe7acb10f5"
-  },
-  {
-    "id": "pack-libros",
-    "title": "Pack Completo de Libros",
-    "price": 18,
-    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-ce22eafa-f3ac-4ad4-ad88-eaf8068fb725",
-    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-ce22eafa-f3ac-4ad4-ad88-eaf8068fb725",
-    "preference_id": "3020489059-ce22eafa-f3ac-4ad4-ad88-eaf8068fb725"
-  },
-  {
     "id": "programa-fundamental",
-    "title": "PROGRAMA FUNDAMENTAL",
+    "title": "Programa Fundamental",
     "price": 369,
-    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-99a82e8f-f337-496e-b84d-d4c5c535bbc9",
-    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-99a82e8f-f337-496e-b84d-d4c5c535bbc9",
-    "preference_id": "3020489059-99a82e8f-f337-496e-b84d-d4c5c535bbc9"
+    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-867592ff-f537-416f-b9bb-9c9c3ae882c0",
+    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-867592ff-f537-416f-b9bb-9c9c3ae882c0",
+    "preference_id": "3020489059-867592ff-f537-416f-b9bb-9c9c3ae882c0"
   },
   {
-    "id": "entrenamiento-trimestral",
-    "title": "ENTRENAMIENTO TRIMESTRAL",
+    "id": "escuela-urko-anual",
+    "title": "Escuela Urko Anual",
+    "price": 1000,
+    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-c96c880a-ccc5-4c55-8678-ce0ef2c1e37a",
+    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-c96c880a-ccc5-4c55-8678-ce0ef2c1e37a",
+    "preference_id": "3020489059-c96c880a-ccc5-4c55-8678-ce0ef2c1e37a"
+  },
+  {
+    "id": "intensivo-trimestral",
+    "title": "Intensivo Trimestral",
     "price": 750,
-    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-4d55c893-f99b-42d6-a760-2b5b9d05ef3b",
-    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-4d55c893-f99b-42d6-a760-2b5b9d05ef3b",
-    "preference_id": "3020489059-4d55c893-f99b-42d6-a760-2b5b9d05ef3b"
-  },
-  {
-    "id": "proceso-acompanado",
-    "title": "PROCESO ACOMPAÑADO",
-    "price": 1500,
-    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-aa6aac42-137b-4ae6-869b-d7ae7c698b24",
-    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-aa6aac42-137b-4ae6-869b-d7ae7c698b24",
-    "preference_id": "3020489059-aa6aac42-137b-4ae6-869b-d7ae7c698b24"
+    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-40b11e3b-cff5-4358-91af-586029499add",
+    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-40b11e3b-cff5-4358-91af-586029499add",
+    "preference_id": "3020489059-40b11e3b-cff5-4358-91af-586029499add"
   }
 ]

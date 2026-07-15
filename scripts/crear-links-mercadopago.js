@@ -28,53 +28,29 @@ const client = new MercadoPagoConfig({
 });
 const preference = new Preference(client);
 
-// Productos a crear
+// Productos a crear (solo los que se venden por MP - buttonType: 'buy')
 const productos = [
   {
-    id: 'libro-1',
-    title: 'Si yo pude, vos podés',
-    description: 'Testimonio directo de transformación. Desde la pérdida de firmeza y la eyaculación precoz, hasta la recuperación del vigor masculino.',
-    unit_price: 11,
-    quantity: 1,
-    currency_id: 'USD'
-  },
-  {
-    id: 'libro-2',
-    title: 'El Entrenamiento Urko',
-    description: 'La guía definitiva de 10 pasos para el vigor masculino. Sistematización completa del método tántrico-taoísta aplicado.',
-    unit_price: 11,
-    quantity: 1,
-    currency_id: 'USD'
-  },
-  {
-    id: 'pack-libros',
-    title: 'Pack Completo de Libros',
-    description: 'Ambos libros en un solo pack con precio especial.',
-    unit_price: 18,
-    quantity: 1,
-    currency_id: 'USD'
-  },
-  {
     id: 'programa-fundamental',
-    title: 'PROGRAMA FUNDAMENTAL',
-    description: 'Acceso completo al método Urko en formato autónomo. Incluye método paso a paso, protocolos prácticos, ejercicios progresivos, acceso de por vida y actualizaciones futuras.',
+    title: 'Programa Fundamental',
+    description: 'Para hombres que quieren empezar a trabajar seriamente en su proceso a su propio ritmo. Incluye Método Urko completo, Protocolos y ejercicios, Biblioteca Urko, 30 días en Escuela Urko, 2 videollamadas grupales y acceso a La senda del varón presente.',
     unit_price: 369,
     quantity: 1,
     currency_id: 'USD'
   },
   {
-    id: 'entrenamiento-trimestral',
-    title: 'ENTRENAMIENTO TRIMESTRAL',
-    description: 'Tres meses de estructura grupal con encuentros en vivo. Incluye calendario definido, 6 encuentros grupales en vivo, método completo, acceso de por vida y actualizaciones.',
-    unit_price: 750,
+    id: 'escuela-urko-anual',
+    title: 'Escuela Urko Anual',
+    description: 'Nuestro espacio principal de acompañamiento y transformación masculina. Incluye Método Urko completo, Comunidad privada, 2 encuentros grupales por mes (24 al año), Biblioteca completa, Actualizaciones futuras, Sesión inicial 1 a 1 y Sesión estratégica 1 a 1 durante el año.',
+    unit_price: 1000,
     quantity: 1,
     currency_id: 'USD'
   },
   {
-    id: 'proceso-acompanado',
-    title: 'PROCESO ACOMPAÑADO',
-    description: 'Tres meses con guía directa, seguimiento personalizado y videollamadas semanales. Incluye encuentros grupales semanales, videollamadas personalizadas, seguimiento personalizado, correcciones y guía directa.',
-    unit_price: 1500,
+    id: 'intensivo-trimestral',
+    title: 'Intensivo Trimestral',
+    description: 'Proceso grupal de 90 días para recuperar control, presencia y seguridad masculina. Incluye Programa completo Método Urko, Calendario de práctica, 6 encuentros grupales en vivo, Espacio de integración y consultas, Comunidad privada, 1 sesión privada 1 a 1 y Acceso a grabaciones anteriores.',
+    unit_price: 750,
     quantity: 1,
     currency_id: 'USD'
   }
@@ -83,9 +59,10 @@ const productos = [
 // URLs de retorno (ajustar según tu dominio)
 const BASE_URL = 'https://urkotantrico.com'; // CAMBIAR POR TU DOMINIO
 
-// IMPORTANTE: Reemplazar con tu URL de webhook de Make
-// La encontrás en tu escenario de Make, en el módulo "Webhooks"
-const MAKE_WEBHOOK_URL = 'https://hook.us2.make.com/ylhtebvebmkrge47jkl2oq41qynzuswb';
+// URL del webhook de make.com para el escenario de Mercado Pago
+// (separado del escenario de PayPal que se notifica desde el cliente)
+const MAKE_WEBHOOK_URL = process.env.VITE_MAKE_WEBHOOK_URL_MP
+  || 'https://hook.us2.make.com/ylhtebvebmkrge47jkl2oq41qynzuswb';
 
 async function crearPreferencia(producto) {
   try {

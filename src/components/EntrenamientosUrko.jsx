@@ -7,6 +7,8 @@ import { useRevealOnScroll } from '../hooks/useRevealOnScroll';
 import products from '../data/products';
 
 const PAYPAL_CLIENT_ID = import.meta.env.VITE_PAYPAL_CLIENT_ID;
+const MAKE_WEBHOOK_URL_PAYPAL = import.meta.env.VITE_MAKE_WEBHOOK_URL_PAYPAL
+  || 'https://hook.us2.make.com/ylhtebvebmkrge47jkl2oq41qynzuswb';
 
 const loadPayPalScript = () => {
   const src = `https://www.paypal.com/sdk/js?client-id=${PAYPAL_CLIENT_ID}&currency=USD`;
@@ -20,6 +22,18 @@ const loadPayPalScript = () => {
   }
 
   return script;
+};
+
+const notifyMake = async (payload) => {
+  try {
+    await fetch(MAKE_WEBHOOK_URL_PAYPAL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+  } catch (err) {
+    console.error('Error notificando a make.com:', err);
+  }
 };
 
 const EntrenamientosUrko = () => {
@@ -41,7 +55,7 @@ const EntrenamientosUrko = () => {
         if (!container || container.children.length > 0) return;
 
         window.paypal.Buttons({
-          style: { 
+          style: {
             layout: 'vertical',
             color: 'blue',
             shape: 'rect',
@@ -61,6 +75,21 @@ const EntrenamientosUrko = () => {
             }),
           onApprove: async (_, actions) => {
             const order = await actions.order.capture();
+            const purchaseUnit = order.purchase_units?.[0] || {};
+            const payer = order.payer || {};
+
+            await notifyMake({
+              source: 'paypal',
+              order_id: order.id,
+              status: order.status,
+              product_id: purchaseUnit.custom_id || program.id,
+              product_title: purchaseUnit.description || program.title,
+              amount: purchaseUnit.amount?.value || program.price.toFixed(2),
+              currency: purchaseUnit.amount?.currency_code || 'USD',
+              payer_email: payer.email_address || '',
+              payer_name: `${payer.name?.given_name || ''} ${payer.name?.surname || ''}`.trim(),
+            });
+
             alert(`Pago exitoso! ID de orden: ${order.id}`);
           },
           onError: (err) => {
