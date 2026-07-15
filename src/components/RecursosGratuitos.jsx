@@ -5,7 +5,7 @@ import guiaImg from '../assets/images/Guia.png';
 
 const YOUTUBE_VIDEO_ID = 'LsdhL9xcZlE';
 const YOUTUBE_WATCH_URL = `https://www.youtube.com/watch?v=${YOUTUBE_VIDEO_ID}`;
-const YOUTUBE_EMBED_URL = `https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${YOUTUBE_VIDEO_ID}&controls=0&showinfo=0&modestbranding=1&rel=0`;
+const YOUTUBE_EMBED_URL = `https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${YOUTUBE_VIDEO_ID}&controls=0&showinfo=0&modestbranding=1&rel=0`;
 
 const RecursosGratuitos = () => {
   const sectionRef = useRevealOnScroll();
@@ -46,7 +46,8 @@ const RecursosGratuitos = () => {
             <iframe
               src={YOUTUBE_EMBED_URL}
               title="Masterclass Urko"
-              allow="autoplay; encrypted-media; accelerometer; gyroscope; picture-in-picture"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               loading="lazy"
             />
