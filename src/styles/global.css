@@ -192,7 +192,7 @@ body::before {
 @media (max-width: 767px) {
   .hero .boton-hero-urko {
     width: 80%;
-    bottom: 220px;
+    bottom: 220px !important;
     transform: translateX(-50%);
   }
 }
