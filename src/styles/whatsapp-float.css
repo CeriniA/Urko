@@ -16,7 +16,7 @@
   font-size: 32px;
   color: #fff;
   box-shadow: 0 4px 12px rgba(249, 170, 51, 0.4);
-  z-index: 1000;
+  z-index: 1050;
   transition: all 0.3s ease;
   text-decoration: none;
   animation: whatsappPulse 2s ease-in-out infinite;
