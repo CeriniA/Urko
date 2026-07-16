@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll';
 import guiaImg from '../assets/images/Guia.png';
 
-const YOUTUBE_VIDEO_ID = 'LsdhL9xcZlE';
+const YOUTUBE_VIDEO_ID = '6QLo79_UUSo';
 const YOUTUBE_WATCH_URL = `https://www.youtube.com/watch?v=${YOUTUBE_VIDEO_ID}`;
 const YOUTUBE_EMBED_URL = `https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${YOUTUBE_VIDEO_ID}&controls=0&showinfo=0&modestbranding=1&rel=0`;
 

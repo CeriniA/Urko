@@ -116,6 +116,33 @@ const products = [
     category: 'programs',
   },
   {
+    id: 'intensivo-trimestral',
+    title: 'Intensivo Trimestral',
+    icon: '🔥',
+    price: 750,
+    currency: 'USD',
+    description: 'Un proceso grupal de 90 días para hombres que quieren recuperar control, presencia y seguridad masculina de forma guiada y estructurada. La idea no es solamente mejorar el rendimiento íntimo: es reconstruir seguridad, estabilidad y presencia masculina desde la raíz.',
+    subtitle: 'Durante 3 meses trabajamos: regulación emocional y sexual, ansiedad sexual y pérdida de control, reconexión cuerpo-mente, presencia masculina, hábitos y dirección personal.',
+    access: '🔓 Acceso al Drive con el programa completo + grabaciones.',
+    includes: [
+      'Programa completo Método Urko.',
+      'Calendario de práctica.',
+      '6 encuentros grupales en vivo.',
+      'Espacio de integración y consultas.',
+      'Comunidad privada.'
+    ],
+    bonus: [
+      '1 sesión privada 1 a 1.',
+      'Acceso a grabaciones anteriores.'
+    ],
+    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-40b11e3b-cff5-4358-91af-586029499add',
+    paypalScriptId: 'paypal-intensivo-trimestral',
+    buttonText: 'Ingresar al Intensivo',
+    buttonType: 'buy',
+    recommended: true,
+    category: 'programs',
+  },
+  {
     id: 'escuela-urko-anual',
     title: 'Escuela Urko Anual',
     icon: '🔸',
@@ -139,33 +166,6 @@ const products = [
     mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-c96c880a-ccc5-4c55-8678-ce0ef2c1e37a',
     paypalScriptId: 'paypal-escuela-anual',
     buttonText: 'Ingresar a la Escuela Anual',
-    buttonType: 'buy',
-    recommended: true,
-    category: 'programs',
-  },
-  {
-    id: 'intensivo-trimestral',
-    title: 'Intensivo Trimestral',
-    icon: '🔥',
-    price: 750,
-    currency: 'USD',
-    description: 'Un proceso grupal de 90 días para hombres que quieren recuperar control, presencia y seguridad masculina de forma guiada y estructurada. La idea no es solamente mejorar el rendimiento íntimo: es reconstruir seguridad, estabilidad y presencia masculina desde la raíz.',
-    subtitle: 'Durante 3 meses trabajamos: regulación emocional y sexual, ansiedad sexual y pérdida de control, reconexión cuerpo-mente, presencia masculina, hábitos y dirección personal.',
-    access: '🔓 Acceso al Drive con el programa completo + grabaciones.',
-    includes: [
-      'Programa completo Método Urko.',
-      'Calendario de práctica.',
-      '6 encuentros grupales en vivo.',
-      'Espacio de integración y consultas.',
-      'Comunidad privada.'
-    ],
-    bonus: [
-      '1 sesión privada 1 a 1.',
-      'Acceso a grabaciones anteriores.'
-    ],
-    mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-40b11e3b-cff5-4358-91af-586029499add',
-    paypalScriptId: 'paypal-intensivo-trimestral',
-    buttonText: 'Ingresar al Intensivo',
     buttonType: 'buy',
     recommended: true,
     category: 'programs',

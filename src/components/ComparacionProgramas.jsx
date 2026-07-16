@@ -8,16 +8,15 @@ const ComparacionProgramas = () => {
   const sectionRef = useRevealOnScroll();
 
   const features = [
-    { name: 'Método Urko completo', fundamental: true, anual: true, trimestral: true, privado: true },
-    { name: 'Biblioteca Urko', fundamental: true, anual: 'Completa', trimestral: false, privado: false },
-    { name: 'Comunidad privada', fundamental: 'Bonus', anual: true, trimestral: true, privado: false },
-    { name: 'Encuentros grupales en vivo', fundamental: '2 (bonus)', anual: '24 al año (2/mes)', trimestral: '6 (en 90 días)', privado: false },
-    { name: 'Sesiones 1-1 privadas', fundamental: false, anual: '2 (inicial + estratégica)', trimestral: '1 (bonus)', privado: true },
-    { name: 'Seguimiento directo', fundamental: false, anual: 'Anual', trimestral: 'Grupal', privado: 'Directo' },
-    { name: 'Calendario de práctica', fundamental: false, anual: false, trimestral: true, privado: 'Plan adaptado' },
-    { name: 'Trabajo completamente personalizado', fundamental: false, anual: false, trimestral: false, privado: true },
-    { name: 'Encuentros presenciales', fundamental: false, anual: false, trimestral: false, privado: 'Según disponibilidad' },
-    { name: 'Aplicación / evaluación previa', fundamental: false, anual: false, trimestral: false, privado: 'Requerida' },
+    { name: 'Método Urko completo', fundamental: true, trimestral: true, anual: true, privado: true },
+    { name: 'Biblioteca Urko', fundamental: true, trimestral: true, anual: true, privado: true },
+    { name: 'Comunidad privada', fundamental: false, trimestral: true, anual: true, privado: true },
+    { name: 'Encuentros grupales', fundamental: false, trimestral: '6', anual: '24', privado: false },
+    { name: 'Encuentros privados', fundamental: false, trimestral: false, anual: false, privado: true },
+    { name: 'Calendario práctica', fundamental: false, trimestral: true, anual: true, privado: 'Adaptado' },
+    { name: 'Trabajo personalizado', fundamental: false, trimestral: false, anual: false, privado: true },
+    { name: 'Encuentros presenciales', fundamental: false, trimestral: false, anual: false, privado: 'Según disponibilidad' },
+    { name: 'Aplicación requerida', fundamental: false, trimestral: false, anual: false, privado: 'Requerida' },
   ];
 
   const renderCell = (value) => {
@@ -53,8 +52,8 @@ const ComparacionProgramas = () => {
               <tr>
                 <th>Característica</th>
                 <th>Programa Fundamental</th>
-                <th>Escuela Urko Anual</th>
                 <th className="table-recommended">Intensivo Trimestral</th>
+                <th>Escuela Urko Anual</th>
                 <th>Acompañamiento Privado</th>
               </tr>
             </thead>
@@ -63,8 +62,8 @@ const ComparacionProgramas = () => {
                 <tr key={idx}>
                   <td className="fw-bold">{feature.name}</td>
                   <td className="text-center">{renderCell(feature.fundamental)}</td>
-                  <td className="text-center">{renderCell(feature.anual)}</td>
                   <td className="text-center table-recommended">{renderCell(feature.trimestral)}</td>
+                  <td className="text-center">{renderCell(feature.anual)}</td>
                   <td className="text-center">{renderCell(feature.privado)}</td>
                 </tr>
               ))}
@@ -75,14 +74,14 @@ const ComparacionProgramas = () => {
                     Comprar
                   </Button>
                 </td>
-                <td className="text-center">
-                  <Button variant="outline-light" size="sm" onClick={() => scrollToSpecificProgram('escuela-urko-anual')} className="btn-tabla-compra">
-                    Comprar
-                  </Button>
-                </td>
                 <td className="text-center table-recommended">
                   <Button variant="warning" size="sm" onClick={() => scrollToSpecificProgram('intensivo-trimestral')} className="btn-tabla-compra btn-tabla-compra-destacado">
                     Comprar Ahora
+                  </Button>
+                </td>
+                <td className="text-center">
+                  <Button variant="outline-light" size="sm" onClick={() => scrollToSpecificProgram('escuela-urko-anual')} className="btn-tabla-compra">
+                    Comprar
                   </Button>
                 </td>
                 <td className="text-center">
