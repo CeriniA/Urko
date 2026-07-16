@@ -139,7 +139,7 @@ body::before {
 
   .boton-hero-urko {
     width: 80%;
-    bottom: 15vh;
+    bottom: 100px;
     transform: translateX(-50%) !important;
   }
 }
@@ -1107,7 +1107,7 @@ body::before {
 
 @media (max-width: 767px) {
   .hero {
-    padding: 5rem 0 2rem;
+    padding: 3rem 0 8rem; min-height: 100vh;
   }
 
   .urko-navbar {
