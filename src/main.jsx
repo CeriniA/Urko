@@ -4,6 +4,7 @@ import App from './App.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/global.css';
 import './styles/recaptcha-hide.css';
+import './styles/whatsapp-float.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
