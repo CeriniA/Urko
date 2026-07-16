@@ -139,7 +139,7 @@ body::before {
 
   .boton-hero-urko {
     width: 80%;
-    bottom: 100px;
+    bottom: max(100px, calc(100px + env(safe-area-inset-bottom)));
     transform: translateX(-50%) !important;
   }
 }
