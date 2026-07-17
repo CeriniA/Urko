@@ -160,6 +160,17 @@ const EntrenamientosUrko = () => {
                       {program.paypalScriptId && (
                         <div id={program.paypalScriptId} className="paypal-button-container"></div>
                       )}
+                      {program.whatsappLink && (
+                        <a 
+                          href={program.whatsappLink} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="btn btn-outline-success w-100 mt-2"
+                        >
+                          <i className="bi bi-whatsapp me-2"></i>
+                          Consultar por WhatsApp
+                        </a>
+                      )}
                     </>
                   )}
 

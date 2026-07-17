@@ -52,8 +52,8 @@ const ComparacionProgramas = () => {
               <tr>
                 <th>Característica</th>
                 <th>Programa Fundamental</th>
-                <th className="table-recommended">Intensivo Trimestral</th>
-                <th>Escuela Urko Anual</th>
+                <th>Intensivo Trimestral</th>
+                <th className="table-recommended">Escuela Urko Anual</th>
                 <th>Acompañamiento Privado</th>
               </tr>
             </thead>
@@ -62,8 +62,8 @@ const ComparacionProgramas = () => {
                 <tr key={idx}>
                   <td className="fw-bold">{feature.name}</td>
                   <td className="text-center">{renderCell(feature.fundamental)}</td>
-                  <td className="text-center table-recommended">{renderCell(feature.trimestral)}</td>
-                  <td className="text-center">{renderCell(feature.anual)}</td>
+                  <td className="text-center">{renderCell(feature.trimestral)}</td>
+                  <td className="text-center table-recommended">{renderCell(feature.anual)}</td>
                   <td className="text-center">{renderCell(feature.privado)}</td>
                 </tr>
               ))}
@@ -74,14 +74,14 @@ const ComparacionProgramas = () => {
                     Comprar
                   </Button>
                 </td>
-                <td className="text-center table-recommended">
-                  <Button variant="warning" size="sm" onClick={() => scrollToSpecificProgram('intensivo-trimestral')} className="btn-tabla-compra btn-tabla-compra-destacado">
-                    Comprar Ahora
+                <td className="text-center">
+                  <Button variant="outline-light" size="sm" onClick={() => scrollToSpecificProgram('intensivo-trimestral')} className="btn-tabla-compra">
+                    Comprar
                   </Button>
                 </td>
-                <td className="text-center">
-                  <Button variant="outline-light" size="sm" onClick={() => scrollToSpecificProgram('escuela-urko-anual')} className="btn-tabla-compra">
-                    Comprar
+                <td className="text-center table-recommended">
+                  <Button variant="warning" size="sm" onClick={() => scrollToSpecificProgram('escuela-urko-anual')} className="btn-tabla-compra btn-tabla-compra-destacado">
+                    Comprar Ahora
                   </Button>
                 </td>
                 <td className="text-center">

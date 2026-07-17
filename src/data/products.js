@@ -1,4 +1,13 @@
-const WHATSAPP_GENERIC = 'https://wa.me/5493492210169?text=Hola%20Lucas,%20me%20interesa...';
+const WHATSAPP_GENERIC = 'https://wa.me/5493492210169?text=Buen%20d%C3%ADa%20Urko.%0A%0AMi%20nombre%20es%3A%20...%0A%0AQuisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20este%20programa%20espec%C3%ADfico%3A%20...';
+
+// WhatsApp links específicos por programa
+const WHATSAPP_PROGRAMA_FUNDAMENTAL = 'https://wa.me/5493492210169?text=Buen%20d%C3%ADa%20Urko.%0A%0AMi%20nombre%20es%3A%20...%0A%0AQuisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20este%20programa%20espec%C3%ADfico%3A%20Programa%20Fundamental';
+
+const WHATSAPP_INTENSIVO_TRIMESTRAL = 'https://wa.me/5493492210169?text=Buen%20d%C3%ADa%20Urko.%0A%0AMi%20nombre%20es%3A%20...%0A%0AQuisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20este%20programa%20espec%C3%ADfico%3A%20Intensivo%20Trimestral';
+
+const WHATSAPP_ESCUELA_ANUAL = 'https://wa.me/5493492210169?text=Buen%20d%C3%ADa%20Urko.%0A%0AMi%20nombre%20es%3A%20...%0A%0AQuisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20este%20programa%20espec%C3%ADfico%3A%20Escuela%20Urko%20Anual';
+
+const WHATSAPP_ACOMPANAMIENTO_PRIVADO = 'https://wa.me/5493492210169?text=Buen%20d%C3%ADa%20Urko.%0A%0AMi%20nombre%20es%3A%20...%0A%0AQuisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20este%20programa%20espec%C3%ADfico%3A%20Acompa%C3%B1amiento%20Privado';
 
 const products = [
   // RECURSOS GRATUITOS
@@ -111,6 +120,7 @@ const products = [
     idealFor: 'Ideal para quienes necesitan algo más estructurado que información, pero todavía no buscan acompañamiento continuo.',
     mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-867592ff-f537-416f-b9bb-9c9c3ae882c0',
     paypalScriptId: 'paypal-programa-fundamental',
+    whatsappLink: WHATSAPP_PROGRAMA_FUNDAMENTAL,
     buttonText: 'Comenzar ahora',
     buttonType: 'buy',
     category: 'programs',
@@ -137,9 +147,9 @@ const products = [
     ],
     mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-40b11e3b-cff5-4358-91af-586029499add',
     paypalScriptId: 'paypal-intensivo-trimestral',
+    whatsappLink: WHATSAPP_INTENSIVO_TRIMESTRAL,
     buttonText: 'Ingresar al Intensivo',
     buttonType: 'buy',
-    recommended: true,
     category: 'programs',
   },
   {
@@ -165,6 +175,7 @@ const products = [
     idealFor: 'Para hombres que quieren sostener cambios reales y construir presencia, seguridad y dirección masculina a largo plazo.',
     mpLink: 'https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=3020489059-c96c880a-ccc5-4c55-8678-ce0ef2c1e37a',
     paypalScriptId: 'paypal-escuela-anual',
+    whatsappLink: WHATSAPP_ESCUELA_ANUAL,
     buttonText: 'Ingresar a la Escuela Anual',
     buttonType: 'buy',
     recommended: true,
@@ -186,7 +197,7 @@ const products = [
       'Plan de trabajo adaptado a tu proceso.',
       'Posibilidad de encuentros presenciales (según disponibilidad).'
     ],
-    whatsappLink: WHATSAPP_GENERIC,
+    whatsappLink: WHATSAPP_ACOMPANAMIENTO_PRIVADO,
     buttonText: 'Solicitar una entrevista',
     buttonType: 'whatsapp',
     category: 'programs',
